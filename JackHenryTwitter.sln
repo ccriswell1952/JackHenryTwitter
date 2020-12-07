@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackHenryTwitter", "JackHenryTwitter.csproj", "{13E6B642-AAD9-4BBF-8B47-48543665340D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackHenryTwitter.Tests", "..\JackHenryTwitter.Tests\JackHenryTwitter.Tests.csproj", "{ED5E13A0-C19A-4818-A4A9-C0E105131BF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13E6B642-AAD9-4BBF-8B47-48543665340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E6B642-AAD9-4BBF-8B47-48543665340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E6B642-AAD9-4BBF-8B47-48543665340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E6B642-AAD9-4BBF-8B47-48543665340D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5E13A0-C19A-4818-A4A9-C0E105131BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5E13A0-C19A-4818-A4A9-C0E105131BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5E13A0-C19A-4818-A4A9-C0E105131BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5E13A0-C19A-4818-A4A9-C0E105131BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5700DD2-73F2-47A0-8F9E-A7E0708DE38D}
+	EndGlobalSection
+EndGlobal

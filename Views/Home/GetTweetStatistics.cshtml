@@ -1,0 +1,156 @@
+﻿@model JackHenryTwitter.Models.TweetStats
+<style>
+    dt {
+        width: 300px;
+    }
+</style>
+<div style="width:100%;">
+    <h4>Tweet Stats</h4>
+    @if (Model != null)
+    {
+
+        <dl class="dl-horizontal">
+            <dt>
+                Total Accumulated Tweets Received
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalTweetsReceived)
+            </dd>
+
+            <dt>
+                Average TweetsReceived Per Hour
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AverageTweetsReceivedPerHour)
+            </dd>
+
+            <dt>
+                Average Tweets Received Per Minute
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AverageTweetsReceivedPerMinute)
+            </dd>
+
+            <dt>
+                Average Tweets Received Per Second
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AverageTweetsReceivedPerSecond)
+            </dd>
+
+            <dt>
+                % Tweets With Emojis (not available yet)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PctTweetsWithEmojis)%
+            </dd>
+
+            <dt>
+                % Tweets With Photo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PctTweetsWithPhoto)%
+            </dd>
+
+            <dt>
+                % Tweets With Url
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PctTweetsWithUrl)%
+            </dd>
+
+            <dt>
+                Total Accumulated Download Time in Seconds
+            </dt>
+
+            <dd>
+                @{
+                    var totalDownloadTimeInSeconds = Model.TotalDownloadTimeInMiliSeconds / 1000;
+                }
+                @totalDownloadTimeInSeconds
+            </dd>
+
+            <dt>
+                Total Emojis in All Tweets (not available yet)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalEmojis)
+            </dd>
+
+            <dt>
+                Total Accumulated Tweets With Photo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalTweetsWithPhoto)
+            </dd>
+
+            <dt>
+                Total Accumulated Tweets With URL
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalUrlsInTweets)
+            </dd>
+
+        </dl>
+        <div>
+            <h3>Top URLs</h3>
+            <table style="width:30%">
+                <thead>
+                    <tr><th>URL</th><th>Count</th></tr>
+                </thead>
+                @if (Model.TopUrlDomainList != null)
+                {
+                    foreach (var item in Model.TopUrlDomainList)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Domain)
+                        </td>
+                        <td style="padding-left:10px;">
+                            @Html.DisplayFor(modelItem => item.DomainCount)
+                        </td>
+                    </tr>
+                    }
+                }
+            </table>
+        </div>
+        <div>
+            <h3>Top Hashtags</h3>
+            <table>
+                <thead>
+                    <tr><th>Hashtag</th><th>Count</th></tr>
+                    <tr></tr>
+                </thead>
+                @if (Model.TopHashtagList != null)
+                {
+
+                    foreach (var item in Model.TopHashtagList)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hashtag)
+                        </td>
+                        <td style="padding-left:10px;">
+                            @Html.DisplayFor(modelItem => item.HashtagCount)
+                        </td>
+                    </tr>
+                    }
+                }
+            </table>
+        </div>
+    }
+    else
+    {
+        <span>There currently is no statistic data available. Click the Load More Tweets to get data for this report.</span>
+    }
+</div>

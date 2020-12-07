@@ -1,0 +1,96 @@
+﻿@model JackHenryTwitter.Models.TweetStats
+@{
+    ViewBag.Title = "Tweet Challenge For Jack Henry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TweetTest</h2>
+<div>
+    <input type="button" value="Refresh Statistics" id="btnViewStats" class="btn-primary" />
+</div>
+<br />
+
+<div>
+    Select the amount of time you want the new tweet load to run:
+    <select id="runForTime">
+        <option value="10">10 seconds</option>
+        <option value="20">20 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="40">40 seconds</option>
+        <option value="50">50 seconds</option>
+        <option value="60" selected>1 minute</option>
+        <option value="70">70 seconds</option>
+        <option value="80">80 seconds</option>
+        <option value="90">90 seconds</option>
+        <option value="120">2 minutes</option>
+    </select> 
+    <input type="button" value="Load More Tweets" id="btnRefreshTweetData" class="btn-primary" />
+
+</div>
+<div id="divWaiting" style="display:none;">
+    <span style="color:red;">More data is currently loading. This is being done asynchronously, so you can still navigate the site, refresh the page, etc.
+    Once the new tweet data has loaded the updated statistics will display. Until then the statistics will display the values up to this download. 
+    If the tweet data was updating a database table the results could be displayed as the records are received, but since I'm writing the results to a Json file 
+    I decided to wait for them all to load into memory, then push them to the file. The values shown below come from a Json file that is deserialized 
+    into a c# tweet object, then displayed via an ajax call.
+    </span>
+    <br />
+    Approximate time left for new Tweet Load <span id="spanTimer" style="color: red; font-weight:bold;"></span> seconds.
+</div>
+<div id="divReport">
+    @{
+        Html.RenderPartial("GetTweetStatistics");
+    }
+</div>
+<script type="text/javascript">
+
+    $().ready(function () {
+        $("#btnRefreshTweetData").on("click", function () {
+            var secondsToRun = $("#runForTime").val();
+            var data = { "secondsToRun": secondsToRun };
+            $.ajax({
+                method: "POST",
+                url: "GetTweetStreamFromTwitter",
+                dataType: "json",
+                data: data,
+                beforeSend: function () {
+                    $("#divWaiting").show();
+                    $("#btnRefreshTweetData").attr("disabled", "disabled");
+                }
+            })
+            var intTimeoutValue = parseInt(secondsToRun) * 1000;
+            var addTime = intTimeoutValue * .10;
+            var totalTime = intTimeoutValue + addTime;
+            var countDown = totalTime / 1000;
+            var spanTimer = $("#spanTimer");
+
+            var timer = setInterval(function () {
+                countDown = countDown - 1;
+                spanTimer.text(countDown);
+            }, 1000);
+            setTimeout(function () {
+                clearInterval(timer);
+                $("#divWaiting").hide();
+                $("#btnRefreshTweetData").removeAttr("disabled");
+                $("#btnViewStats").trigger("click");
+                alert("Tweet data refreshed and new statistics loaded.");
+            }, (totalTime));
+        });
+
+        $("#btnViewStats").on("click", function () {
+            $.ajax({
+                method: "POST",
+                url: "GetTweetStatistics",
+                dataType: "html",
+                beforeSend: function () {
+                    $("#divReport").hide();
+                }
+            })
+                .done(function (html) {
+                    $("#divReport").html(html);
+                    $("#divReport").show();
+                });
+        });
+    });
+</script>
+
