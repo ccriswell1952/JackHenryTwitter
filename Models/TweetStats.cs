@@ -1,37 +1,135 @@
-﻿using System.Collections.Generic;
+﻿// ***********************************************************************
+// Assembly         : JackHenryTwitter
+// Author           : Chuck
+// Created          : 12-05-2020
+//
+// Last Modified By : Chuck
+// Last Modified On : 12-06-2020
+// ***********************************************************************
+// <copyright file="TweetStats.cs" company="">
+//     Copyright ©  2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace JackHenryTwitter.Models
 {
+    /// <summary>
+    /// Class TweetStats.
+    /// </summary>
     public partial class TweetStats
     {
+        /// <summary>
+        /// The tweet root
+        /// </summary>
         private Root tweetRoot = new Root();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TweetStats"/> class.
+        /// </summary>
         public TweetStats()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TweetStats"/> class.
+        /// </summary>
+        /// <param name="root">A Tweet Root object.</param>
         public TweetStats(Root root)
         {
             this.tweetRoot = root;
         }
 
+        /// <summary>
+        /// Gets or sets the average tweets received per hour.
+        /// </summary>
+        /// <value>The average tweets received per hour.</value>
         public double AverageTweetsReceivedPerHour { get; set; }
+
+        /// <summary>
+        /// Gets or sets the average tweets received per minute.
+        /// </summary>
+        /// <value>The average tweets received per minute.</value>
         public double AverageTweetsReceivedPerMinute { get; set; }
+
+        /// <summary>
+        /// Gets or sets the average tweets received per second.
+        /// </summary>
+        /// <value>The average tweets received per second.</value>
         public double AverageTweetsReceivedPerSecond { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percentage of tweets with emojis.
+        /// </summary>
+        /// <value>The percentage of tweets with emojis.</value>
         public decimal PctTweetsWithEmojis { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percentage of tweets with photo.
+        /// </summary>
+        /// <value>The percentage of tweets with photo.</value>
         public decimal PctTweetsWithPhoto { get; set; }
+
+        /// <summary>
+        /// Gets or sets the percentage of tweets with URL.
+        /// </summary>
+        /// <value>The percentage of tweets with URL.</value>
         public decimal PctTweetsWithUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the top emojis.
+        /// </summary>
+        /// <value>The top emojis.</value>
         public List<TopEmojies> TopEmojis { get; set; }
+
+        /// <summary>
+        /// Gets or sets the top hashtag list.
+        /// </summary>
+        /// <value>The top hashtag list.</value>
         public List<TopHashtags> TopHashtagList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the top URL domain list.
+        /// </summary>
+        /// <value>The top URL domain list.</value>
         public List<TopDomains> TopUrlDomainList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total download time in mili seconds.
+        /// </summary>
+        /// <value>The total download time in mili seconds.</value>
         public int TotalDownloadTimeInMiliSeconds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total emojis.
+        /// </summary>
+        /// <value>The total emojis.</value>
         public double TotalEmojis { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total tweets received.
+        /// </summary>
+        /// <value>The total tweets received.</value>
         public double TotalTweetsReceived { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total tweets with photo.
+        /// </summary>
+        /// <value>The total tweets with photo.</value>
         public double TotalTweetsWithPhoto { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total urls in tweets.
+        /// </summary>
+        /// <value>The total urls in tweets.</value>
         public double TotalUrlsInTweets { get; set; }
 
+        /// <summary>
+        /// Sets all tweet stats properties.
+        /// </summary>
         public void SetAllTweetStatsProperties()
         {
             this.TotalTweetsReceived = tweetRoot.TweetData.Tweets.Count;
@@ -43,6 +141,9 @@ namespace JackHenryTwitter.Models
             SetTopHashtags();
         }
 
+        /// <summary>
+        /// Sets the average times.
+        /// </summary>
         public void SetAverageTimes()
         {
             var averageTweetsPerSecond = this.TotalTweetsReceived / (this.TotalDownloadTimeInMiliSeconds / 1000);
@@ -51,6 +152,10 @@ namespace JackHenryTwitter.Models
             this.AverageTweetsReceivedPerHour = averageTweetsPerSecond * (60 * 60);
         }
 
+        /// <summary>
+        /// Sets the percentage of tweets with emoji.
+        /// </summary>
+        /// <param name="totalEmojis">The total emojis.</param>
         public void SetPctTweetsWithEmoji(int totalEmojis)
         {
             this.TotalEmojis = totalEmojis;
@@ -64,6 +169,9 @@ namespace JackHenryTwitter.Models
             }
         }
 
+        /// <summary>
+        /// Sets the percentage of tweets with photo.
+        /// </summary>
         public void SetPctTweetsWithPhoto()
         {
             this.TotalTweetsWithPhoto = tweetRoot.TweetData.Tweets.Where(t => t.includes.users.Any(a => a.profile_image_url != null)).Count();
@@ -77,6 +185,10 @@ namespace JackHenryTwitter.Models
             }
         }
 
+        /// <summary>
+        /// Sets the percentage of tweets with photo.
+        /// </summary>
+        /// <param name="totalTweetsWithPhoto">The total tweets with photo.</param>
         public void SetPctTweetsWithPhoto(double totalTweetsWithPhoto)
         {
             this.TotalTweetsWithPhoto = totalTweetsWithPhoto;
@@ -90,6 +202,9 @@ namespace JackHenryTwitter.Models
             }
         }
 
+        /// <summary>
+        /// Sets the percentage of tweets with URL.
+        /// </summary>
         public void SetPctTweetsWithUrl()
         {
             this.TotalUrlsInTweets = tweetRoot.TweetData.Tweets.Where(t => t.includes.users.Any(a => a.url != null)).Count();
@@ -103,6 +218,10 @@ namespace JackHenryTwitter.Models
             }
         }
 
+        /// <summary>
+        /// Sets the percentage of tweets with URL.
+        /// </summary>
+        /// <param name="totalUrlsInTweets">The total urls in tweets.</param>
         public void SetPctTweetsWithUrl(double totalUrlsInTweets)
         {
             this.TotalUrlsInTweets = totalUrlsInTweets;
@@ -116,6 +235,9 @@ namespace JackHenryTwitter.Models
             }
         }
 
+        /// <summary>
+        /// Sets the top hashtags.
+        /// </summary>
         public void SetTopHashtags()
         {
             var regex = new Regex(@"#\w+");
@@ -159,6 +281,9 @@ namespace JackHenryTwitter.Models
             this.TopHashtagList = topHashtagList.OrderByDescending(o => o.HashtagCount).ToList();
         }
 
+        /// <summary>
+        /// Sets the top URL domains.
+        /// </summary>
         public void SetTopUrlDomains()
         {
             List<string> urlList = new List<string>();
@@ -195,21 +320,57 @@ namespace JackHenryTwitter.Models
             this.TopUrlDomainList = topDomainList.OrderByDescending(o => o.DomainCount).ToList();
         }
 
+        /// <summary>
+        /// Class TopDomains.
+        /// </summary>
         public class TopDomains
         {
+            /// <summary>
+            /// Gets or sets the domain name.
+            /// </summary>
+            /// <value>The domain name.</value>
             public string Domain { get; set; }
+
+            /// <summary>
+            /// Gets or sets the domain count.
+            /// </summary>
+            /// <value>The domain count.</value>
             public int DomainCount { get; set; }
         }
 
+        /// <summary>
+        /// Class TopEmojies.
+        /// </summary>
         public class TopEmojies
         {
+            /// <summary>
+            /// Gets or sets the emoji.
+            /// </summary>
+            /// <value>The emoji.</value>
             public string Emoji { get; set; }
+
+            /// <summary>
+            /// Gets or sets the emoji count.
+            /// </summary>
+            /// <value>The emoji count.</value>
             public int EmojiCount { get; set; }
         }
 
+        /// <summary>
+        /// Class TopHashtags.
+        /// </summary>
         public class TopHashtags
         {
+            /// <summary>
+            /// Gets or sets the hashtag.
+            /// </summary>
+            /// <value>The hashtag.</value>
             public string Hashtag { get; set; }
+
+            /// <summary>
+            /// Gets or sets the hashtag count.
+            /// </summary>
+            /// <value>The hashtag count.</value>
             public int HashtagCount { get; set; }
         }
     }
