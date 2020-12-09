@@ -189,6 +189,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AppVariableDataSource.cs" />
+    <Compile Include="Models\Emoji.cs" />
+    <Compile Include="Models\EmojiBase.cs" />
     <Compile Include="Models\IDataSource.cs" />
     <Compile Include="Models\TweetClasses.cs" />
     <Compile Include="Models\TweetStats.cs" />

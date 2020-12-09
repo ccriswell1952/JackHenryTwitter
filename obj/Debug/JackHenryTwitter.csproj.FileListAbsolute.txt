@@ -95,3 +95,4 @@ C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csprojAs
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csproj.CopyComplete
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.dll
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.pdb
+C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csproj.CoreCompileInputs.cache

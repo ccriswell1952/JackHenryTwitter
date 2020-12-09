@@ -31,19 +31,24 @@ namespace JackHenryTwitter.Models
     public class AppVariableDataSource : IDataSource
     {
         public TweetData tweetData = new TweetData();
-
+        public int EmojiInFileRunningCount = 0;
+        public List<EmojiBase> emojiBaseList = new List<EmojiBase>();
         public AppVariableDataSource(int secondsToDownload)
         {
             this.TimeToTweetDownload = secondsToDownload * 1000; // turning the time into miliseconds
             tweetData.Tweets = new System.Collections.Generic.List<Tweet>();
             CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
             CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
+            var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
+            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
         }
 
         public AppVariableDataSource()
         {
             CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
             CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
+            var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
+            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath); 
         }
 
         /// <summary>
@@ -51,6 +56,12 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The combined file path.</value>
         public string CombinedFilePathForData { get; set; }
+
+        /// <summary>
+        /// Gets or sets the combined file path for emojis.
+        /// </summary>
+        /// <value>The combined file path for emojis.</value>
+        public string CombinedFilePathForEmojis { get; set; }
 
         /// <summary>Gets or sets the combined file path for stats.</summary>
         /// <value>The combined file path for stats.</value>
@@ -76,8 +87,35 @@ namespace JackHenryTwitter.Models
         /// <param name="data">The tweet data.</param>
         public void AddStreamingTweetToTempDataset(string data)
         {
-            Tweet myDeserializedClass = Newtonsoft.Json.JsonConvert.DeserializeObject<Tweet>(data);
+            List<string> emojiList = new List<string>();
+            Tweet myDeserializedClass = JsonConvert.DeserializeObject<Tweet>(data);
             tweetData.Tweets.Add(myDeserializedClass);
+            string lineToAdd = myDeserializedClass.data.text;
+            if (!string.IsNullOrEmpty(lineToAdd))
+            {
+                emojiList.Add(lineToAdd);
+            }
+            foreach (var user in myDeserializedClass.includes.users)
+            {
+                lineToAdd = null;
+                lineToAdd = user.name;
+                if (!string.IsNullOrEmpty(lineToAdd))
+                {
+                    emojiList.Add(lineToAdd);
+                }
+                lineToAdd = null;
+                lineToAdd = user.description;
+                if (!string.IsNullOrEmpty(lineToAdd))
+                {
+                    emojiList.Add(lineToAdd);
+                }
+            }
+            if (emojiList.Count > 0)
+            {
+                EmojiInFileRunningCount++;
+                List<EmojiBase> thisList = EmojiParser.GetEmojiList(emojiList);
+                emojiBaseList.AddRange(thisList); 
+            }
         }
 
         /// <summary>
@@ -135,17 +173,24 @@ namespace JackHenryTwitter.Models
             root.TweetData = tweetData;
             var content = JsonConvert.SerializeObject(root);
 
-            if(ConfigurationManager.AppSettings["SaveTweetDataToFile"] == "true")
+            var emojiContent = JsonConvert.SerializeObject(emojiBaseList);
+            if (ConfigurationManager.AppSettings["SaveTweetDataToFile"] == "true")
             {
                 using (StreamWriter writer = new StreamWriter(CombinedFilePathForData))
                 {
                     writer.Write(content);
                     writer.Close();
                 }
+
+                using (StreamWriter writer = new StreamWriter(CombinedFilePathForEmojis))
+                {
+                    writer.Write(emojiContent);
+                    writer.Close();
+                }
             }
 
             // set the stats for the newly downloaded stream of tweets
-            TweetStats tweetStats = new TweetStats(root);
+            TweetStats tweetStats = new TweetStats(root, emojiBaseList, EmojiInFileRunningCount);
             tweetStats.TotalDownloadTimeInMiliSeconds = this.TimeToTweetDownload;
             tweetStats.SetAllTweetStatsProperties();
             if (File.Exists(CombinedFilePathForStats))
@@ -178,6 +223,7 @@ namespace JackHenryTwitter.Models
             stats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
             stats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
             stats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
+            stats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
             stats.SetAverageTimes();
             stats.SetPctTweetsWithPhoto(stats.TotalTweetsWithPhoto);
             stats.SetPctTweetsWithUrl(stats.TotalUrlsInTweets);
@@ -216,7 +262,7 @@ namespace JackHenryTwitter.Models
                     }
                 }
             }
-            foreach(var existingDomain in existingTopDomains)
+            foreach (var existingDomain in existingTopDomains)
             {
                 string existingDomainName = existingDomain.Domain.ToLower();
                 int existingDomainCount = existingDomain.DomainCount;
@@ -236,7 +282,7 @@ namespace JackHenryTwitter.Models
         public List<TweetStats.TopHashtags> UpdateTopHashtags(List<TweetStats.TopHashtags> existingTopHashtags, List<TweetStats.TopHashtags> newTopHashtags)
         {
             List<TweetStats.TopHashtags> mergedTopHashtags = new List<TweetStats.TopHashtags>();
-            
+
             List<string> mergedNames = new List<string>();
             // we iterate over the new top hashtags just downloaded
             foreach (var hashtags in newTopHashtags)
