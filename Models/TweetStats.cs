@@ -4,7 +4,7 @@
 // Created          : 12-05-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-06-2020
+// Last Modified On : 12-09-2020
 // ***********************************************************************
 // <copyright file="TweetStats.cs" company="">
 //     Copyright ©  2020
@@ -23,22 +23,33 @@ namespace JackHenryTwitter.Models
     public partial class TweetStats
     {
         /// <summary>
+        /// The emoji list
+        /// </summary>
+        private List<EmojiBase> emojiList = new List<EmojiBase>();
+
+        /// <summary>
+        /// The top emojies
+        /// </summary>
+        private List<TopEmojies> topEmojies = new List<TopEmojies>();
+
+        /// <summary>
         /// The tweet root
         /// </summary>
         private Root tweetRoot = new Root();
-        private List<EmojiBase> emojiList = new List<EmojiBase>();
-        private List<TopEmojies> topEmojies = new List<TopEmojies>();
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="TweetStats"/> class.
+        /// Initializes a new instance of the <see cref="TweetStats" /> class.
         /// </summary>
         public TweetStats()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TweetStats"/> class.
+        /// Initializes a new instance of the <see cref="TweetStats" /> class.
         /// </summary>
         /// <param name="root">A Tweet Root object.</param>
+        /// <param name="emojiList">The emoji list.</param>
+        /// <param name="tweetsWithEmojiCount">The tweets with emoji count.</param>
         public TweetStats(Root root, List<EmojiBase> emojiList, int tweetsWithEmojiCount = 0)
         {
             this.tweetRoot = root;
@@ -130,7 +141,6 @@ namespace JackHenryTwitter.Models
         /// <value>The tweets with emoji count.</value>
         public int TweetsWithEmojiCount { get; set; }
 
-
         /// <summary>
         /// Sets all tweet stats properties.
         /// </summary>
@@ -162,6 +172,22 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <param name="totalEmojis">The total emojis.</param>
         public void SetPctTweetsWithEmoji(int totalEmojis)
+        {
+            if (totalEmojis > 0)
+            {
+                this.TweetsWithEmojiCount = totalEmojis;
+                this.PctTweetsWithEmojis = ((decimal)this.TweetsWithEmojiCount / (decimal)this.TotalTweetsReceived) * 100;
+            }
+            else
+            {
+                this.PctTweetsWithEmojis = 0;
+            }
+        }
+
+        /// <summary>
+        /// Sets the PCT tweets with emoji.
+        /// </summary>
+        public void SetPctTweetsWithEmoji()
         {
             if (this.TweetsWithEmojiCount > 0)
             {
@@ -239,41 +265,31 @@ namespace JackHenryTwitter.Models
             }
         }
 
-        public void SetTopEmojies()
+        /// <summary>
+        /// Sets the top emojies.
+        /// </summary>
+        /// <returns>List&lt;TopEmojies&gt;.</returns>
+        public List<TopEmojies> SetTopEmojies()
         {
             TopEmojis = new List<TopEmojies>();
             var distinctList = emojiList.Select(s => new { s.EmojiHtmlEncode, s.EmojiImage }).Distinct();
             foreach (var image in distinctList)
             {
+                int emojiCount = 0;
                 TopEmojies topEmoji = new TopEmojies();
-                topEmoji.Emoji.EmojiHtmlEncode = image.EmojiHtmlEncode;
-                topEmoji.Emoji.EmojiImage = image.EmojiImage;
-                topEmoji.EmojiCount = emojiList.Where(w => w.EmojiHtmlEncode == image.EmojiHtmlEncode).Count();
-                TopEmojis.Add(topEmoji);
+                EmojiBase emoji = new EmojiBase();
+                emoji.EmojiHtmlEncode = image.EmojiHtmlEncode;
+                emoji.EmojiImage = image.EmojiImage;
+                topEmoji.Emoji = emoji;
+                emojiCount = emojiList.Where(w => w.EmojiHtmlEncode == image.EmojiHtmlEncode).Count();
+                if (emojiCount > 1)
+                {
+                    topEmoji.EmojiCount = emojiCount;
+                    TopEmojis.Add(topEmoji);
+                }
             }
-
-        }
-        public void SetTopEmojies(List<EmojiBase> newEmojiList, List<TopEmojies> existingList)
-        {
-            TopEmojis = new List<TopEmojies>();
-            List<EmojiBase> combinedLists = new List<EmojiBase>();
-            combinedLists.AddRange(newEmojiList);
-            foreach(var image in existingList)
-            {
-                EmojiBase emojiBase = new EmojiBase();
-                emojiBase.EmojiHtmlEncode = image.Emoji.EmojiHtmlEncode;
-                emojiBase.EmojiImage = image.Emoji.EmojiImage;
-            }
-            var distinctList = emojiList.Select(s => new { s.EmojiHtmlEncode, s.EmojiImage }).Distinct();
-            foreach (var image in distinctList)
-            {
-                TopEmojies topEmoji = new TopEmojies();
-                topEmoji.Emoji.EmojiHtmlEncode = image.EmojiHtmlEncode;
-                topEmoji.Emoji.EmojiImage = image.EmojiImage;
-                topEmoji.EmojiCount = emojiList.Where(w => w.EmojiHtmlEncode == image.EmojiHtmlEncode).Count();
-                TopEmojis.Add(topEmoji);
-            }
-
+            TopEmojis = TopEmojis.Take(100).OrderByDescending(o => o.EmojiCount).ToList();
+            return TopEmojis;
         }
 
         /// <summary>
@@ -339,7 +355,22 @@ namespace JackHenryTwitter.Models
                         urlList.Add(u.url);
                     }
                 }
+                Entities ent = new Entities();
+                if (tweet.data.entities != null)
+                {
+                    ent = tweet.data.entities;
+                    List<Url> us = new List<Url>();
+                    if (ent.urls != null)
+                    {
+                        us = ent.urls;
+                        foreach (var e in us)
+                        {
+                            urlList.Add(e.expanded_url);
+                        }
+                    }
+                }
             }
+
             foreach (var url in urlList)
             {
                 var host = Utilities.Utilities.GetHostFromUrlString(url);

@@ -91,8 +91,7 @@ C:\Users\Chuck\source\repos\JackHenryTwitter\bin\Tweetinvi.Streams.xml
 C:\Users\Chuck\source\repos\JackHenryTwitter\bin\Tweetinvi.WebLogic.xml
 C:\Users\Chuck\source\repos\JackHenryTwitter\bin\Antlr3.Runtime.pdb
 C:\Users\Chuck\source\repos\JackHenryTwitter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csprojAssemblyReference.cache
+C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csproj.CoreCompileInputs.cache
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csproj.CopyComplete
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.dll
 C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.pdb
-C:\Users\Chuck\source\repos\JackHenryTwitter\obj\Debug\JackHenryTwitter.csproj.CoreCompileInputs.cache

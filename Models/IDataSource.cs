@@ -4,7 +4,7 @@
 // Created          : 12-04-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-05-2020
+// Last Modified On : 12-06-2020
 // ***********************************************************************
 // <copyright file="IDataSource.cs" company="">
 //     Copyright ©  2020
@@ -38,6 +38,7 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Gets the sample tweets from twitter.
         /// </summary>
+        /// <returns>Task&lt;System.Boolean&gt;.</returns>
         Task<bool> GetSampleTweetsFromTwitter();
 
         /// <summary>
@@ -59,9 +60,10 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Updates the tweet statistics.
         /// </summary>
-        /// <param name="newTweets">The new tweet stats.</param>
+        /// <param name="newTweetStats">The new tweet stats.</param>
         /// <returns>TweetStats.</returns>
         TweetStats UpdateTweetStatistics(TweetStats newTweetStats);
+
         /// <summary>
         /// Writes the tweet stats to data set.
         /// </summary>

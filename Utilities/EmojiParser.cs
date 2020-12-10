@@ -1,48 +1,51 @@
-﻿using JackHenryTwitter.Models;
-using Newtonsoft.Json.Linq;
-using System;
+﻿// ***********************************************************************
+// Assembly         : JackHenryTwitter
+// Author           : Chuck
+// Created          : 12-06-2020
+//
+// Last Modified By : Chuck
+// Last Modified On : 12-09-2020
+// ***********************************************************************
+// <copyright file="EmojiParser.cs" company="">
+//     Copyright ©  2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using JackHenryTwitter.Models;
 using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
 namespace JackHenryTwitter.Utilities
 {
+    /// <summary>
+    /// Class EmojiParser.
+    /// </summary>
     public static class EmojiParser
     {
-        static readonly Dictionary<string, string> emojisAsColons;
-        static readonly Regex regexColons;
-        static EmojiParser()
+        /// <summary>
+        /// Returns the Emoji HTMLEncoded.
+        /// </summary>
+        /// <param name="emoji">The emoji.</param>
+        /// <returns>System.String.</returns>
+        public static string EmojiToHtmlEncode(string emoji)
         {
-            string path = ConfigurationManager.AppSettings["EmojiJsonFilePath"];
-            string filePath = Utilities.GetFilePath(path);
-            // load mentioned json from somewhere
-            var data = JArray.Parse(File.ReadAllText(filePath));
-            emojisAsColons = data.OfType<JObject>().ToDictionary(
-                // key dictionary by coloned short names
-                c => ":" + ((JValue)c["short_name"]).Value.ToString() + ":",
-                c =>
-                {
-                    var unicodeRaw = ((JValue)c["unified"]).Value.ToString();
-                    var chars = new List<char>();
-                    // some characters are multibyte in UTF32, split them
-                    foreach (var point in unicodeRaw.Split('-'))
-                    {
-                        // parse hex to 32-bit unsigned integer (UTF32)
-                        uint unicodeInt = uint.Parse(point, System.Globalization.NumberStyles.HexNumber);
-                        // convert to bytes and get chars with UTF32 encoding
-                        chars.AddRange(Encoding.UTF32.GetChars(BitConverter.GetBytes(unicodeInt)));
-                    }
-                    // this is resulting emoji
-                    return new string(chars.ToArray());
-                });
-            // build huge regex (all 1500 emojies combined) by join all names with OR ("|")
-            regexColons = new Regex(String.Join("|", emojisAsColons.Keys.Select(Regex.Escape)));
+            // call the normal HtmlEncode first
+            char[] chars = HttpUtility.HtmlEncode(emoji).ToCharArray();
+            StringBuilder encodedValue = new StringBuilder();
+            foreach (char c in chars)
+            {
+                encodedValue.Append((int)c);
+            }
+            return encodedValue.ToString();
         }
 
+        /// <summary>
+        /// Gets an emoji list.
+        /// </summary>
+        /// <param name="lines">The lines from the tweet that may or may not contain an emoji.</param>
+        /// <returns>List&lt;EmojiBase&gt;.</returns>
         public static List<EmojiBase> GetEmojiList(List<string> lines)
         {
             List<EmojiBase> emojiList = new List<EmojiBase>();
@@ -56,40 +59,12 @@ namespace JackHenryTwitter.Utilities
                     {
                         EmojiBase emoji = new EmojiBase();
                         emoji.EmojiImage = m.Value;
-                        emoji.EmojiHtmlEncode = EmojiHtmlEncode(m.Value);
+                        emoji.EmojiHtmlEncode = EmojiToHtmlEncode(m.Value);
                         emojiList.Add(emoji);
                     }
                 }
             }
             return emojiList;
         }
-
-        public static string ReplaceColonNames(string input)
-        {
-            // replace match using dictionary
-            return regexColons.Replace(input, match => emojisAsColons[match.Value]);
-        }
-
-        public static string EmojiHtmlEncode(string value)
-        {
-            // call the normal HtmlEncode first
-            char[] chars = HttpUtility.HtmlEncode(value).ToCharArray();
-            StringBuilder encodedValue = new StringBuilder();
-            foreach (char c in chars)
-            {
-                encodedValue.Append((int)c);
-            }
-            return encodedValue.ToString();
-        }
-
-        /*
-byte[] utfBytes = System.Text.Encoding.UTF32.GetBytes("👱");
-print(utfBytes.Length);
-for (int i = 0; i < utfBytes.Length; i += 4)
-{
-     if (i != 0) result += '-';
-     result += System.BitConverter.ToInt32(utfBytes, i).ToString("x2").ToUpper();
-}         
-* */
     }
 }

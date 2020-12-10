@@ -4,16 +4,13 @@
 // Created          : 12-04-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-04-2020
+// Last Modified On : 12-09-2020
 // ***********************************************************************
 // <copyright file="HomeController.cs" company="">
 //     Copyright ©  2020
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using JackHenryTwitter.Models;
-using Newtonsoft.Json;
-using System.IO;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -27,7 +24,7 @@ namespace JackHenryTwitter.Controllers
     public class HomeController : Controller
     {
         /// <summary>
-        /// Abouts this instance.
+        /// Returns the About view.
         /// </summary>
         /// <returns>ActionResult.</returns>
         public ActionResult About()
@@ -38,7 +35,7 @@ namespace JackHenryTwitter.Controllers
         }
 
         /// <summary>
-        /// Contacts this instance.
+        /// returns the Contact view.
         /// </summary>
         /// <returns>ActionResult.</returns>
         public ActionResult Contact()
@@ -49,15 +46,46 @@ namespace JackHenryTwitter.Controllers
         }
 
         /// <summary>
-        /// Indexes this instance.
+        /// Gets the tweet statistics.
+        /// </summary>
+        /// <returns>ActionResult.</returns>
+        public ActionResult GetTweetStatistics()
+        {
+            var model = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
+            return PartialView(model);
+        }
+
+        /// <summary>
+        /// Gets the tweet stream from twitter.
+        /// </summary>
+        /// <param name="secondsToRun">The seconds to run.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        public async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
+        {
+            await Utilities.Utilities.GetTweetStreamFromTwitter(secondsToRun);
+            return true;
+        }
+
+        /// <summary>
+        /// Returns the Index view.
         /// </summary>
         /// <returns>ActionResult.</returns>
         public ActionResult Index()
         {
             return View();
         }
+
         /// <summary>
-        /// Tweets the test.
+        /// Used for development reasons only.
+        /// </summary>
+        /// <returns>ActionResult.</returns>
+        public ActionResult sample()
+        {
+            return null;
+        }
+
+        /// <summary>
+        /// Returns the TestTweet view.
         /// </summary>
         /// <returns>ActionResult.</returns>
         public ActionResult TweetTest()
@@ -65,23 +93,5 @@ namespace JackHenryTwitter.Controllers
             var model = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
             return View(model);
         }
-
-        public ActionResult GetTweetStatistics()
-        {
-            var model = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
-            return PartialView(model);
-        }
-
-        public async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
-        {
-            await Utilities.Utilities.GetTweetStreamFromTwitter(secondsToRun);
-            return true;
-        }
-
-        public ActionResult sample()
-        {
-            return null;
-        }
-
     }
 }

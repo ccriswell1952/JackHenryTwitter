@@ -1,11 +1,31 @@
-﻿using System.Web;
+﻿// ***********************************************************************
+// Assembly         : JackHenryTwitter
+// Author           : Chuck
+// Created          : 12-04-2020
+//
+// Last Modified By : Chuck
+// Last Modified On : 12-04-2020
+// ***********************************************************************
+// <copyright file="BundleConfig.cs" company="">
+//     Copyright ©  2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Web;
 using System.Web.Optimization;
 
 namespace JackHenryTwitter
 {
+    /// <summary>
+    /// Class BundleConfig.
+    /// </summary>
     public class BundleConfig
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+        /// <summary>
+        /// Registers the bundles.
+        /// </summary>
+        /// <param name="bundles">The bundles.</param>
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(

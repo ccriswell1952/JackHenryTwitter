@@ -43,14 +43,6 @@
             </dd>
 
             <dt>
-                % Tweets With Emojis (not available yet)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.PctTweetsWithEmojis)%
-            </dd>
-
-            <dt>
                 % Tweets With Photo
             </dt>
 
@@ -67,6 +59,14 @@
             </dd>
 
             <dt>
+                % Tweets With Emojis
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PctTweetsWithEmojis)%
+            </dd>
+
+            <dt>
                 Total Accumulated Download Time in Seconds
             </dt>
 
@@ -78,11 +78,11 @@
             </dd>
 
             <dt>
-                Total Emojis in All Tweets (not available yet)
+                Total tweets containing emojis
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.TotalEmojis)
+                @Html.DisplayFor(model => model.TweetsWithEmojiCount)
             </dd>
 
             <dt>
@@ -100,53 +100,76 @@
             <dd>
                 @Html.DisplayFor(model => model.TotalUrlsInTweets)
             </dd>
-
         </dl>
-        <div>
-            <h3>Top URLs</h3>
-            <table style="width:30%">
-                <thead>
-                    <tr><th>URL</th><th>Count</th></tr>
-                </thead>
-                @if (Model.TopUrlDomainList != null)
-                {
-                    foreach (var item in Model.TopUrlDomainList)
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Top URLs</h3>
+                <table style="width:30%">
+                    <thead>
+                        <tr><th>URL</th><th>Count</th></tr>
+                    </thead>
+                    @if (Model.TopUrlDomainList != null)
                     {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Domain)
-                        </td>
-                        <td style="padding-left:10px;">
-                            @Html.DisplayFor(modelItem => item.DomainCount)
-                        </td>
-                    </tr>
+                        foreach (var item in Model.TopUrlDomainList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Domain)
+                                </td>
+                                <td style="padding-left:10px;">
+                                    @Html.DisplayFor(modelItem => item.DomainCount)
+                                </td>
+                            </tr>
+                        }
                     }
-                }
-            </table>
-        </div>
-        <div>
-            <h3>Top Hashtags</h3>
-            <table>
-                <thead>
-                    <tr><th>Hashtag</th><th>Count</th></tr>
-                    <tr></tr>
-                </thead>
-                @if (Model.TopHashtagList != null)
-                {
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <h3>Top Emojies</h3>
+                <table style="width:30%">
+                    <thead>
+                        <tr><th>Emoji</th><th>Count</th></tr>
+                    </thead>
+                    @if (Model.TopEmojis != null)
+                    {
+                        foreach (var item in Model.TopEmojis)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Emoji.EmojiImage)
+                                </td>
+                                <td style="padding-left:10px;">
+                                    @Html.DisplayFor(modelItem => item.EmojiCount)
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <h3>Top Hashtags</h3>
+                <table>
+                    <thead>
+                        <tr><th>Hashtag</th><th>Count</th></tr>
+                        <tr></tr>
+                    </thead>
+                    @if (Model.TopHashtagList != null)
+                    {
 
-                    foreach (var item in Model.TopHashtagList)
-                    {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Hashtag)
-                        </td>
-                        <td style="padding-left:10px;">
-                            @Html.DisplayFor(modelItem => item.HashtagCount)
-                        </td>
-                    </tr>
+                        foreach (var item in Model.TopHashtagList)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Hashtag)
+                                </td>
+                                <td style="padding-left:10px;">
+                                    @Html.DisplayFor(modelItem => item.HashtagCount)
+                                </td>
+                            </tr>
+                        }
                     }
-                }
-            </table>
+                </table>
+            </div>
         </div>
     }
     else

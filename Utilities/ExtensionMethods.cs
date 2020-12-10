@@ -4,13 +4,15 @@
 // Created          : 12-05-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-05-2020
+// Last Modified On : 12-09-2020
 // ***********************************************************************
 // <copyright file="ExtensionMethods.cs" company="">
 //     Copyright ©  2020
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using System.Collections.Generic;
+
 namespace JackHenryTwitter.Utilities
 {
     /// <summary>
@@ -18,6 +20,18 @@ namespace JackHenryTwitter.Utilities
     /// </summary>
     public static partial class ExtensionMethods
     {
+        /// <summary>
+        /// Adds an item to a dictionary only if there isn't an already existing key.
+        /// </summary>
+        /// <param name="dictionary">The dictionary.</param>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        public static void AddSafe(this Dictionary<object, object> dictionary, object key, object value)
+        {
+            if (!dictionary.ContainsKey(key))
+                dictionary.Add(key, value);
+        }
+
         /// <summary>
         /// Replaces the first instance of a string with another.
         /// </summary>

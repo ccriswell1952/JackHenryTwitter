@@ -4,7 +4,7 @@
 // Created          : 12-04-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-05-2020
+// Last Modified On : 12-09-2020
 // ***********************************************************************
 // <copyright file="AppVariableDataSource.cs" company="">
 //     Copyright ©  2020
@@ -18,8 +18,10 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Tweetinvi;
+using static JackHenryTwitter.Models.TweetStats;
 
 namespace JackHenryTwitter.Models
 {
@@ -30,9 +32,24 @@ namespace JackHenryTwitter.Models
     /// <seealso cref="JackHenryTwitter.Models.IDataSource" />
     public class AppVariableDataSource : IDataSource
     {
-        public TweetData tweetData = new TweetData();
-        public int EmojiInFileRunningCount = 0;
+        /// <summary>
+        /// The emoji base list
+        /// </summary>
         public List<EmojiBase> emojiBaseList = new List<EmojiBase>();
+
+        /// <summary>
+        /// The emoji in file running count
+        /// </summary>
+        public int EmojiInFileRunningCount = 0;
+
+        /// <summary>
+        /// The tweet data
+        /// </summary>
+        public TweetData tweetData = new TweetData();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppVariableDataSource" /> class.
+        /// </summary>
+        /// <param name="secondsToDownload">The seconds to download.</param>
         public AppVariableDataSource(int secondsToDownload)
         {
             this.TimeToTweetDownload = secondsToDownload * 1000; // turning the time into miliseconds
@@ -43,12 +60,15 @@ namespace JackHenryTwitter.Models
             CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppVariableDataSource" /> class.
+        /// </summary>
         public AppVariableDataSource()
         {
             CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
             CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
             var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
-            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath); 
+            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
         }
 
         /// <summary>
@@ -63,9 +83,17 @@ namespace JackHenryTwitter.Models
         /// <value>The combined file path for emojis.</value>
         public string CombinedFilePathForEmojis { get; set; }
 
-        /// <summary>Gets or sets the combined file path for stats.</summary>
+        /// <summary>
+        /// Gets or sets the combined file path for stats.
+        /// </summary>
         /// <value>The combined file path for stats.</value>
         public string CombinedFilePathForStats { get; set; }
+
+        /// <summary>
+        /// Gets or sets the end time for download.
+        /// </summary>
+        /// <value>The end time for download.</value>
+        public DateTime EndTimeForDownload { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is finished loading tweets.
@@ -73,14 +101,22 @@ namespace JackHenryTwitter.Models
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
         public bool IsFinishedLoadingTweets { get; set; }
 
+        /// <summary>
+        /// Gets or sets the start time for download.
+        /// </summary>
+        /// <value>The start time for download.</value>
         public DateTime StartTimeForDownload { get; set; }
-
-        public DateTime EndTimeForDownload { get; set; }
-
-        public int TimeToTweetDownload { get; set; }
-
+        /// <summary>
+        /// Gets or sets the time left for tweet download.
+        /// </summary>
+        /// <value>The time left for tweet download.</value>
         public int TimeLeftForTweetDownload { get; set; }
 
+        /// <summary>
+        /// Gets or sets the time to download this tweet.
+        /// </summary>
+        /// <value>The time to tweet download.</value>
+        public int TimeToTweetDownload { get; set; }
         /// <summary>
         /// Adds the tweet data to data source.
         /// </summary>
@@ -114,7 +150,7 @@ namespace JackHenryTwitter.Models
             {
                 EmojiInFileRunningCount++;
                 List<EmojiBase> thisList = EmojiParser.GetEmojiList(emojiList);
-                emojiBaseList.AddRange(thisList); 
+                emojiBaseList.AddRange(thisList);
             }
         }
 
@@ -133,6 +169,7 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Gets the sample tweets from twitter.
         /// </summary>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public async Task<bool> GetSampleTweetsFromTwitter()
         {
             this.StartTimeForDownload = DateTime.Now;
@@ -163,9 +200,140 @@ namespace JackHenryTwitter.Models
             }
         }
 
-        /// <summary>Writes the tweet stats to data set.</summary>
-        /// <returns>
-        ///   <c>true</c> if records were added to the data set, <c>false</c> otherwise.</returns>
+        /// <summary>
+        /// Updates the top domains.
+        /// </summary>
+        /// <param name="existingTopDomains">The existing top domains.</param>
+        /// <param name="newTopDomains">The new top domains.</param>
+        /// <returns>TweetStats.TopDomains.</returns>
+        public List<TweetStats.TopDomains> UpdateTopDomains(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
+        {
+            List<TopDomains> mergedTopDomains = new List<TopDomains>();
+            List<TopDomains> combinedLists = new List<TopDomains>();
+            combinedLists.AddRange(newTopDomains);
+            combinedLists.AddRange(existingTopDomains);
+
+            var uniqueDomain = combinedLists.Select(s => new { s.Domain }).Distinct();
+            foreach (var item in uniqueDomain)
+            {
+                TopDomains topDomain = new TopDomains();
+                var domain = item.Domain;
+                topDomain.Domain = domain;
+                int domainCount = 0;
+                foreach (var te in combinedLists)
+                {
+                    if (te.Domain.Equals(domain))
+                    {
+                        domainCount += te.DomainCount;
+                    }
+                }
+                topDomain.DomainCount = domainCount;
+                mergedTopDomains.Add(topDomain);
+            }
+            mergedTopDomains = mergedTopDomains.OrderByDescending(o => o.DomainCount).Take(100).ToList();
+            return mergedTopDomains;
+        }
+
+        /// <summary>
+        /// Updates the top hashtags.
+        /// </summary>
+        /// <param name="existingTopHashtags">The existing top hashtags.</param>
+        /// <param name="newTopHashtags">The new top hashtags.</param>
+        /// <returns>TweetStats.TopHashtags.</returns>
+        public List<TopHashtags> UpdateTopHashtags(List<TopHashtags> existingTopHashtags, List<TweetStats.TopHashtags> newTopHashtags)
+        {
+            List<TopHashtags> topHashtags = new List<TopHashtags>();
+            List<TopHashtags> combinedLists = new List<TopHashtags>();
+            combinedLists.AddRange(newTopHashtags);
+            combinedLists.AddRange(existingTopHashtags);
+
+            var uniqueHashtag = combinedLists.Select(s => new { s.Hashtag }).Distinct();
+            foreach (var item in uniqueHashtag)
+            {
+                TopHashtags topHashTag = new TopHashtags();
+                var hashtag = item.Hashtag;
+                topHashTag.Hashtag = hashtag;
+                int HashtagCount = 0;
+                foreach (var te in combinedLists)
+                {
+                    if (te.Hashtag.Equals(item.Hashtag))
+                    {
+                        HashtagCount += te.HashtagCount;
+                    }
+                }
+                topHashTag.HashtagCount = HashtagCount;
+                topHashtags.Add(topHashTag);
+            }
+            topHashtags = topHashtags.OrderByDescending(o => o.HashtagCount).Take(100).ToList();
+            return topHashtags;
+        }
+
+        /// <summary>
+        /// Updates the tweet statistics.
+        /// </summary>
+        /// <param name="newTweetStats">The new tweet stats.</param>
+        /// <returns>TweetStats.</returns>
+        public TweetStats UpdateTweetStatistics(TweetStats newTweetStats)
+        {
+            TweetStats stats = new TweetStats();
+            stats = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
+            stats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
+            stats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
+            stats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
+            stats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
+            stats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
+            stats.SetAverageTimes();
+            var combinedStats = UpdatTopEmojies(stats.TopEmojis, newTweetStats.TopEmojis);
+            stats.TopEmojis = combinedStats;
+            stats.SetPctTweetsWithPhoto(stats.TotalTweetsWithPhoto);
+            stats.SetPctTweetsWithUrl(stats.TotalUrlsInTweets);
+            stats.SetPctTweetsWithEmoji(stats.TweetsWithEmojiCount);
+            stats.TopUrlDomainList = UpdateTopDomains(stats.TopUrlDomainList, newTweetStats.TopUrlDomainList);
+            stats.TopHashtagList = UpdateTopHashtags(stats.TopHashtagList, newTweetStats.TopHashtagList);
+            return stats;
+        }
+
+        /// <summary>
+        /// Updats the top emojies.
+        /// </summary>
+        /// <param name="newEmojiList">The new emoji list.</param>
+        /// <param name="existingList">The existing list.</param>
+        /// <returns>List&lt;TopEmojies&gt;.</returns>
+        public List<TopEmojies> UpdatTopEmojies(List<TopEmojies> newEmojiList, List<TopEmojies> existingList)
+        {
+            List<TopEmojies> topEmojis = new List<TopEmojies>();
+            List<TopEmojies> combinedLists = new List<TopEmojies>();
+            combinedLists.AddRange(newEmojiList);
+            combinedLists.AddRange(existingList);
+
+            var uniqueEmojies = combinedLists.Select(s => new { s.Emoji.EmojiHtmlEncode, s.Emoji.EmojiImage }).Distinct();
+            foreach (var item in uniqueEmojies)
+            {
+                TopEmojies topEmoji = new TopEmojies();
+                EmojiBase emoji = new EmojiBase();
+                var emojiHtmlEncode = item.EmojiImage;
+                emoji.EmojiHtmlEncode = emojiHtmlEncode;
+                emoji.EmojiImage = item.EmojiImage;
+                topEmoji.Emoji = emoji;
+                int emojiCount = 0;
+                foreach (var te in combinedLists)
+                {
+                    if (te.Emoji.EmojiHtmlEncode.Equals(item.EmojiHtmlEncode))
+                    {
+                        emojiCount += te.EmojiCount;
+                    }
+                }
+                topEmoji.EmojiCount = emojiCount;
+                topEmojis.Add(topEmoji);
+            }
+            topEmojis = topEmojis.OrderByDescending(o => o.EmojiCount).Take(100).ToList();
+            return topEmojis;
+        }
+
+        /// <summary>
+        /// Writes the tweet stats to data set.
+        /// </summary>
+        /// <returns><c>true</c> if records were added to the data set, <c>false</c> otherwise.</returns>
         public bool WriteTweetStatsToDataSet()
         {
             this.EndTimeForDownload = DateTime.Now;
@@ -213,118 +381,6 @@ namespace JackHenryTwitter.Models
             }
             IsFinishedLoadingTweets = true;
             return IsFinishedLoadingTweets;
-        }
-
-        public TweetStats UpdateTweetStatistics(TweetStats newTweetStats)
-        {
-            TweetStats stats = new TweetStats();
-            stats = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
-            stats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
-            stats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
-            stats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
-            stats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
-            stats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
-            stats.SetAverageTimes();
-            stats.SetPctTweetsWithPhoto(stats.TotalTweetsWithPhoto);
-            stats.SetPctTweetsWithUrl(stats.TotalUrlsInTweets);
-            stats.TopUrlDomainList = UpdateTopDomains(stats.TopUrlDomainList, newTweetStats.TopUrlDomainList);
-            stats.TopHashtagList = UpdateTopHashtags(stats.TopHashtagList, newTweetStats.TopHashtagList);
-            return stats;
-        }
-
-        public List<TweetStats.TopDomains> UpdateTopDomains(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
-        {
-            List<TweetStats.TopDomains> mergedTopDomains = new List<TweetStats.TopDomains>();
-
-            // we iterate over the new top domains we just received
-            List<string> mergedNames = new List<string>();
-            foreach (var domain in newTopDomains)
-            {
-                string newlyAddedDomainName = domain.Domain.ToLower();
-                int newlyAddedDomainCount = domain.DomainCount;
-                if (!mergedNames.Contains(newlyAddedDomainName))
-                {
-                    mergedNames.Add(newlyAddedDomainName);
-                    foreach (var existingDomain in existingTopDomains)
-                    {
-                        string existingDomainName = existingDomain.Domain.ToLower();
-                        int existingDomainCount = existingDomain.DomainCount;
-
-                        // if both collections contain the same domain name we add it to the collection we return and add the old count to the new count.
-                        if (existingDomainName == newlyAddedDomainName)
-                        {
-                            TweetStats.TopDomains topDomain = new TweetStats.TopDomains();
-                            topDomain.Domain = newlyAddedDomainName;
-                            topDomain.DomainCount = newlyAddedDomainCount + existingDomainCount;
-                            mergedTopDomains.Add(topDomain);
-                            break;
-                        }
-                    }
-                }
-            }
-            foreach (var existingDomain in existingTopDomains)
-            {
-                string existingDomainName = existingDomain.Domain.ToLower();
-                int existingDomainCount = existingDomain.DomainCount;
-                if (!mergedNames.Contains(existingDomainName))
-                {
-                    mergedNames.Add(existingDomainName);
-                    TweetStats.TopDomains topDomain = new TweetStats.TopDomains();
-                    topDomain.Domain = existingDomainName;
-                    topDomain.DomainCount = existingDomainCount;
-                    mergedTopDomains.Add(topDomain);
-                }
-            }
-
-            return mergedTopDomains;
-        }
-
-        public List<TweetStats.TopHashtags> UpdateTopHashtags(List<TweetStats.TopHashtags> existingTopHashtags, List<TweetStats.TopHashtags> newTopHashtags)
-        {
-            List<TweetStats.TopHashtags> mergedTopHashtags = new List<TweetStats.TopHashtags>();
-
-            List<string> mergedNames = new List<string>();
-            // we iterate over the new top hashtags just downloaded
-            foreach (var hashtags in newTopHashtags)
-            {
-                string newlyAddedHashtagName = hashtags.Hashtag.ToLower();
-                int newlyAddedHashtagCount = hashtags.HashtagCount;
-                if (!mergedNames.Contains(newlyAddedHashtagName))
-                {
-                    foreach (var existingHashtag in existingTopHashtags)
-                    {
-                        string existingHashtagName = existingHashtag.Hashtag.ToLower();
-                        int existingHashtagCount = existingHashtag.HashtagCount;
-
-                        // if both collections contain the same hashtags name we add it to the collection we return and add the old count to the new count.
-                        if (existingHashtagName == newlyAddedHashtagName)
-                        {
-                            TweetStats.TopHashtags topHashtag = new TweetStats.TopHashtags();
-                            topHashtag.Hashtag = newlyAddedHashtagName;
-                            topHashtag.HashtagCount = newlyAddedHashtagCount + existingHashtagCount;
-                            mergedTopHashtags.Add(topHashtag);
-                            mergedNames.Add(newlyAddedHashtagName);
-                            break;
-                        }
-                    }
-                }
-            }
-
-            foreach (var existingDomain in existingTopHashtags)
-            {
-                string existingHashtagName = existingDomain.Hashtag.ToLower();
-                int existingHashtagCount = existingDomain.HashtagCount;
-                if (!mergedNames.Contains(existingHashtagName))
-                {
-                    mergedNames.Add(existingHashtagName);
-                    TweetStats.TopHashtags topHashtag = new TweetStats.TopHashtags();
-                    topHashtag.Hashtag = existingHashtagName;
-                    topHashtag.HashtagCount = existingHashtagCount;
-                    mergedTopHashtags.Add(topHashtag);
-                }
-            }
-
-            return mergedTopHashtags;
         }
     }
 }

@@ -213,6 +213,7 @@
     <Content Include="Content\Emoji\emoji_pretty.json" />
     <Content Include="App_Data\tweetJson.json" />
     <Content Include="App_Data\tweetStatsJson.json" />
+    <Content Include="App_Data\emojiStatsJson.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
