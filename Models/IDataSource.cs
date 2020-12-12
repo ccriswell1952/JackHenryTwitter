@@ -13,6 +13,7 @@
 // ***********************************************************************
 
 using System.Collections.Generic;
+using static JackHenryTwitter.Models.TweetStats;
 
 namespace JackHenryTwitter.Models
 {
@@ -69,6 +70,14 @@ namespace JackHenryTwitter.Models
         /// <param name="newTweetStats">The new tweet stats.</param>
         /// <returns>TweetStats.</returns>
         TweetStats UpdateTweetStatistics(TweetStats newTweetStats);
+
+        /// <summary>
+        /// Updates the top emojies.
+        /// </summary>
+        /// <param name="newEmojiList">The new emoji list.</param>
+        /// <param name="existingList">The existing list.</param>
+        /// <returns>List&lt;TopEmojies&gt;.</returns>
+        List<TopEmojies> UpdateTopEmojies(List<TopEmojies> newEmojiList, List<TopEmojies> existingList);
 
         /// <summary>
         /// Writes the tweet stats to data set.

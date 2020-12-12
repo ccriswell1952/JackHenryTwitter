@@ -13,7 +13,6 @@
 // ***********************************************************************
 using JackHenryTwitter.Utilities;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -29,7 +28,6 @@ namespace JackHenryTwitter.Models
     /// <seealso cref="JackHenryTwitter.Models.IDataSource" />
     public class DataSource : IDataSource
     {
-
         #region Public Fields
 
         /// <summary>
@@ -90,18 +88,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
         public bool IsFinishedLoadingTweets { get; set; }
-
-        /// <summary>
-        /// Gets or sets the start time for download.
-        /// </summary>
-        /// <value>The start time for download.</value>
-        public DateTime StartTimeForDownload { get; set; }
-
-        /// <summary>
-        /// Gets or sets the time left for tweet download.
-        /// </summary>
-        /// <value>The time left for tweet download.</value>
-        public int TimeLeftForTweetDownload { get; set; }
 
         public TweetDownloadProperties tweetDownloadProperties { get; set; }
 
@@ -193,6 +179,43 @@ namespace JackHenryTwitter.Models
         }
 
         /// <summary>
+        /// Updats the top emojies.
+        /// </summary>
+        /// <param name="newEmojiList">The new emoji list.</param>
+        /// <param name="existingList">The existing list.</param>
+        /// <returns>List&lt;TopEmojies&gt;.</returns>
+        public List<TopEmojies> UpdateTopEmojies(List<TopEmojies> newEmojiList, List<TopEmojies> existingList)
+        {
+            List<TopEmojies> topEmojis = new List<TopEmojies>();
+            List<TopEmojies> combinedLists = new List<TopEmojies>();
+            combinedLists.AddRange(newEmojiList);
+            combinedLists.AddRange(existingList);
+
+            var uniqueEmojies = combinedLists.Select(s => new { s.Emoji.EmojiHtmlEncode, s.Emoji.EmojiImage }).Distinct();
+            foreach (var item in uniqueEmojies)
+            {
+                TopEmojies topEmoji = new TopEmojies();
+                EmojiBase emoji = new EmojiBase();
+                var emojiHtmlEncode = item.EmojiImage;
+                emoji.EmojiHtmlEncode = emojiHtmlEncode;
+                emoji.EmojiImage = item.EmojiImage;
+                topEmoji.Emoji = emoji;
+                int emojiCount = 0;
+                foreach (var te in combinedLists)
+                {
+                    if (te.Emoji.EmojiHtmlEncode.Equals(item.EmojiHtmlEncode))
+                    {
+                        emojiCount += te.EmojiCount;
+                    }
+                }
+                topEmoji.EmojiCount = emojiCount;
+                topEmojis.Add(topEmoji);
+            }
+            topEmojis = topEmojis.OrderByDescending(o => o.EmojiCount).Take(100).ToList();
+            return topEmojis;
+        }
+
+        /// <summary>
         /// Updates the top hashtags.
         /// </summary>
         /// <param name="existingTopHashtags">The existing top hashtags.</param>
@@ -241,7 +264,7 @@ namespace JackHenryTwitter.Models
             stats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
             stats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
             stats.SetAverageTimes();
-            var combinedStats = UpdatTopEmojies(stats.TopEmojis, newTweetStats.TopEmojis);
+            var combinedStats = UpdateTopEmojies(stats.TopEmojis, newTweetStats.TopEmojis);
             stats.TopEmojis = combinedStats;
             stats.SetPctTweetsWithPhoto(stats.TotalTweetsWithPhoto);
             stats.SetPctTweetsWithUrl(stats.TotalUrlsInTweets);
@@ -249,43 +272,6 @@ namespace JackHenryTwitter.Models
             stats.TopUrlDomainList = UpdateTopDomains(stats.TopUrlDomainList, newTweetStats.TopUrlDomainList);
             stats.TopHashtagList = UpdateTopHashtags(stats.TopHashtagList, newTweetStats.TopHashtagList);
             return stats;
-        }
-
-        /// <summary>
-        /// Updats the top emojies.
-        /// </summary>
-        /// <param name="newEmojiList">The new emoji list.</param>
-        /// <param name="existingList">The existing list.</param>
-        /// <returns>List&lt;TopEmojies&gt;.</returns>
-        public List<TopEmojies> UpdatTopEmojies(List<TopEmojies> newEmojiList, List<TopEmojies> existingList)
-        {
-            List<TopEmojies> topEmojis = new List<TopEmojies>();
-            List<TopEmojies> combinedLists = new List<TopEmojies>();
-            combinedLists.AddRange(newEmojiList);
-            combinedLists.AddRange(existingList);
-
-            var uniqueEmojies = combinedLists.Select(s => new { s.Emoji.EmojiHtmlEncode, s.Emoji.EmojiImage }).Distinct();
-            foreach (var item in uniqueEmojies)
-            {
-                TopEmojies topEmoji = new TopEmojies();
-                EmojiBase emoji = new EmojiBase();
-                var emojiHtmlEncode = item.EmojiImage;
-                emoji.EmojiHtmlEncode = emojiHtmlEncode;
-                emoji.EmojiImage = item.EmojiImage;
-                topEmoji.Emoji = emoji;
-                int emojiCount = 0;
-                foreach (var te in combinedLists)
-                {
-                    if (te.Emoji.EmojiHtmlEncode.Equals(item.EmojiHtmlEncode))
-                    {
-                        emojiCount += te.EmojiCount;
-                    }
-                }
-                topEmoji.EmojiCount = emojiCount;
-                topEmojis.Add(topEmoji);
-            }
-            topEmojis = topEmojis.OrderByDescending(o => o.EmojiCount).Take(100).ToList();
-            return topEmojis;
         }
 
         /// <summary>
@@ -342,6 +328,5 @@ namespace JackHenryTwitter.Models
         }
 
         #endregion Public Methods
-
     }
 }
