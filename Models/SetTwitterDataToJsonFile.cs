@@ -23,10 +23,10 @@ namespace JackHenryTwitter.Models
 {
     /// <summary>
     /// Class AppVariableDataSource.
-    /// Implements the <see cref="JackHenryTwitter.Models.IDataSource" />
+    /// Implements the <see cref="JackHenryTwitter.Models.ISetTwitterData" />
     /// </summary>
-    /// <seealso cref="JackHenryTwitter.Models.IDataSource" />
-    public class DataSource : IDataSource
+    /// <seealso cref="JackHenryTwitter.Models.ISetTwitterData" />
+    public class SetTwitterDataToJsonFile : ISetTwitterData
     {
         #region Public Fields
 
@@ -50,48 +50,52 @@ namespace JackHenryTwitter.Models
         #region Public Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataSource" /> class.
+        /// Initializes a new instance of the <see cref="SetTwitterDataToJsonFile" /> class.
         /// </summary>
-        public DataSource()
+        public SetTwitterDataToJsonFile()
         {
             tweetData.Tweets = new List<Tweet>();
-            CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
-            CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
+            CombinedFilePathForData = Utilities.GetTwitterDetails.GetTweetJsonFilePath(false);
+            CombinedFilePathForStats = Utilities.GetTwitterDetails.GetTweetJsonFilePath(true);
             var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
-            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
+            CombinedFilePathForEmojis = Utilities.GetTwitterDetails.GetFilePath(filePath);
         }
 
         #endregion Public Constructors
 
         #region Public Properties
 
+        public TweetDownloadProperties tweetDownloadProperties { get; set; }
+
+        #endregion Public Properties
+
+        #region Private Properties
+
         /// <summary>
         /// Gets or sets the combined file path.
         /// </summary>
         /// <value>The combined file path.</value>
-        public string CombinedFilePathForData { get; set; }
+        private string CombinedFilePathForData { get; set; }
 
         /// <summary>
         /// Gets or sets the combined file path for emojis.
         /// </summary>
         /// <value>The combined file path for emojis.</value>
-        public string CombinedFilePathForEmojis { get; set; }
+        private string CombinedFilePathForEmojis { get; set; }
 
         /// <summary>
         /// Gets or sets the combined file path for stats.
         /// </summary>
         /// <value>The combined file path for stats.</value>
-        public string CombinedFilePathForStats { get; set; }
+        private string CombinedFilePathForStats { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is finished loading tweets.
         /// </summary>
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
-        public bool IsFinishedLoadingTweets { get; set; }
+        private bool IsFinishedLoadingTweets { get; set; }
 
-        public TweetDownloadProperties tweetDownloadProperties { get; set; }
-
-        #endregion Public Properties
+        #endregion Private Properties
 
         #region Public Methods
 
@@ -257,7 +261,7 @@ namespace JackHenryTwitter.Models
         public TweetStats UpdateTweetStatistics(TweetStats newTweetStats)
         {
             TweetStats stats = new TweetStats();
-            stats = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
+            stats = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
             stats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
             stats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
             stats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;

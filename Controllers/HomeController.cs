@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using JackHenryTwitter.Models;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -51,7 +52,7 @@ namespace JackHenryTwitter.Controllers
         /// <returns>ActionResult.</returns>
         public ActionResult GetTweetStatistics()
         {
-            var model = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
+            var model = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
             return PartialView(model);
         }
 
@@ -62,7 +63,7 @@ namespace JackHenryTwitter.Controllers
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
         {
-            await Utilities.Utilities.GetTweetStreamFromTwitter(secondsToRun);
+            await Utilities.GetTwitterDetails.GetTweetStreamFromTwitter(secondsToRun);
             return true;
         }
 
@@ -90,7 +91,7 @@ namespace JackHenryTwitter.Controllers
         /// <returns>ActionResult.</returns>
         public ActionResult TweetTest()
         {
-            var model = Utilities.Utilities.GetDeserializedFileJsonStatisitcsData();
+            var model = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
             return View(model);
         }
     }

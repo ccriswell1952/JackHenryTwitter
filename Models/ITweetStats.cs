@@ -39,6 +39,12 @@ namespace JackHenryTwitter.Models
         /// <value>The average tweets received per second.</value>
         double AverageTweetsReceivedPerSecond { get; set; }
         /// <summary>
+        /// Gets the host from URL string.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        /// <returns>System.String.</returns>
+        string GetHostFromUrlString(string url);
+        /// <summary>
         /// Gets or sets the PCT tweets with emojis.
         /// </summary>
         /// <value>The PCT tweets with emojis.</value>

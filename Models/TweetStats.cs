@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -22,6 +23,7 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class TweetStats : ITweetStats
     {
+
         #region Private Fields
 
         /// <summary>
@@ -149,6 +151,24 @@ namespace JackHenryTwitter.Models
         #endregion Public Properties
 
         #region Public Methods
+
+        /// <summary>
+        /// Gets the host from URL string.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        /// <returns>System.String.</returns>
+        public string GetHostFromUrlString(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+            {
+                return String.Empty;
+            }
+            if (url.Contains(@"://"))
+            {
+                url = url.Split(new string[] { "://" }, 2, StringSplitOptions.None)[1];
+            }
+            return url.Split('/')[0];
+        }
 
         /// <summary>
         /// Sets all tweet stats properties.
@@ -381,7 +401,7 @@ namespace JackHenryTwitter.Models
 
             foreach (var url in urlList)
             {
-                var host = Utilities.Utilities.GetHostFromUrlString(url);
+                var host = this.GetHostFromUrlString(url);
                 hostList.Add(host);
             }
             uniqueHostList = hostList.Select(s => s.Trim()).Distinct().ToList();
@@ -409,6 +429,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public class TopDomains
         {
+
             #region Public Properties
 
             /// <summary>
@@ -424,6 +445,7 @@ namespace JackHenryTwitter.Models
             public int DomainCount { get; set; }
 
             #endregion Public Properties
+
         }
 
         /// <summary>
@@ -431,6 +453,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public class TopEmojies
         {
+
             #region Public Properties
 
             /// <summary>
@@ -446,6 +469,7 @@ namespace JackHenryTwitter.Models
             public int EmojiCount { get; set; }
 
             #endregion Public Properties
+
         }
 
         /// <summary>
@@ -453,6 +477,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public class TopHashtags
         {
+
             #region Public Properties
 
             /// <summary>
@@ -468,8 +493,10 @@ namespace JackHenryTwitter.Models
             public int HashtagCount { get; set; }
 
             #endregion Public Properties
+
         }
 
         #endregion Public Classes
+
     }
 }

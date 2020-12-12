@@ -20,7 +20,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Interface IDataSource
     /// </summary>
-    internal interface IDataSource
+    internal interface ISetTwitterData
     {
 
         #region Public Properties
