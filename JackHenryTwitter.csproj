@@ -200,7 +200,6 @@
     <Compile Include="Models\ITweetStats.cs" />
     <Compile Include="Models\TweetClasses.cs" />
     <Compile Include="Models\TweetStats.cs" />
-    <Compile Include="Models\TwitterCredentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\EmojiParser.cs" />
     <Compile Include="Utilities\ExtensionMethods.cs" />
