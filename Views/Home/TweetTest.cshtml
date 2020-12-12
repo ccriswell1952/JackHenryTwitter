@@ -59,7 +59,7 @@
                 }
             })
             var intTimeoutValue = parseInt(secondsToRun) * 1000;
-            var addTime = intTimeoutValue * .20;
+            var addTime = intTimeoutValue * .30;
             var totalTime = intTimeoutValue + addTime;
             var countDown = totalTime / 1000;
             var spanTimer = $("#spanTimer");
@@ -67,14 +67,14 @@
             var timer = setInterval(function () {
                 countDown = countDown - 1;
                 spanTimer.text(countDown);
-            }, 1000);
+            }, 1300);
             setTimeout(function () {
                 clearInterval(timer);
                 $("#divWaiting").hide();
                 $("#btnRefreshTweetData").removeAttr("disabled");
                 $("#btnViewStats").trigger("click");
                 alert("Tweet data refreshed and new statistics loaded.");
-            }, (totalTime));
+            }, totalTime);
         });
 
         $("#btnViewStats").on("click", function () {

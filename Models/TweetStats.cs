@@ -20,22 +20,23 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class TweetStats.
     /// </summary>
-    public partial class TweetStats
+    public partial class TweetStats : ITweetStats
     {
+        #region Private Fields
+
         /// <summary>
         /// The emoji list
         /// </summary>
         private List<EmojiBase> emojiList = new List<EmojiBase>();
 
         /// <summary>
-        /// The top emojies
-        /// </summary>
-        private List<TopEmojies> topEmojies = new List<TopEmojies>();
-
-        /// <summary>
         /// The tweet root
         /// </summary>
         private Root tweetRoot = new Root();
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TweetStats" /> class.
@@ -56,6 +57,10 @@ namespace JackHenryTwitter.Models
             this.emojiList = emojiList;
             this.TweetsWithEmojiCount = tweetsWithEmojiCount;
         }
+
+        #endregion Public Constructors
+
+        #region Public Properties
 
         /// <summary>
         /// Gets or sets the average tweets received per hour.
@@ -141,6 +146,10 @@ namespace JackHenryTwitter.Models
         /// <value>The tweets with emoji count.</value>
         public int TweetsWithEmojiCount { get; set; }
 
+        #endregion Public Properties
+
+        #region Public Methods
+
         /// <summary>
         /// Sets all tweet stats properties.
         /// </summary>
@@ -149,7 +158,7 @@ namespace JackHenryTwitter.Models
             this.TotalTweetsReceived = tweetRoot.TweetData.Tweets.Count;
             SetAverageTimes();
             SetPctTweetsWithPhoto();
-            SetPctTweetsWithEmoji(0);
+            SetPctTweetsWithEmoji();
             SetPctTweetsWithUrl();
             SetTopUrlDomains();
             SetTopHashtags();
@@ -176,7 +185,6 @@ namespace JackHenryTwitter.Models
             if (totalEmojis > 0)
             {
                 this.TweetsWithEmojiCount = totalEmojis;
-                this.PctTweetsWithEmojis = ((decimal)this.TweetsWithEmojiCount / (decimal)this.TotalTweetsReceived) * 100;
             }
             else
             {
@@ -392,11 +400,17 @@ namespace JackHenryTwitter.Models
             this.TopUrlDomainList = topDomainList.OrderByDescending(o => o.DomainCount).ToList();
         }
 
+        #endregion Public Methods
+
+        #region Public Classes
+
         /// <summary>
         /// Class TopDomains.
         /// </summary>
         public class TopDomains
         {
+            #region Public Properties
+
             /// <summary>
             /// Gets or sets the domain name.
             /// </summary>
@@ -408,6 +422,8 @@ namespace JackHenryTwitter.Models
             /// </summary>
             /// <value>The domain count.</value>
             public int DomainCount { get; set; }
+
+            #endregion Public Properties
         }
 
         /// <summary>
@@ -415,6 +431,8 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public class TopEmojies
         {
+            #region Public Properties
+
             /// <summary>
             /// Gets or sets the emoji.
             /// </summary>
@@ -426,6 +444,8 @@ namespace JackHenryTwitter.Models
             /// </summary>
             /// <value>The emoji count.</value>
             public int EmojiCount { get; set; }
+
+            #endregion Public Properties
         }
 
         /// <summary>
@@ -433,6 +453,8 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public class TopHashtags
         {
+            #region Public Properties
+
             /// <summary>
             /// Gets or sets the hashtag.
             /// </summary>
@@ -444,6 +466,10 @@ namespace JackHenryTwitter.Models
             /// </summary>
             /// <value>The hashtag count.</value>
             public int HashtagCount { get; set; }
+
+            #endregion Public Properties
         }
+
+        #endregion Public Classes
     }
 }

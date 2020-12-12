@@ -13,7 +13,6 @@
 // ***********************************************************************
 
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace JackHenryTwitter.Models
 {
@@ -22,6 +21,19 @@ namespace JackHenryTwitter.Models
     /// </summary>
     internal interface IDataSource
     {
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets the tweet download properties.
+        /// </summary>
+        /// <value>The tweet download properties.</value>
+        TweetDownloadProperties tweetDownloadProperties { get; set; }
+
+        #endregion Public Properties
+
+        #region Public Methods
+
         /// <summary>
         /// Adds the tweet data to data source.
         /// </summary>
@@ -31,15 +43,9 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Formats the tweet data for data insert.
         /// </summary>
-        /// <param name="tweetData">The tweet data.</param>
+        /// <param name="tweetJsonData">The tweet data.</param>
         /// <returns>System.String.</returns>
-        string FormatTweetDataForDataInsert(string tweetData);
-
-        /// <summary>
-        /// Gets the sample tweets from twitter.
-        /// </summary>
-        /// <returns>Task&lt;System.Boolean&gt;.</returns>
-        Task<bool> GetSampleTweetsFromTwitter();
+        string FormatTweetDataForDataInsert(string tweetJsonData);
 
         /// <summary>
         /// Updates the top domains.
@@ -67,7 +73,10 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Writes the tweet stats to data set.
         /// </summary>
-        /// <returns><c>true</c> if if the tweet stats were written to the dataset, <c>false</c> otherwise.</returns>
-        bool WriteTweetStatsToDataSet();
+        /// <returns><c>true</c> if the tweet stats were written to the dataset, <c>false</c> otherwise.</returns>
+        bool WriteTweetStatsToDataSet(TweetDownloadProperties passedTweetDownloadProperties);
+
+        #endregion Public Methods
+
     }
 }

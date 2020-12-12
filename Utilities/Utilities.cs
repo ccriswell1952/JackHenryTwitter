@@ -18,6 +18,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Tweetinvi;
 using Tweetinvi.Models;
 
 namespace JackHenryTwitter.Utilities
@@ -27,6 +28,9 @@ namespace JackHenryTwitter.Utilities
     /// </summary>
     public static partial class Utilities
     {
+
+        #region Public Methods
+
         /// <summary>
         /// Gets the deserialized file json data.
         /// </summary>
@@ -118,6 +122,7 @@ namespace JackHenryTwitter.Utilities
             string relativePath = isStatsFile ? ConfigurationManager.AppSettings["TweetStatsJsonFilePath"] : ConfigurationManager.AppSettings["TweetJsonFilePath"];
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
         }
+
         /// <summary>
         /// Gets the tweet stream from twitter.
         /// </summary>
@@ -125,8 +130,11 @@ namespace JackHenryTwitter.Utilities
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public static async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
         {
-            var appVarDataSrc = new AppVariableDataSource(secondsToRun);
-            return await appVarDataSrc.GetSampleTweetsFromTwitter();
+            var dataSource = new DataSource();
+            ReadOnlyTwitterCredentials twitterCredentials = GetTwitterCredentials();
+            TwitterClient twitterClient = new TwitterClient(twitterCredentials);
+            GetDataFromTwitter getDataFromTwitter = new GetDataFromTwitter(secondsToRun, dataSource, twitterClient);
+            return await getDataFromTwitter.GetSampleTweetsFromTwitter();
         }
 
         /// <summary>
@@ -141,5 +149,8 @@ namespace JackHenryTwitter.Utilities
                 ConfigurationManager.AppSettings["BEARER_TOKEN"]);
             return new ReadOnlyTwitterCredentials(basicCredentials);
         }
+
+        #endregion Public Methods
+
     }
 }

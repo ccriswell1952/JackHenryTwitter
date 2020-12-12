@@ -16,11 +16,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Tweetinvi;
 using static JackHenryTwitter.Models.TweetStats;
 
 namespace JackHenryTwitter.Models
@@ -30,8 +27,11 @@ namespace JackHenryTwitter.Models
     /// Implements the <see cref="JackHenryTwitter.Models.IDataSource" />
     /// </summary>
     /// <seealso cref="JackHenryTwitter.Models.IDataSource" />
-    public class AppVariableDataSource : IDataSource
+    public class DataSource : IDataSource
     {
+
+        #region Public Fields
+
         /// <summary>
         /// The emoji base list
         /// </summary>
@@ -46,30 +46,26 @@ namespace JackHenryTwitter.Models
         /// The tweet data
         /// </summary>
         public TweetData tweetData = new TweetData();
+
+        #endregion Public Fields
+
+        #region Public Constructors
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppVariableDataSource" /> class.
+        /// Initializes a new instance of the <see cref="DataSource" /> class.
         /// </summary>
-        /// <param name="secondsToDownload">The seconds to download.</param>
-        public AppVariableDataSource(int secondsToDownload)
+        public DataSource()
         {
-            this.TimeToTweetDownload = secondsToDownload * 1000; // turning the time into miliseconds
-            tweetData.Tweets = new System.Collections.Generic.List<Tweet>();
+            tweetData.Tweets = new List<Tweet>();
             CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
             CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
             var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
             CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AppVariableDataSource" /> class.
-        /// </summary>
-        public AppVariableDataSource()
-        {
-            CombinedFilePathForData = Utilities.Utilities.GetTweetJsonFilePath(false);
-            CombinedFilePathForStats = Utilities.Utilities.GetTweetJsonFilePath(true);
-            var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
-            CombinedFilePathForEmojis = Utilities.Utilities.GetFilePath(filePath);
-        }
+        #endregion Public Constructors
+
+        #region Public Properties
 
         /// <summary>
         /// Gets or sets the combined file path.
@@ -90,12 +86,6 @@ namespace JackHenryTwitter.Models
         public string CombinedFilePathForStats { get; set; }
 
         /// <summary>
-        /// Gets or sets the end time for download.
-        /// </summary>
-        /// <value>The end time for download.</value>
-        public DateTime EndTimeForDownload { get; set; }
-
-        /// <summary>
         /// Gets or sets a value indicating whether this instance is finished loading tweets.
         /// </summary>
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
@@ -106,17 +96,19 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The start time for download.</value>
         public DateTime StartTimeForDownload { get; set; }
+
         /// <summary>
         /// Gets or sets the time left for tweet download.
         /// </summary>
         /// <value>The time left for tweet download.</value>
         public int TimeLeftForTweetDownload { get; set; }
 
-        /// <summary>
-        /// Gets or sets the time to download this tweet.
-        /// </summary>
-        /// <value>The time to tweet download.</value>
-        public int TimeToTweetDownload { get; set; }
+        public TweetDownloadProperties tweetDownloadProperties { get; set; }
+
+        #endregion Public Properties
+
+        #region Public Methods
+
         /// <summary>
         /// Adds the tweet data to data source.
         /// </summary>
@@ -155,49 +147,15 @@ namespace JackHenryTwitter.Models
         }
 
         /// <summary>
-        /// Formats the tweet data for data insert.
+        /// Formats the tweet Json data for data insert.
         /// </summary>
-        /// <param name="tweetData">The tweet data.</param>
+        /// <param name="tweetJsonData">The tweets Json data.</param>
         /// <returns>System.String.</returns>
-        public string FormatTweetDataForDataInsert(string tweetData)
+        public string FormatTweetDataForDataInsert(string tweetJsonData)
         {
-            string returnValue = tweetData.ReplaceFirst("{", ",");
-            returnValue = tweetData.ReplaceLast("}", "");
+            string returnValue = tweetJsonData.ReplaceFirst("{", ",");
+            returnValue = tweetJsonData.ReplaceLast("}", "");
             return returnValue;
-        }
-
-        /// <summary>
-        /// Gets the sample tweets from twitter.
-        /// </summary>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        public async Task<bool> GetSampleTweetsFromTwitter()
-        {
-            this.StartTimeForDownload = DateTime.Now;
-            IsFinishedLoadingTweets = false;
-            var timer = Stopwatch.StartNew();
-            var userClient = new TwitterClient(Utilities.Utilities.GetTwitterCredentials());
-            var sampleStream = userClient.StreamsV2.CreateSampleStream();
-            try
-            {
-                sampleStream.TweetReceived += (sender, eventArgs) =>
-                {
-                    var json = eventArgs.Json;
-                    AddStreamingTweetToTempDataset(json);
-                    if (timer.ElapsedMilliseconds >= this.TimeToTweetDownload)
-                    {
-                        sampleStream.StopStream();
-                    }
-                };
-                await sampleStream.StartAsync();
-                return WriteTweetStatsToDataSet();
-            }
-            catch
-            {
-                // we have received all the records twitter will send us.
-                // since we aren't getting any more we write what we already have to the data set.
-                sampleStream.StopStream();
-                return WriteTweetStatsToDataSet();
-            }
         }
 
         /// <summary>
@@ -334,9 +292,9 @@ namespace JackHenryTwitter.Models
         /// Writes the tweet stats to data set.
         /// </summary>
         /// <returns><c>true</c> if records were added to the data set, <c>false</c> otherwise.</returns>
-        public bool WriteTweetStatsToDataSet()
+        public bool WriteTweetStatsToDataSet(TweetDownloadProperties passedTweetDownloadProperties)
         {
-            this.EndTimeForDownload = DateTime.Now;
+            tweetDownloadProperties = passedTweetDownloadProperties;
             Root root = new Root();
             root.TweetData = tweetData;
             var content = JsonConvert.SerializeObject(root);
@@ -359,7 +317,7 @@ namespace JackHenryTwitter.Models
 
             // set the stats for the newly downloaded stream of tweets
             TweetStats tweetStats = new TweetStats(root, emojiBaseList, EmojiInFileRunningCount);
-            tweetStats.TotalDownloadTimeInMiliSeconds = this.TimeToTweetDownload;
+            tweetStats.TotalDownloadTimeInMiliSeconds = tweetDownloadProperties.TimeSpentDownloading * 1000;
             tweetStats.SetAllTweetStatsProperties();
             if (File.Exists(CombinedFilePathForStats))
             {
@@ -379,8 +337,11 @@ namespace JackHenryTwitter.Models
                 writer.Write(content);
                 writer.Close();
             }
-            IsFinishedLoadingTweets = true;
+            this.IsFinishedLoadingTweets = true;
             return IsFinishedLoadingTweets;
         }
+
+        #endregion Public Methods
+
     }
 }
