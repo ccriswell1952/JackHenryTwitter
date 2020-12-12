@@ -245,7 +245,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\TweetTest.cshtml" />
+    <Content Include="Views\Home\TweetStatistics.cshtml" />
     <Content Include="Views\Home\GetTweetStatistics.cshtml" />
   </ItemGroup>
   <ItemGroup />

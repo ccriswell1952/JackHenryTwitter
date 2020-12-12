@@ -89,7 +89,7 @@ namespace JackHenryTwitter.Controllers
         /// Returns the TestTweet view.
         /// </summary>
         /// <returns>ActionResult.</returns>
-        public ActionResult TweetTest()
+        public ActionResult TweetStatistics()
         {
             var model = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
             return View(model);
