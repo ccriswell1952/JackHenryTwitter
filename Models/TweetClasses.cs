@@ -4,7 +4,7 @@
 // Created          : 12-05-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-09-2020
+// Last Modified On : 12-13-2020
 // ***********************************************************************
 // <copyright file="TweetClasses.cs" company="">
 //     Copyright ©  2020
@@ -21,11 +21,17 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Attachments
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the media keys.
         /// </summary>
         /// <value>The media keys.</value>
         public List<string> media_keys { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -33,6 +39,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Data
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the attachments.
         /// </summary>
@@ -98,6 +107,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The text.</value>
         public string text { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -105,11 +117,17 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Description
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the mentions.
         /// </summary>
         /// <value>The mentions.</value>
         public List<Mention> mentions { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -117,11 +135,17 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Entities
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the urls.
         /// </summary>
         /// <value>The urls.</value>
         public List<Url> urls { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -129,11 +153,17 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Entities2
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the description.
         /// </summary>
         /// <value>The description.</value>
         public Description description { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -141,6 +171,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Includes
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the media.
         /// </summary>
@@ -152,6 +185,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The users.</value>
         public List<User> users { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -159,6 +195,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Medium
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the duration ms.
         /// </summary>
@@ -194,6 +233,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The width.</value>
         public int width { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -201,6 +243,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Mention
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the end.
         /// </summary>
@@ -218,6 +263,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The username.</value>
         public string username { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -225,6 +273,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class PublicMetrics
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the like count.
         /// </summary>
@@ -248,6 +299,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The retweet count.</value>
         public int retweet_count { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -255,6 +309,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class PublicMetricsUsers
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the followers count.
         /// </summary>
@@ -278,6 +335,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The tweet count.</value>
         public int tweet_count { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -285,11 +345,105 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Root
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the tweet data.
         /// </summary>
         /// <value>The tweet data.</value>
         public TweetData TweetData { get; set; }
+
+        #endregion Public Properties
+
+    }
+
+    /// <summary>
+    /// Class RunningTotals.
+    /// </summary>
+    public class RunningTotals
+    {
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets the full list of emojies.
+        /// </summary>
+        /// <value>The full list of emojies.</value>
+        public List<string> FullListOfEmojies { get; set; }
+
+        /// <summary>
+        /// Gets or sets the full list of hashtags.
+        /// </summary>
+        /// <value>The full list of hashtags.</value>
+        public List<string> FullListOfHashtags { get; set; }
+
+        /// <summary>
+        /// Gets or sets the full list of urls.
+        /// </summary>
+        /// <value>The full list of urls.</value>
+        public List<string> FullListOfUrls { get; set; }
+
+        /// <summary>
+        /// Gets or sets the emoji running total.
+        /// </summary>
+        /// <value>The emoji running total.</value>
+        public int RunningTotalEmoji { get; set; }
+        /// <summary>
+        /// Gets or sets the hash tag running total.
+        /// </summary>
+        /// <value>The hash tag running total.</value>
+        public int RunningTotalHashtag { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URL running total.
+        /// </summary>
+        /// <value>The URL running total.</value>
+        public int RunningTotalUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the time to download in mili seconds.
+        /// </summary>
+        /// <value>The time to download in mili seconds.</value>
+        public double TimeToDownloadInMiliSeconds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tweets with emoji running total.
+        /// </summary>
+        /// <value>The tweets with emoji running total.</value>
+        public int TweetsWithEmojiRunningTotal { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tweets with hash tag running total.
+        /// </summary>
+        /// <value>The tweets with hash tag running total.</value>
+        public int TweetsWithHashTagRunningTotal { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tweets with URL running total.
+        /// </summary>
+        /// <value>The tweets with URL running total.</value>
+        public int TweetsWithUrlRunningTotal { get; set; }
+
+        /// <summary>
+        /// Gets or sets the emoji list.
+        /// </summary>
+        /// <value>The emoji list.</value>
+        public List<string> UniqueEmojiList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the hash tag list.
+        /// </summary>
+        /// <value>The hash tag list.</value>
+        public List<string> UniqueHashTagList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URL list.
+        /// </summary>
+        /// <value>The URL list.</value>
+        public List<string> UniqueUrlList { get; set; }
+
+        #endregion Public Properties
     }
 
     /// <summary>
@@ -297,6 +451,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Tweet
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the data.
         /// </summary>
@@ -308,6 +465,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The includes.</value>
         public Includes includes { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -315,11 +475,17 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class TweetData
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the tweet.
         /// </summary>
         /// <value>The tweet.</value>
         public List<Tweet> Tweets { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -327,6 +493,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class Url
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the display URL.
         /// </summary>
@@ -356,6 +525,9 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The URL.</value>
         public string url { get; set; }
+
+        #endregion Public Properties
+
     }
 
     /// <summary>
@@ -363,6 +535,9 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public class User
     {
+
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="User" /> is protected.
         /// </summary>
@@ -434,5 +609,8 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value><c>true</c> if verified; otherwise, <c>false</c>.</value>
         public bool verified { get; set; }
+
+        #endregion Public Properties
+
     }
 }

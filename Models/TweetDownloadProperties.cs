@@ -44,7 +44,7 @@ namespace JackHenryTwitter.Models
         /// Gets or sets the time actually taken to download.
         /// </summary>
         /// <value>The time taken to download.</value>
-        public int TimeSpentDownloading { get; set; }
+        public double TimeSpentDownloadingInSeconds { get; set; }
 
         /// <summary>
         /// Gets or sets the time user wants to download new tweets.

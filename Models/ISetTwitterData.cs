@@ -4,25 +4,22 @@
 // Created          : 12-04-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-06-2020
+// Last Modified On : 12-13-2020
 // ***********************************************************************
-// <copyright file="IDataSource.cs" company="">
+// <copyright file="ISetTwitterData.cs" company="">
 //     Copyright ©  2020
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-
 using System.Collections.Generic;
-using static JackHenryTwitter.Models.TweetStats;
 
 namespace JackHenryTwitter.Models
 {
     /// <summary>
-    /// Interface IDataSource
+    /// Interface ISetTwitterData
     /// </summary>
-    internal interface ISetTwitterData
+    public interface ISetTwitterData
     {
-
         #region Public Properties
 
         /// <summary>
@@ -36,33 +33,41 @@ namespace JackHenryTwitter.Models
         #region Public Methods
 
         /// <summary>
-        /// Adds the tweet data to data source.
+        /// Adds the streaming tweet to temporary dataset.
         /// </summary>
-        /// <param name="tweetData">The tweet data.</param>
-        void AddStreamingTweetToTempDataset(string tweetData);
+        /// <param name="data">The data.</param>
+        void AddStreamingTweetToTempDataset(string data);
 
         /// <summary>
         /// Formats the tweet data for data insert.
         /// </summary>
-        /// <param name="tweetJsonData">The tweet data.</param>
+        /// <param name="tweetJsonData">The tweet json data.</param>
         /// <returns>System.String.</returns>
         string FormatTweetDataForDataInsert(string tweetJsonData);
 
         /// <summary>
-        /// Updates the top domains.
+        /// Updates the top emojies.
         /// </summary>
-        /// <param name="existingTopDomains">The existing top domains.</param>
-        /// <param name="newTopDomains">The new top domains.</param>
-        /// <returns>TweetStats.TopDomains.</returns>
-        List<TweetStats.TopDomains> UpdateTopDomains(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains);
+        /// <param name="newEmojiList">The new emoji list.</param>
+        /// <param name="existingList">The existing list.</param>
+        /// <returns>List&lt;TweetStats.TopEmojies&gt;.</returns>
+        List<TweetStats.TopEmojies> UpdateTopEmojies(List<TweetStats.TopEmojies> newEmojiList, List<TweetStats.TopEmojies> existingList);
 
         /// <summary>
         /// Updates the top hashtags.
         /// </summary>
         /// <param name="existingTopHashtags">The existing top hashtags.</param>
         /// <param name="newTopHashtags">The new top hashtags.</param>
-        /// <returns>TweetStats.TopHashtags.</returns>
+        /// <returns>List&lt;TweetStats.TopHashtags&gt;.</returns>
         List<TweetStats.TopHashtags> UpdateTopHashtags(List<TweetStats.TopHashtags> existingTopHashtags, List<TweetStats.TopHashtags> newTopHashtags);
+
+        /// <summary>
+        /// Updates the top urls.
+        /// </summary>
+        /// <param name="existingTopDomains">The existing top domains.</param>
+        /// <param name="newTopDomains">The new top domains.</param>
+        /// <returns>List&lt;TweetStats.TopDomains&gt;.</returns>
+        List<TweetStats.TopDomains> UpdateTopUrls(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains);
 
         /// <summary>
         /// Updates the tweet statistics.
@@ -72,20 +77,12 @@ namespace JackHenryTwitter.Models
         TweetStats UpdateTweetStatistics(TweetStats newTweetStats);
 
         /// <summary>
-        /// Updates the top emojies.
-        /// </summary>
-        /// <param name="newEmojiList">The new emoji list.</param>
-        /// <param name="existingList">The existing list.</param>
-        /// <returns>List&lt;TopEmojies&gt;.</returns>
-        List<TopEmojies> UpdateTopEmojies(List<TopEmojies> newEmojiList, List<TopEmojies> existingList);
-
-        /// <summary>
         /// Writes the tweet stats to data set.
         /// </summary>
-        /// <returns><c>true</c> if the tweet stats were written to the dataset, <c>false</c> otherwise.</returns>
+        /// <param name="passedTweetDownloadProperties">The passed tweet download properties.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         bool WriteTweetStatsToDataSet(TweetDownloadProperties passedTweetDownloadProperties);
 
         #endregion Public Methods
-
     }
 }

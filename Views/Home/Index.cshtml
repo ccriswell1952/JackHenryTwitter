@@ -3,15 +3,40 @@
 }
 
 <div class="jumbotron">
-    <h1>Jack Henry Code Challenge</h1>
-    <p class="lead">This application is a sample of the code techniques Chuck Criswell uses when writing code.</p>
+    <h3>Coding Example</h3>
+    <p class="lead">
+        This application is an example of the code techniques used by Chuck Criswell.<br />
+        What this sample does:
+        <ul>
+            <li>
+                provides a means to consume a Twitter service
+            </li>
+            <li>
+                stores the consumed data
+            </li>
+            <li>
+                computes statistics from the data
+            </li>
+            <li>
+                stores the computed statistics
+            </li>
+            <li>
+                reports the statistical data
+            </li>
+        </ul>
+    </p>
 </div>
 <div class="row">
-    <div class="col-md-12">
-        <h2>Available Processes</h2>
+    <div class="col-md-6">
         <p>
-            <input type="button" value="Start A New One Minute Async Download" class="btn-primary" id="btnRefreshTweetData" />
+            You can click this button to go to the page that shows existing stored computed statistics.
             <input type="button" onclick="goToTweetStats()" class="btn-primary" value="View Current Tweet Statistics" /> &nbsp;
+        </p>
+    </div>
+    <div class="col-md-6">
+        <p>
+            You can click this button to start an async process that utilizes the Twitter service. It will run the service for 10 seconds, then store the data.
+            <input type="button" value="Start A New 10 Second Async Download" class="btn-primary" id="btnRefreshTweetData" />
         </p>
     </div>
 </div>
@@ -21,14 +46,14 @@
     }
     $().ready(function () {
         $("#btnRefreshTweetData").on("click", function () {
-            var data = { "secondsToRun": 60 };
+            var data = { "secondsToRun": 10 };
             $.ajax({
                 method: "POST",
                 url: "/Home/GetTweetStreamFromTwitter",
                 dataType: "json",
                 data: data,
                 beforeSend: function () {
-                    alert("Your download has started. This is done behind the sceens so you are free to continue on.")
+                    alert("Your download will start when you close this Alert. This is actually being done behind the sceens so you are free to navigate the site as you please.")
                 }
             })
         });

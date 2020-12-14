@@ -35,16 +35,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public List<EmojiBase> emojiBaseList = new List<EmojiBase>();
 
-        /// <summary>
-        /// The emoji in file running count
-        /// </summary>
-        public int EmojiInFileRunningCount = 0;
-
-        /// <summary>
-        /// The tweet data
-        /// </summary>
-        public TweetData tweetData = new TweetData();
-
         #endregion Public Fields
 
         #region Public Constructors
@@ -55,10 +45,24 @@ namespace JackHenryTwitter.Models
         public SetTwitterDataToJsonFile()
         {
             tweetData.Tweets = new List<Tweet>();
-            CombinedFilePathForData = Utilities.GetTwitterDetails.GetTweetJsonFilePath(false);
-            CombinedFilePathForStats = Utilities.GetTwitterDetails.GetTweetJsonFilePath(true);
+            runningTotals = new RunningTotals();
+            runningTotals.TweetsWithEmojiRunningTotal = 0;
+            runningTotals.TweetsWithHashTagRunningTotal = 0;
+            runningTotals.TweetsWithUrlRunningTotal = 0;
+            runningTotals.RunningTotalEmoji = 0;
+            runningTotals.RunningTotalHashtag = 0;
+            runningTotals.RunningTotalUrl = 0;
+            runningTotals.UniqueUrlList = new List<string>();
+            runningTotals.UniqueHashTagList = new List<string>();
+            runningTotals.UniqueEmojiList = new List<string>();
+            runningTotals.FullListOfEmojies = new List<string>();
+            runningTotals.FullListOfUrls = new List<string>();
+            runningTotals.FullListOfHashtags = new List<string>();
+
+            CombinedFilePathForData = GetTwitterDetails.GetTweetJsonFilePath(false);
+            CombinedFilePathForStats = GetTwitterDetails.GetTweetJsonFilePath(true);
             var filePath = ConfigurationManager.AppSettings["EmojiStatsJsonFilePath"];
-            CombinedFilePathForEmojis = Utilities.GetTwitterDetails.GetFilePath(filePath);
+            CombinedFilePathForEmojis = GetTwitterDetails.GetFilePath(filePath);
         }
 
         #endregion Public Constructors
@@ -95,6 +99,13 @@ namespace JackHenryTwitter.Models
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
         private bool IsFinishedLoadingTweets { get; set; }
 
+        private RunningTotals runningTotals;
+
+        /// <summary>
+        /// The tweet data
+        /// </summary>
+        private TweetData tweetData = new TweetData();
+
         #endregion Private Properties
 
         #region Public Methods
@@ -105,34 +116,103 @@ namespace JackHenryTwitter.Models
         /// <param name="data">The tweet data.</param>
         public void AddStreamingTweetToTempDataset(string data)
         {
-            List<string> emojiList = new List<string>();
+            List<string> linesToCheckForStats = new List<string>();
             Tweet myDeserializedClass = JsonConvert.DeserializeObject<Tweet>(data);
             tweetData.Tweets.Add(myDeserializedClass);
             string lineToAdd = myDeserializedClass.data.text;
             if (!string.IsNullOrEmpty(lineToAdd))
             {
-                emojiList.Add(lineToAdd);
+                linesToCheckForStats.Add(lineToAdd);
             }
-            foreach (var user in myDeserializedClass.includes.users)
+            if (GetTwitterDetails.SearchTextFieldOnlyForStatTotals() == false)
             {
-                lineToAdd = null;
-                lineToAdd = user.name;
-                if (!string.IsNullOrEmpty(lineToAdd))
+                foreach (var user in myDeserializedClass.includes.users)
                 {
-                    emojiList.Add(lineToAdd);
+                    lineToAdd = null;
+                    lineToAdd = user.name;
+                    if (!string.IsNullOrEmpty(lineToAdd))
+                    {
+                        linesToCheckForStats.Add(lineToAdd);
+                    }
+                    lineToAdd = null;
+                    lineToAdd = user.description;
+                    if (!string.IsNullOrEmpty(lineToAdd))
+                    {
+                        linesToCheckForStats.Add(lineToAdd);
+                    }
                 }
-                lineToAdd = null;
-                lineToAdd = user.description;
-                if (!string.IsNullOrEmpty(lineToAdd))
+                Entities ent = new Entities();
+                if (myDeserializedClass.data.entities != null)
                 {
-                    emojiList.Add(lineToAdd);
+                    ent = myDeserializedClass.data.entities;
+                    List<Url> us = new List<Url>();
+                    if (ent.urls != null)
+                    {
+                        us = ent.urls;
+                        foreach (var e in us)
+                        {
+                            if (!string.IsNullOrEmpty(e.expanded_url))
+                            {
+                                linesToCheckForStats.Add(e.expanded_url);
+                            }
+                        }
+                    }
                 }
+
             }
-            if (emojiList.Count > 0)
+            if (linesToCheckForStats.Count > 0)
             {
-                EmojiInFileRunningCount++;
-                List<EmojiBase> thisList = EmojiParser.GetEmojiList(emojiList);
-                emojiBaseList.AddRange(thisList);
+                List<EmojiBase> thisEmojiList = LineStatParsers.GetEmojiList(linesToCheckForStats);
+
+                if (thisEmojiList.Count > 0)
+                {
+                    this.emojiBaseList.AddRange(thisEmojiList);
+                    List<string> emojiNames = new List<string>();
+                    emojiNames = thisEmojiList.Select(s => s.EmojiHtmlEncode).Distinct().ToList();
+                    runningTotals.RunningTotalEmoji += thisEmojiList.Count;
+                    runningTotals.TweetsWithEmojiRunningTotal++;
+                    if (runningTotals.UniqueEmojiList.Count == 0)
+                    {
+                        runningTotals.UniqueEmojiList.AddRange(emojiNames);
+                    }
+                    else
+                    {
+                        runningTotals.UniqueEmojiList.Union(emojiNames).ToList();
+                    }
+                    runningTotals.FullListOfEmojies.AddRange(emojiNames);
+                }
+                var thisHashTagList = LineStatParsers.GetHashTagList(linesToCheckForStats);
+                var thisHastTagCount = thisHashTagList.Count;
+                if (thisHastTagCount > 0)
+                {
+                    runningTotals.RunningTotalHashtag += thisHastTagCount;
+                    runningTotals.TweetsWithHashTagRunningTotal++;
+                    if (runningTotals.UniqueHashTagList.Count == 0)
+                    {
+                        runningTotals.UniqueHashTagList.AddRange(thisHashTagList);
+                    }
+                    else
+                    {
+                        runningTotals.UniqueHashTagList.Union(thisHashTagList);
+                    }
+                    runningTotals.FullListOfHashtags.AddRange(thisHashTagList);
+                }
+                var thisUrlList = LineStatParsers.GetUrlList(linesToCheckForStats);
+                var thisUrlCount = thisUrlList.Count;
+                if (thisUrlCount > 0)
+                {
+                    runningTotals.RunningTotalUrl += thisUrlCount;
+                    runningTotals.TweetsWithUrlRunningTotal++;
+                    if (runningTotals.UniqueUrlList.Count == 0)
+                    {
+                        runningTotals.UniqueUrlList.AddRange(thisUrlList);
+                    }
+                    else
+                    {
+                        runningTotals.UniqueUrlList.Union(thisUrlList);
+                    }
+                    runningTotals.FullListOfUrls.AddRange(thisUrlList);
+                }
             }
         }
 
@@ -149,12 +229,12 @@ namespace JackHenryTwitter.Models
         }
 
         /// <summary>
-        /// Updates the top domains.
+        /// Updates the top domains from the URLs.
         /// </summary>
         /// <param name="existingTopDomains">The existing top domains.</param>
         /// <param name="newTopDomains">The new top domains.</param>
         /// <returns>TweetStats.TopDomains.</returns>
-        public List<TweetStats.TopDomains> UpdateTopDomains(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
+        public List<TweetStats.TopDomains> UpdateTopUrls(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
         {
             List<TopDomains> mergedTopDomains = new List<TopDomains>();
             List<TopDomains> combinedLists = new List<TopDomains>();
@@ -260,22 +340,25 @@ namespace JackHenryTwitter.Models
         /// <returns>TweetStats.</returns>
         public TweetStats UpdateTweetStatistics(TweetStats newTweetStats)
         {
-            TweetStats stats = new TweetStats();
-            stats = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
-            stats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
-            stats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
-            stats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
-            stats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
-            stats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
-            stats.SetAverageTimes();
-            var combinedStats = UpdateTopEmojies(stats.TopEmojis, newTweetStats.TopEmojis);
-            stats.TopEmojis = combinedStats;
-            stats.SetPctTweetsWithPhoto(stats.TotalTweetsWithPhoto);
-            stats.SetPctTweetsWithUrl(stats.TotalUrlsInTweets);
-            stats.SetPctTweetsWithEmoji(stats.TweetsWithEmojiCount);
-            stats.TopUrlDomainList = UpdateTopDomains(stats.TopUrlDomainList, newTweetStats.TopUrlDomainList);
-            stats.TopHashtagList = UpdateTopHashtags(stats.TopHashtagList, newTweetStats.TopHashtagList);
-            return stats;
+            TweetStats combinedStats = new TweetStats();
+            combinedStats = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
+            combinedStats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
+            combinedStats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
+            combinedStats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
+            combinedStats.TotalUrlsInTweets  += newTweetStats.TotalUrlsInTweets;
+            combinedStats.TotalHashTagsInTweets += newTweetStats.TotalHashTagsInTweets;
+            combinedStats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
+            combinedStats.TweetsWithHashTagsCount += newTweetStats.TweetsWithHashTagsCount;
+            combinedStats.TweetsWithUrlsCount += newTweetStats.TweetsWithUrlsCount;
+            combinedStats.SetAverageTimes();
+            combinedStats.TopEmojisList = UpdateTopEmojies(combinedStats.TopEmojisList, newTweetStats.TopEmojisList);
+            combinedStats.SetPctTweetsWithPhoto(combinedStats.TotalTweetsWithPhoto);
+            combinedStats.SetPctTweetsWithUrl(combinedStats.TweetsWithUrlsCount);
+            combinedStats.SetPctTweetsWithEmoji(combinedStats.TweetsWithEmojiCount);
+            combinedStats.SetPctTweetsWithHashTags(combinedStats.TweetsWithHashTagsCount);
+            combinedStats.TopUrlDomainList = UpdateTopUrls(combinedStats.TopUrlDomainList, newTweetStats.TopUrlDomainList);
+            combinedStats.TopHashtagList = UpdateTopHashtags(combinedStats.TopHashtagList, newTweetStats.TopHashtagList);
+            return combinedStats;
         }
 
         /// <summary>
@@ -288,7 +371,7 @@ namespace JackHenryTwitter.Models
             Root root = new Root();
             root.TweetData = tweetData;
             var content = JsonConvert.SerializeObject(root);
-
+            runningTotals.TimeToDownloadInMiliSeconds = passedTweetDownloadProperties.TimeSpentDownloadingInSeconds / 1000;
             var emojiContent = JsonConvert.SerializeObject(emojiBaseList);
             if (ConfigurationManager.AppSettings["SaveTweetDataToFile"] == "true")
             {
@@ -306,8 +389,7 @@ namespace JackHenryTwitter.Models
             }
 
             // set the stats for the newly downloaded stream of tweets
-            TweetStats tweetStats = new TweetStats(root, emojiBaseList, EmojiInFileRunningCount);
-            tweetStats.TotalDownloadTimeInMiliSeconds = tweetDownloadProperties.TimeSpentDownloading * 1000;
+            TweetStats tweetStats = new TweetStats(root, emojiBaseList, runningTotals);
             tweetStats.SetAllTweetStatsProperties();
             if (File.Exists(CombinedFilePathForStats))
             {

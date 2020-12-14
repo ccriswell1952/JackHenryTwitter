@@ -5,34 +5,38 @@
 }
 
 <h2>Tweet Statistics</h2>
-<div>
-    <input type="button" value="Refresh Statistics" id="btnViewStats" class="btn-primary" />
-</div>
-<br />
 
-<div>
-    Select the amount of time you want the new tweet load to run:
-    <select id="runForTime">
-        <option value="10">10 seconds</option>
-        <option value="20">20 seconds</option>
-        <option value="30">30 seconds</option>
-        <option value="40">40 seconds</option>
-        <option value="50">50 seconds</option>
-        <option value="60" selected>1 minute</option>
-        <option value="70">70 seconds</option>
-        <option value="80">80 seconds</option>
-        <option value="90">90 seconds</option>
-        <option value="120">2 minutes</option>
-    </select>
-    <input type="button" value="Load More Tweets" id="btnRefreshTweetData" class="btn-primary" />
+<div class="row">
+    <div class="col-md-3">
+        <input type="button" value="Refresh Statistics" id="btnViewStats" class="btn-primary" />
+    </div>
+    <div class="col-md-9">
+        If you want to add data to this report you can select the amount of time you want the new tweet load to run 
+        then click the<br /> <b>Load More Tweets</b> button.<br />
+        <select id="runForTime">
+            <option value="10">10 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="40">40 seconds</option>
+            <option value="50">50 seconds</option>
+            <option value="60" selected>1 minute</option>
+            <option value="70">70 seconds</option>
+            <option value="80">80 seconds</option>
+            <option value="90">90 seconds</option>
+            <option value="120">2 minutes</option>
+        </select>
+        <input type="button" value="Load More Tweets" id="btnRefreshTweetData" class="btn-primary" />
+    </div>
 </div>
+
+<br />
 <div id="divWaiting" style="display:none;">
     <span style="color:red;">
         More data is currently loading. This is being done asynchronously, so you can still navigate the site, refresh the page, etc.
         Once the new tweet data has loaded the updated statistics will display. Until then the statistics will display the values up to this download.
         If the tweet data was updating a database table the results could be displayed as the records are received, but since I'm writing the results to a Json file
         I decided to wait for them all to load into memory, then push them to the file. The values shown below come from a Json file that is deserialized
-        into a c# tweet object, then displayed via an ajax call.
+        into a c# tweet statistics object, then displayed via an ajax call.
     </span>
     <br />
     Approximate time left for new Tweet Load <span id="spanTimer" style="color: red; font-weight:bold;"></span> seconds.
@@ -59,7 +63,7 @@
                 }
             })
             var intTimeoutValue = parseInt(secondsToRun) * 1000;
-            var addTime = intTimeoutValue * .30;
+            var addTime = intTimeoutValue * .50;
             var totalTime = intTimeoutValue + addTime;
             var countDown = totalTime / 1000;
             var spanTimer = $("#spanTimer");

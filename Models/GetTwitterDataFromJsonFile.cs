@@ -72,7 +72,7 @@ namespace JackHenryTwitter.Models
                 deserializedClass = JsonConvert.DeserializeObject<TweetStats>(fileContent);
                 deserializedClass.TopUrlDomainList = deserializedClass.TopUrlDomainList.Distinct().OrderByDescending(o => o.DomainCount).ThenBy(t => t.Domain).Take(100).ToList();
                 deserializedClass.TopHashtagList = deserializedClass.TopHashtagList.Distinct().OrderByDescending(o => o.HashtagCount).ThenBy(t => t.Hashtag).Take(100).ToList();
-                deserializedClass.TopEmojis = deserializedClass.TopEmojis.Distinct().OrderByDescending(o => o.EmojiCount).Take(100).ToList();
+                deserializedClass.TopEmojisList = deserializedClass.TopEmojisList.Distinct().OrderByDescending(o => o.EmojiCount).Take(100).ToList();
             }
 
             return deserializedClass;

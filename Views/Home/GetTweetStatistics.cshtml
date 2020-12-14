@@ -6,13 +6,12 @@
     }
 </style>
 <div style="width:100%;">
-    <h4>Tweet Stats</h4>
     @if (Model != null)
     {
         var urlCount = Model.TopUrlDomainList != null ? Model.TopUrlDomainList.Count : 0;
-        var emojiCount = Model.TopEmojis != null ? Model.TopEmojis.Count : 0;
+        var emojiCount = Model.TopEmojisList != null ? Model.TopEmojisList.Count : 0;
         var hashtagCount = Model.TopHashtagList != null ? Model.TopHashtagList.Count : 0;
-
+        <h3>Totals</h3>
         <dl class="dl-horizontal">
             <dt>
                 Total Accumulated Tweets Received
@@ -28,11 +27,63 @@
 
             <dd>
                 @{
-                    var totalDownloadTimeInSeconds = Model.TotalDownloadTimeInMiliSeconds / 1000;
+                    var totalDownloadTimeInSeconds = Model.TotalDownloadTimeInMiliSeconds * 1000;
                 }
                 @totalDownloadTimeInSeconds
             </dd>
 
+            <dt>
+                Total Tweets With Emojis
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TweetsWithEmojiCount)
+            </dd>
+
+            <dt>
+                Total Accumulated Tweets With Photo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalTweetsWithPhoto)
+            </dd>
+
+            <dt>
+                Total URLs in in Tweets
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalUrlsInTweets)
+            </dd>
+
+            <dt>
+                Total Tweets With URLs
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TweetsWithUrlsCount)
+            </dd>
+
+            <dt>
+                Total Hashtags in in Tweets
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalHashTagsInTweets)
+            </dd>
+
+            <dt>
+                Total Tweets With Hashtags
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TweetsWithHashTagsCount)
+            </dd>
+
+        </dl>
+
+        <h3>Averages</h3>
+        <dl class="dl-horizontal">
             <dt>
                 Average TweetsReceived Per Hour
             </dt>
@@ -56,15 +107,9 @@
             <dd>
                 @Html.DisplayFor(model => model.AverageTweetsReceivedPerSecond)
             </dd>
-
-            <dt>
-                Total Accumulated Tweets With Emojis
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.TweetsWithEmojiCount)
-            </dd>
-
+        </dl>
+        <h3>Percentages</h3>
+        <dl class="dl-horizontal">
             <dt>
                 % Tweets With Emojis
             </dt>
@@ -74,15 +119,7 @@
             </dd>
 
             <dt>
-                Total Accumulated Tweets With Photo
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.TotalTweetsWithPhoto)
-            </dd>
-
-            <dt>
-                % Tweets With Photo
+                % Tweets With a Photo
             </dt>
 
             <dd>
@@ -90,15 +127,7 @@
             </dd>
 
             <dt>
-                Total Accumulated Tweets With URLs
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.TotalUrlsInTweets)
-            </dd>
-
-            <dt>
-                % Tweets With Url
+                % Tweets With a Url
             </dt>
 
             <dd>
@@ -107,7 +136,7 @@
         </dl>
         <div class="row">
             <div class="col-lg-4">
-                <h3>Top @urlCount URLs</h3>
+                <h3>Top @urlCount Domain(s)</h3>
                 <table style="width:30%">
                     <thead>
                         <tr><th>URL</th><th>Count</th></tr>
@@ -134,9 +163,9 @@
                     <thead>
                         <tr><th>Emoji</th><th>Count</th></tr>
                     </thead>
-                    @if (Model.TopEmojis != null)
+                    @if (Model.TopEmojisList != null)
                     {
-                        foreach (var item in Model.TopEmojis)
+                        foreach (var item in Model.TopEmojisList)
                         {
                             <tr>
                                 <td>
@@ -151,7 +180,7 @@
                 </table>
             </div>
             <div class="col-lg-4">
-                <h3>Top @hashtagCount Hashtags</h3>
+                <h3>Top @hashtagCount Hashtag(s)</h3>
                 <table style="width:40%">
                     <thead>
                         <tr><th>Hashtag</th><th>Count</th></tr>

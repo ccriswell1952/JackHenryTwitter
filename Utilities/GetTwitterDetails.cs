@@ -26,7 +26,6 @@ namespace JackHenryTwitter.Utilities
     /// </summary>
     public static partial class GetTwitterDetails
     {
-
         #region Public Methods
 
         /// <summary>
@@ -77,7 +76,15 @@ namespace JackHenryTwitter.Utilities
             return new ReadOnlyTwitterCredentials(basicCredentials);
         }
 
-        #endregion Public Methods
+        /// <summary>
+        /// Determines if we search the tweet text field only for statistic data.
+        /// </summary>
+        /// <returns><c>true</c> if we only searth the tweet text field for statistic data, <c>false</c> otherwise.</returns>
+        public static bool SearchTextFieldOnlyForStatTotals()
+        {
+            return ConfigurationManager.AppSettings["SearchOnlyTextFieldForTotals"] == "true";
+        }
 
+        #endregion Public Methods
     }
 }

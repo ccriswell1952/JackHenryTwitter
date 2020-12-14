@@ -4,9 +4,9 @@
 // Created          : 12-12-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-12-2020
+// Last Modified On : 12-13-2020
 // ***********************************************************************
-// <copyright file="GetDataFromTwitter.cs" company="">
+// <copyright file="GetTweetsFromTwitter.cs" company="">
 //     Copyright ©  2020
 // </copyright>
 // <summary></summary>
@@ -25,13 +25,23 @@ namespace JackHenryTwitter.Models
     /// <seealso cref="JackHenryTwitter.Models.IGetTweetsFromTwitter" />
     public partial class GetTweetsFromTwitter : IGetTweetsFromTwitter
     {
-
         #region Private Fields
 
         /// <summary>
         /// The datasource
         /// </summary>
         private SetTwitterDataToJsonFile datasource = new SetTwitterDataToJsonFile();
+
+        /// <summary>
+        /// The end time
+        /// </summary>
+        private DateTime endTime;
+
+        /// <summary>
+        /// The start time
+        /// </summary>
+        private DateTime startTime;
+
         /// <summary>
         /// The twitter credentials
         /// </summary>
@@ -42,7 +52,7 @@ namespace JackHenryTwitter.Models
         #region Public Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetTweetsFromTwitter"/> class.
+        /// Initializes a new instance of the <see cref="GetTweetsFromTwitter" /> class.
         /// </summary>
         /// <param name="secondsToRun">The seconds to run.</param>
         /// <param name="passedDataSource">The passed data source.</param>
@@ -75,7 +85,7 @@ namespace JackHenryTwitter.Models
         /// <returns>Task&lt;System.Boolean&gt;.</returns>
         public async Task<bool> GetSampleTweetsFromTwitter()
         {
-            this.TweetDownloadProperties.StartTimeForDownload = DateTime.Now;
+            startTime = DateTime.Now;
             this.TweetDownloadProperties.IsFinishedLoadingTweets = false;
             var timer = Stopwatch.StartNew();
             var sampleStream = twitterCredentials.StreamsV2.CreateSampleStream();
@@ -108,14 +118,15 @@ namespace JackHenryTwitter.Models
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool HandleTweetDownloadCompletion()
         {
-            this.TweetDownloadProperties.EndTimeForDownload = DateTime.Now;
-            TimeSpan span = (this.TweetDownloadProperties.EndTimeForDownload.Subtract(this.TweetDownloadProperties.StartTimeForDownload));
-            this.TweetDownloadProperties.TimeSpentDownloading = span.Seconds;
+            this.endTime = DateTime.Now;
+            this.TweetDownloadProperties.StartTimeForDownload = this.startTime;
+            this.TweetDownloadProperties.EndTimeForDownload = endTime;
+            TimeSpan span = endTime.Subtract(startTime);
+            this.TweetDownloadProperties.TimeSpentDownloadingInSeconds = span.TotalSeconds;
             this.TweetDownloadProperties.IsFinishedLoadingTweets = true;
             return this.datasource.WriteTweetStatsToDataSet(this.TweetDownloadProperties);
         }
 
         #endregion Public Methods
-
     }
 }

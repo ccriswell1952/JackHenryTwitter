@@ -190,18 +190,18 @@
     </Compile>
     <Compile Include="Models\GetTwitterDataFromJsonFile.cs" />
     <Compile Include="Models\IGetTwitterData.cs" />
+    <Compile Include="Models\ISetTwitterData.cs" />
+    <Compile Include="Models\ITweetStats.cs" />
     <Compile Include="Models\SetTwitterDataToJsonFile.cs" />
     <Compile Include="Models\Emoji.cs" />
     <Compile Include="Models\EmojiBase.cs" />
     <Compile Include="Models\GetTweetsFromTwitter.cs" />
     <Compile Include="Models\IGetTweetsFromTwitter.cs" />
-    <Compile Include="Models\ISetTwitterData.cs" />
     <Compile Include="Models\TweetDownloadProperties.cs" />
-    <Compile Include="Models\ITweetStats.cs" />
     <Compile Include="Models\TweetClasses.cs" />
     <Compile Include="Models\TweetStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\EmojiParser.cs" />
+    <Compile Include="Utilities\LineStatParsers.cs" />
     <Compile Include="Utilities\ExtensionMethods.cs" />
     <Compile Include="Utilities\GetTwitterDetails.cs" />
   </ItemGroup>
