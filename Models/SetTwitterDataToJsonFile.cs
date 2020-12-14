@@ -52,10 +52,6 @@ namespace JackHenryTwitter.Models
             runningTotals.RunningTotalEmoji = 0;
             runningTotals.RunningTotalHashtag = 0;
             runningTotals.RunningTotalUrl = 0;
-            runningTotals.UniqueUrlList = new List<string>();
-            runningTotals.UniqueHashTagList = new List<string>();
-            runningTotals.UniqueEmojiList = new List<string>();
-            runningTotals.FullListOfEmojies = new List<string>();
             runningTotals.FullListOfUrls = new List<string>();
             runningTotals.FullListOfHashtags = new List<string>();
 
@@ -171,15 +167,6 @@ namespace JackHenryTwitter.Models
                     emojiNames = thisEmojiList.Select(s => s.EmojiHtmlEncode).Distinct().ToList();
                     runningTotals.RunningTotalEmoji += thisEmojiList.Count;
                     runningTotals.TweetsWithEmojiRunningTotal++;
-                    if (runningTotals.UniqueEmojiList.Count == 0)
-                    {
-                        runningTotals.UniqueEmojiList.AddRange(emojiNames);
-                    }
-                    else
-                    {
-                        runningTotals.UniqueEmojiList.Union(emojiNames).ToList();
-                    }
-                    runningTotals.FullListOfEmojies.AddRange(emojiNames);
                 }
                 var thisHashTagList = LineStatParsers.GetHashTagList(linesToCheckForStats);
                 var thisHastTagCount = thisHashTagList.Count;
@@ -187,14 +174,6 @@ namespace JackHenryTwitter.Models
                 {
                     runningTotals.RunningTotalHashtag += thisHastTagCount;
                     runningTotals.TweetsWithHashTagRunningTotal++;
-                    if (runningTotals.UniqueHashTagList.Count == 0)
-                    {
-                        runningTotals.UniqueHashTagList.AddRange(thisHashTagList);
-                    }
-                    else
-                    {
-                        runningTotals.UniqueHashTagList.Union(thisHashTagList);
-                    }
                     runningTotals.FullListOfHashtags.AddRange(thisHashTagList);
                 }
                 var thisUrlList = LineStatParsers.GetUrlList(linesToCheckForStats);
@@ -203,14 +182,6 @@ namespace JackHenryTwitter.Models
                 {
                     runningTotals.RunningTotalUrl += thisUrlCount;
                     runningTotals.TweetsWithUrlRunningTotal++;
-                    if (runningTotals.UniqueUrlList.Count == 0)
-                    {
-                        runningTotals.UniqueUrlList.AddRange(thisUrlList);
-                    }
-                    else
-                    {
-                        runningTotals.UniqueUrlList.Union(thisUrlList);
-                    }
                     runningTotals.FullListOfUrls.AddRange(thisUrlList);
                 }
             }

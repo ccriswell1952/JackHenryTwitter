@@ -367,12 +367,6 @@ namespace JackHenryTwitter.Models
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets the full list of emojies.
-        /// </summary>
-        /// <value>The full list of emojies.</value>
-        public List<string> FullListOfEmojies { get; set; }
-
-        /// <summary>
         /// Gets or sets the full list of hashtags.
         /// </summary>
         /// <value>The full list of hashtags.</value>
@@ -424,24 +418,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The tweets with URL running total.</value>
         public int TweetsWithUrlRunningTotal { get; set; }
-
-        /// <summary>
-        /// Gets or sets the emoji list.
-        /// </summary>
-        /// <value>The emoji list.</value>
-        public List<string> UniqueEmojiList { get; set; }
-
-        /// <summary>
-        /// Gets or sets the hash tag list.
-        /// </summary>
-        /// <value>The hash tag list.</value>
-        public List<string> UniqueHashTagList { get; set; }
-
-        /// <summary>
-        /// Gets or sets the URL list.
-        /// </summary>
-        /// <value>The URL list.</value>
-        public List<string> UniqueUrlList { get; set; }
 
         #endregion Public Properties
     }

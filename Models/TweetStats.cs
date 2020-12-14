@@ -30,11 +30,6 @@ namespace JackHenryTwitter.Models
         private List<EmojiBase> emojiList = new List<EmojiBase>();
 
         /// <summary>
-        /// The full list of emojies
-        /// </summary>
-        private List<string> fullListOfEmojies = new List<string>();
-
-        /// <summary>
         /// The full list of hashtags
         /// </summary>
         private List<string> fullListOfHashtags = new List<string>();
@@ -92,10 +87,6 @@ namespace JackHenryTwitter.Models
             this.TweetsWithEmojiCount = runningTotals.TweetsWithEmojiRunningTotal;
             this.TweetsWithUrlsCount = runningTotals.TweetsWithUrlRunningTotal;
             this.TweetsWithHashTagsCount = runningTotals.TweetsWithHashTagRunningTotal;
-            this.uniqueListOfEmojies = runningTotals.UniqueEmojiList;
-            this.uniqueListOfHashtags = runningTotals.UniqueHashTagList;
-            this.uniqueListOfUrls = runningTotals.UniqueUrlList;
-            this.fullListOfEmojies = runningTotals.FullListOfEmojies;
             this.fullListOfHashtags = runningTotals.FullListOfHashtags;
             this.fullListOfUrls = runningTotals.FullListOfUrls;
         }
@@ -400,6 +391,7 @@ namespace JackHenryTwitter.Models
         public List<TopEmojies> SetTopEmojies()
         {
             TopEmojisList = new List<TopEmojies>();
+            this.uniqueListOfEmojies = emojiList.Select(s => s.EmojiHtmlEncode).Distinct().ToList();
             foreach (var htmlEncode in this.uniqueListOfEmojies)
             {
                 var distinctList = emojiList.Select(s => new { s.EmojiHtmlEncode, s.EmojiImage }).Where(w => w.EmojiHtmlEncode.Equals(htmlEncode));
@@ -426,6 +418,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public void SetTopHashtags()
         {
+            this.uniqueListOfHashtags = this.fullListOfHashtags.Distinct().ToList();
             List<TopHashtags> topHashtagList = new List<TopHashtags>();
             foreach (var uniqueHashtag in this.uniqueListOfHashtags)
             {
@@ -446,6 +439,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public void SetTopUrlDomains()
         {
+            this.uniqueListOfUrls = this.fullListOfUrls.Distinct().ToList();
             List<TopDomains> topDomainList = new List<TopDomains>();
             foreach (var uniqueHost in this.uniqueListOfUrls)
             {
