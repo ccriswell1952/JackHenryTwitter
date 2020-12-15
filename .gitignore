@@ -1,7 +1,8 @@
 /bin/*
 /obj/*
 /packages/*
-/.vs*
-/.vs*/*
+/.vs/***
+
 
 .vs/JackHenryTwitter/v16/.suo
+
