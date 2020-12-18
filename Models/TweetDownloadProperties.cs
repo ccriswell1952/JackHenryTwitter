@@ -20,6 +20,7 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class TweetDownloadProperties
     {
+
         #region Public Properties
 
         /// <summary>
@@ -53,5 +54,6 @@ namespace JackHenryTwitter.Models
         public int TimeWantedToDownloadTweets { get; set; }
 
         #endregion Public Properties
+
     }
 }

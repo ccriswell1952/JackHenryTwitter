@@ -22,7 +22,6 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class GetTwitterDataFromJsonFile : IGetTwitterData
     {
-
         #region Public Methods
 
         /// <summary>
@@ -79,6 +78,5 @@ namespace JackHenryTwitter.Models
         }
 
         #endregion Public Methods
-
     }
 }

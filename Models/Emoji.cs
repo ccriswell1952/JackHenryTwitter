@@ -20,6 +20,8 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class Emoji : EmojiBase
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the added in.
         /// </summary>
@@ -145,5 +147,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The unified.</value>
         public string unified { get; set; }
+
+        #endregion Public Properties
     }
 }

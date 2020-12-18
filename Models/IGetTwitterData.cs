@@ -18,15 +18,20 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public interface IGetTwitterData
     {
+        #region Public Methods
+
         /// <summary>
         /// Gets the tweeter root data.
         /// </summary>
         /// <returns>Root.</returns>
         Root GetTweeterRootData();
+
         /// <summary>
         /// Gets the twitter statisitcs data.
         /// </summary>
         /// <returns>TweetStats.</returns>
         TweetStats GetTwitterStatisitcsData();
+
+        #endregion Public Methods
     }
 }

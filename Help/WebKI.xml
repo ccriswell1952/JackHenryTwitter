@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="About method">
+    <HelpKINode Title="About Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.About.htm" />
+    <HelpKINode Title="About Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.About.htm" />
+  </HelpKINode>
+  <HelpKINode Title="added_in property" Url="html/P-JackHenryTwitter.Models.Emoji.added_in.htm" />
+  <HelpKINode Title="AddSafe method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.AddSafe.htm" />
+  <HelpKINode Title="AddStreamingTweetToTempDataset method">
+    <HelpKINode Title="AddStreamingTweetToTempDataset Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.AddStreamingTweetToTempDataset.htm" />
+    <HelpKINode Title="AddStreamingTweetToTempDataset Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.AddStreamingTweetToTempDataset.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Attachments class">
+    <HelpKINode Title="Attachments Class" Url="html/T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="Attachments Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="about Attachments class" Url="html/T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Attachments.htm" />
+  </HelpKINode>
+  <HelpKINode Title="attachments property" Url="html/P-JackHenryTwitter.Models.Data.attachments.htm" />
+  <HelpKINode Title="Attachments.media_keys property" Url="html/P-JackHenryTwitter.Models.Attachments.media_keys.htm" />
+  <HelpKINode Title="au property" Url="html/P-JackHenryTwitter.Models.Emoji.au.htm" />
+  <HelpKINode Title="author_id property" Url="html/P-JackHenryTwitter.Models.Data.author_id.htm" />
+  <HelpKINode Title="AverageTweetsReceivedPerHour property">
+    <HelpKINode Title="AverageTweetsReceivedPerHour Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerHour.htm" />
+    <HelpKINode Title="AverageTweetsReceivedPerHour Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerHour.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AverageTweetsReceivedPerMinute property">
+    <HelpKINode Title="AverageTweetsReceivedPerMinute Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerMinute.htm" />
+    <HelpKINode Title="AverageTweetsReceivedPerMinute Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerMinute.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AverageTweetsReceivedPerSecond property">
+    <HelpKINode Title="AverageTweetsReceivedPerSecond Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerSecond.htm" />
+    <HelpKINode Title="AverageTweetsReceivedPerSecond Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerSecond.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BundleConfig class">
+    <HelpKINode Title="BundleConfig Class" Url="html/T-JackHenryTwitter.BundleConfig.htm" />
+    <HelpKINode Title="BundleConfig Members" Url="html/AllMembers.T-JackHenryTwitter.BundleConfig.htm" />
+    <HelpKINode Title="about BundleConfig class" Url="html/T-JackHenryTwitter.BundleConfig.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.BundleConfig.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.BundleConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BundleConfig.RegisterBundles method" Url="html/M-JackHenryTwitter.BundleConfig.RegisterBundles.htm" />
+  <HelpKINode Title="category property" Url="html/P-JackHenryTwitter.Models.Emoji.category.htm" />
+  <HelpKINode Title="Contact method">
+    <HelpKINode Title="Contact Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.Contact.htm" />
+    <HelpKINode Title="Contact Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Contact.htm" />
+  </HelpKINode>
+  <HelpKINode Title="conversation_id property" Url="html/P-JackHenryTwitter.Models.Data.conversation_id.htm" />
+  <HelpKINode Title="created_at property">
+    <HelpKINode Title="created_at Property " Url="html/P-JackHenryTwitter.Models.Data.created_at.htm" />
+    <HelpKINode Title="created_at Property " Url="html/P-JackHenryTwitter.Models.User.created_at.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Data class">
+    <HelpKINode Title="Data Class" Url="html/T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="Data Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="about Data class" Url="html/T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Data.htm" />
+  </HelpKINode>
+  <HelpKINode Title="data property" Url="html/P-JackHenryTwitter.Models.Tweet.data.htm" />
+  <HelpKINode Title="Data.attachments property" Url="html/P-JackHenryTwitter.Models.Data.attachments.htm" />
+  <HelpKINode Title="Data.author_id property" Url="html/P-JackHenryTwitter.Models.Data.author_id.htm" />
+  <HelpKINode Title="Data.conversation_id property" Url="html/P-JackHenryTwitter.Models.Data.conversation_id.htm" />
+  <HelpKINode Title="Data.created_at property" Url="html/P-JackHenryTwitter.Models.Data.created_at.htm" />
+  <HelpKINode Title="Data.entities property" Url="html/P-JackHenryTwitter.Models.Data.entities.htm" />
+  <HelpKINode Title="Data.id property" Url="html/P-JackHenryTwitter.Models.Data.id.htm" />
+  <HelpKINode Title="Data.lang property" Url="html/P-JackHenryTwitter.Models.Data.lang.htm" />
+  <HelpKINode Title="Data.possibly_sensitive property" Url="html/P-JackHenryTwitter.Models.Data.possibly_sensitive.htm" />
+  <HelpKINode Title="Data.public_metrics property" Url="html/P-JackHenryTwitter.Models.Data.public_metrics.htm" />
+  <HelpKINode Title="Data.source property" Url="html/P-JackHenryTwitter.Models.Data.source.htm" />
+  <HelpKINode Title="Data.text property" Url="html/P-JackHenryTwitter.Models.Data.text.htm" />
+  <HelpKINode Title="Description class">
+    <HelpKINode Title="Description Class" Url="html/T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="Description Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="about Description class" Url="html/T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Description.htm" />
+  </HelpKINode>
+  <HelpKINode Title="description property">
+    <HelpKINode Title="description Property " Url="html/P-JackHenryTwitter.Models.User.description.htm" />
+    <HelpKINode Title="description Property " Url="html/P-JackHenryTwitter.Models.Entities2.description.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Description.mentions property" Url="html/P-JackHenryTwitter.Models.Description.mentions.htm" />
+  <HelpKINode Title="display_url property" Url="html/P-JackHenryTwitter.Models.Url.display_url.htm" />
+  <HelpKINode Title="docomo property" Url="html/P-JackHenryTwitter.Models.Emoji.docomo.htm" />
+  <HelpKINode Title="Domain property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.Domain.htm" />
+  <HelpKINode Title="DomainCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.DomainCount.htm" />
+  <HelpKINode Title="duration_ms property" Url="html/P-JackHenryTwitter.Models.Medium.duration_ms.htm" />
+  <HelpKINode Title="Emoji class">
+    <HelpKINode Title="Emoji Class" Url="html/T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="Emoji Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="about Emoji class" Url="html/T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Emoji.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Emoji property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.Emoji.htm" />
+  <HelpKINode Title="Emoji.added_in property" Url="html/P-JackHenryTwitter.Models.Emoji.added_in.htm" />
+  <HelpKINode Title="Emoji.au property" Url="html/P-JackHenryTwitter.Models.Emoji.au.htm" />
+  <HelpKINode Title="Emoji.category property" Url="html/P-JackHenryTwitter.Models.Emoji.category.htm" />
+  <HelpKINode Title="Emoji.docomo property" Url="html/P-JackHenryTwitter.Models.Emoji.docomo.htm" />
+  <HelpKINode Title="Emoji.google property" Url="html/P-JackHenryTwitter.Models.Emoji.google.htm" />
+  <HelpKINode Title="Emoji.has_img_apple property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_apple.htm" />
+  <HelpKINode Title="Emoji.has_img_facebook property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_facebook.htm" />
+  <HelpKINode Title="Emoji.has_img_google property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_google.htm" />
+  <HelpKINode Title="Emoji.has_img_twitter property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_twitter.htm" />
+  <HelpKINode Title="Emoji.image property" Url="html/P-JackHenryTwitter.Models.Emoji.image.htm" />
+  <HelpKINode Title="Emoji.name property" Url="html/P-JackHenryTwitter.Models.Emoji.name.htm" />
+  <HelpKINode Title="Emoji.non_qualified property" Url="html/P-JackHenryTwitter.Models.Emoji.non_qualified.htm" />
+  <HelpKINode Title="Emoji.sheet_x property" Url="html/P-JackHenryTwitter.Models.Emoji.sheet_x.htm" />
+  <HelpKINode Title="Emoji.sheet_y property" Url="html/P-JackHenryTwitter.Models.Emoji.sheet_y.htm" />
+  <HelpKINode Title="Emoji.short_name property" Url="html/P-JackHenryTwitter.Models.Emoji.short_name.htm" />
+  <HelpKINode Title="Emoji.short_names property" Url="html/P-JackHenryTwitter.Models.Emoji.short_names.htm" />
+  <HelpKINode Title="Emoji.softbank property" Url="html/P-JackHenryTwitter.Models.Emoji.softbank.htm" />
+  <HelpKINode Title="Emoji.sort_order property" Url="html/P-JackHenryTwitter.Models.Emoji.sort_order.htm" />
+  <HelpKINode Title="Emoji.text property" Url="html/P-JackHenryTwitter.Models.Emoji.text.htm" />
+  <HelpKINode Title="Emoji.texts property" Url="html/P-JackHenryTwitter.Models.Emoji.texts.htm" />
+  <HelpKINode Title="Emoji.unified property" Url="html/P-JackHenryTwitter.Models.Emoji.unified.htm" />
+  <HelpKINode Title="EmojiBase class">
+    <HelpKINode Title="EmojiBase Class" Url="html/T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="EmojiBase Members" Url="html/AllMembers.T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="about EmojiBase class" Url="html/T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.EmojiBase.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EmojiBase.EmojiHtmlEncode property" Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiHtmlEncode.htm" />
+  <HelpKINode Title="EmojiBase.EmojiImage property" Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiImage.htm" />
+  <HelpKINode Title="emojiBaseList field" Url="html/F-JackHenryTwitter.Models.SetTwitterDataToJsonFile.emojiBaseList.htm" />
+  <HelpKINode Title="EmojiCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.EmojiCount.htm" />
+  <HelpKINode Title="EmojiHtmlEncode property" Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiHtmlEncode.htm" />
+  <HelpKINode Title="EmojiImage property" Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiImage.htm" />
+  <HelpKINode Title="EmojiToHtmlEncode method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.EmojiToHtmlEncode.htm" />
+  <HelpKINode Title="end property">
+    <HelpKINode Title="end Property " Url="html/P-JackHenryTwitter.Models.Mention.end.htm" />
+    <HelpKINode Title="end Property " Url="html/P-JackHenryTwitter.Models.Url.end.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EndTimeForDownload property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.EndTimeForDownload.htm" />
+  <HelpKINode Title="Entities class">
+    <HelpKINode Title="Entities Class" Url="html/T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="Entities Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="about Entities class" Url="html/T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities.htm" />
+  </HelpKINode>
+  <HelpKINode Title="entities property">
+    <HelpKINode Title="entities Property " Url="html/P-JackHenryTwitter.Models.Data.entities.htm" />
+    <HelpKINode Title="entities Property " Url="html/P-JackHenryTwitter.Models.User.entities.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Entities.urls property" Url="html/P-JackHenryTwitter.Models.Entities.urls.htm" />
+  <HelpKINode Title="Entities2 class">
+    <HelpKINode Title="Entities2 Class" Url="html/T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="Entities2 Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="about Entities2 class" Url="html/T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Entities2.description property" Url="html/P-JackHenryTwitter.Models.Entities2.description.htm" />
+  <HelpKINode Title="expanded_url property" Url="html/P-JackHenryTwitter.Models.Url.expanded_url.htm" />
+  <HelpKINode Title="ExtensionMethods class">
+    <HelpKINode Title="ExtensionMethods Class" Url="html/T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+    <HelpKINode Title="ExtensionMethods Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+    <HelpKINode Title="about ExtensionMethods class" Url="html/T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExtensionMethods.AddSafe method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.AddSafe.htm" />
+  <HelpKINode Title="ExtensionMethods.ReplaceFirst method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceFirst.htm" />
+  <HelpKINode Title="ExtensionMethods.ReplaceLast method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceLast.htm" />
+  <HelpKINode Title="FilterConfig class">
+    <HelpKINode Title="FilterConfig Class" Url="html/T-JackHenryTwitter.FilterConfig.htm" />
+    <HelpKINode Title="FilterConfig Members" Url="html/AllMembers.T-JackHenryTwitter.FilterConfig.htm" />
+    <HelpKINode Title="about FilterConfig class" Url="html/T-JackHenryTwitter.FilterConfig.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.FilterConfig.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.FilterConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FilterConfig.RegisterGlobalFilters method" Url="html/M-JackHenryTwitter.FilterConfig.RegisterGlobalFilters.htm" />
+  <HelpKINode Title="followers_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.followers_count.htm" />
+  <HelpKINode Title="following_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.following_count.htm" />
+  <HelpKINode Title="FormatTweetDataForDataInsert method">
+    <HelpKINode Title="FormatTweetDataForDataInsert Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.FormatTweetDataForDataInsert.htm" />
+    <HelpKINode Title="FormatTweetDataForDataInsert Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.FormatTweetDataForDataInsert.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FullListOfHashtags property" Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfHashtags.htm" />
+  <HelpKINode Title="FullListOfUrls property" Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfUrls.htm" />
+  <HelpKINode Title="GetEmojiList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetEmojiList.htm" />
+  <HelpKINode Title="GetFilePath method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetFilePath.htm" />
+  <HelpKINode Title="GetHashTagList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHashTagList.htm" />
+  <HelpKINode Title="GetHashTotalTagCount method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHashTotalTagCount.htm" />
+  <HelpKINode Title="GetHostFromUrlString method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHostFromUrlString.htm" />
+  <HelpKINode Title="GetSampleTweetsFromTwitter method" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.GetSampleTweetsFromTwitter.htm" />
+  <HelpKINode Title="GetTotalUrlCount method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetTotalUrlCount.htm" />
+  <HelpKINode Title="GetTweeterRootData method">
+    <HelpKINode Title="GetTweeterRootData Method " Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTweeterRootData.htm" />
+    <HelpKINode Title="GetTweeterRootData Method " Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTweeterRootData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTweetJsonFilePath method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetJsonFilePath.htm" />
+  <HelpKINode Title="GetTweetsFromTwitter class">
+    <HelpKINode Title="GetTweetsFromTwitter Class" Url="html/T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="GetTweetsFromTwitter Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="about GetTweetsFromTwitter class" Url="html/T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="constructor" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTweetsFromTwitter.GetSampleTweetsFromTwitter method" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.GetSampleTweetsFromTwitter.htm" />
+  <HelpKINode Title="GetTweetsFromTwitter.GetTweetsFromTwitter constructor" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.-ctor.htm" />
+  <HelpKINode Title="GetTweetsFromTwitter.HandleTweetDownloadCompletion method" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.HandleTweetDownloadCompletion.htm" />
+  <HelpKINode Title="GetTweetsFromTwitter.TweetDownloadProperties property" Url="html/P-JackHenryTwitter.Models.GetTweetsFromTwitter.TweetDownloadProperties.htm" />
+  <HelpKINode Title="GetTweetStatistics method" Url="html/M-JackHenryTwitter.Controllers.HomeController.GetTweetStatistics.htm" />
+  <HelpKINode Title="GetTweetStreamFromTwitter method">
+    <HelpKINode Title="GetTweetStreamFromTwitter Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetStreamFromTwitter.htm" />
+    <HelpKINode Title="GetTweetStreamFromTwitter Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.GetTweetStreamFromTwitter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTwitterCredentials method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTwitterCredentials.htm" />
+  <HelpKINode Title="GetTwitterDataFromJsonFile class">
+    <HelpKINode Title="GetTwitterDataFromJsonFile Class" Url="html/T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+    <HelpKINode Title="GetTwitterDataFromJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+    <HelpKINode Title="about GetTwitterDataFromJsonFile class" Url="html/T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTwitterDataFromJsonFile.GetTweeterRootData method" Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTweeterRootData.htm" />
+  <HelpKINode Title="GetTwitterDataFromJsonFile.GetTwitterStatisitcsData method" Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTwitterStatisitcsData.htm" />
+  <HelpKINode Title="GetTwitterDetails class">
+    <HelpKINode Title="GetTwitterDetails Class" Url="html/T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+    <HelpKINode Title="GetTwitterDetails Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+    <HelpKINode Title="about GetTwitterDetails class" Url="html/T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTwitterDetails.GetFilePath method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetFilePath.htm" />
+  <HelpKINode Title="GetTwitterDetails.GetTweetJsonFilePath method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetJsonFilePath.htm" />
+  <HelpKINode Title="GetTwitterDetails.GetTweetStreamFromTwitter method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetStreamFromTwitter.htm" />
+  <HelpKINode Title="GetTwitterDetails.GetTwitterCredentials method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTwitterCredentials.htm" />
+  <HelpKINode Title="GetTwitterDetails.SearchTextFieldOnlyForStatTotals method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.SearchTextFieldOnlyForStatTotals.htm" />
+  <HelpKINode Title="GetTwitterStatisitcsData method">
+    <HelpKINode Title="GetTwitterStatisitcsData Method " Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTwitterStatisitcsData.htm" />
+    <HelpKINode Title="GetTwitterStatisitcsData Method " Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTwitterStatisitcsData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetUrlList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetUrlList.htm" />
+  <HelpKINode Title="google property" Url="html/P-JackHenryTwitter.Models.Emoji.google.htm" />
+  <HelpKINode Title="HandleTweetDownloadCompletion method" Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.HandleTweetDownloadCompletion.htm" />
+  <HelpKINode Title="Hashtag property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.Hashtag.htm" />
+  <HelpKINode Title="HashtagCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.HashtagCount.htm" />
+  <HelpKINode Title="has_img_apple property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_apple.htm" />
+  <HelpKINode Title="has_img_facebook property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_facebook.htm" />
+  <HelpKINode Title="has_img_google property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_google.htm" />
+  <HelpKINode Title="has_img_twitter property" Url="html/P-JackHenryTwitter.Models.Emoji.has_img_twitter.htm" />
+  <HelpKINode Title="height property" Url="html/P-JackHenryTwitter.Models.Medium.height.htm" />
+  <HelpKINode Title="HomeController class">
+    <HelpKINode Title="HomeController Class" Url="html/T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="HomeController Members" Url="html/AllMembers.T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="about HomeController class" Url="html/T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Controllers.HomeController.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HomeController.About method" Url="html/M-JackHenryTwitter.Controllers.HomeController.About.htm" />
+  <HelpKINode Title="HomeController.Contact method" Url="html/M-JackHenryTwitter.Controllers.HomeController.Contact.htm" />
+  <HelpKINode Title="HomeController.GetTweetStatistics method" Url="html/M-JackHenryTwitter.Controllers.HomeController.GetTweetStatistics.htm" />
+  <HelpKINode Title="HomeController.GetTweetStreamFromTwitter method" Url="html/M-JackHenryTwitter.Controllers.HomeController.GetTweetStreamFromTwitter.htm" />
+  <HelpKINode Title="HomeController.Index method" Url="html/M-JackHenryTwitter.Controllers.HomeController.Index.htm" />
+  <HelpKINode Title="HomeController.sample method" Url="html/M-JackHenryTwitter.Controllers.HomeController.sample.htm" />
+  <HelpKINode Title="HomeController.TweetStatistics method" Url="html/M-JackHenryTwitter.Controllers.HomeController.TweetStatistics.htm" />
+  <HelpKINode Title="HomeControllerTest class">
+    <HelpKINode Title="HomeControllerTest Class" Url="html/T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+    <HelpKINode Title="HomeControllerTest Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+    <HelpKINode Title="about HomeControllerTest class" Url="html/T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HomeControllerTest.About method" Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.About.htm" />
+  <HelpKINode Title="HomeControllerTest.Contact method" Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Contact.htm" />
+  <HelpKINode Title="HomeControllerTest.Index method" Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Index.htm" />
+  <HelpKINode Title="id property">
+    <HelpKINode Title="id Property " Url="html/P-JackHenryTwitter.Models.User.id.htm" />
+    <HelpKINode Title="id Property " Url="html/P-JackHenryTwitter.Models.Data.id.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGetTwitterData interface">
+    <HelpKINode Title="IGetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+    <HelpKINode Title="IGetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+    <HelpKINode Title="about IGetTwitterData interface" Url="html/T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGetTwitterData.GetTweeterRootData method" Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTweeterRootData.htm" />
+  <HelpKINode Title="IGetTwitterData.GetTwitterStatisitcsData method" Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTwitterStatisitcsData.htm" />
+  <HelpKINode Title="image property" Url="html/P-JackHenryTwitter.Models.Emoji.image.htm" />
+  <HelpKINode Title="Includes class">
+    <HelpKINode Title="Includes Class" Url="html/T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="Includes Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="about Includes class" Url="html/T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Includes.htm" />
+  </HelpKINode>
+  <HelpKINode Title="includes property" Url="html/P-JackHenryTwitter.Models.Tweet.includes.htm" />
+  <HelpKINode Title="Includes.media property" Url="html/P-JackHenryTwitter.Models.Includes.media.htm" />
+  <HelpKINode Title="Includes.users property" Url="html/P-JackHenryTwitter.Models.Includes.users.htm" />
+  <HelpKINode Title="Index method">
+    <HelpKINode Title="Index Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Index.htm" />
+    <HelpKINode Title="Index Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.Index.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISetTwitterData interface">
+    <HelpKINode Title="ISetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="ISetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="about ISetTwitterData interface" Url="html/T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ISetTwitterData.AddStreamingTweetToTempDataset method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.AddStreamingTweetToTempDataset.htm" />
+  <HelpKINode Title="ISetTwitterData.FormatTweetDataForDataInsert method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.FormatTweetDataForDataInsert.htm" />
+  <HelpKINode Title="ISetTwitterData.tweetDownloadProperties property" Url="html/P-JackHenryTwitter.Models.ISetTwitterData.tweetDownloadProperties.htm" />
+  <HelpKINode Title="ISetTwitterData.UpdateTopEmojies method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopEmojies.htm" />
+  <HelpKINode Title="ISetTwitterData.UpdateTopHashtags method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopHashtags.htm" />
+  <HelpKINode Title="ISetTwitterData.UpdateTopUrls method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopUrls.htm" />
+  <HelpKINode Title="ISetTwitterData.UpdateTweetStatistics method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTweetStatistics.htm" />
+  <HelpKINode Title="ISetTwitterData.WriteTweetStatsToDataSet method" Url="html/M-JackHenryTwitter.Models.ISetTwitterData.WriteTweetStatsToDataSet.htm" />
+  <HelpKINode Title="IsFinishedLoadingTweets property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.IsFinishedLoadingTweets.htm" />
+  <HelpKINode Title="ITweetStats interface">
+    <HelpKINode Title="ITweetStats Interface" Url="html/T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="ITweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="about ITweetStats interface" Url="html/T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.ITweetStats.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITweetStats.AverageTweetsReceivedPerHour property" Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerHour.htm" />
+  <HelpKINode Title="ITweetStats.AverageTweetsReceivedPerMinute property" Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerMinute.htm" />
+  <HelpKINode Title="ITweetStats.AverageTweetsReceivedPerSecond property" Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerSecond.htm" />
+  <HelpKINode Title="ITweetStats.PctTweetsWithEmojis property" Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithEmojis.htm" />
+  <HelpKINode Title="ITweetStats.PctTweetsWithHashTags property" Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithHashTags.htm" />
+  <HelpKINode Title="ITweetStats.PctTweetsWithPhoto property" Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithPhoto.htm" />
+  <HelpKINode Title="ITweetStats.PctTweetsWithUrl property" Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithUrl.htm" />
+  <HelpKINode Title="ITweetStats.SetAllTweetStatsProperties method" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAllTweetStatsProperties.htm" />
+  <HelpKINode Title="ITweetStats.SetAverageTimes method" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAverageTimes.htm" />
+  <HelpKINode Title="ITweetStats.SetPctTweetsWithEmoji method" Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji.htm" />
+  <HelpKINode Title="ITweetStats.SetPctTweetsWithHashTags method" Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags.htm" />
+  <HelpKINode Title="ITweetStats.SetPctTweetsWithPhoto method" Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto.htm" />
+  <HelpKINode Title="ITweetStats.SetPctTweetsWithUrl method" Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl.htm" />
+  <HelpKINode Title="ITweetStats.SetTopEmojies method" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopEmojies.htm" />
+  <HelpKINode Title="ITweetStats.SetTopHashtags method" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopHashtags.htm" />
+  <HelpKINode Title="ITweetStats.SetTopUrlDomains method" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopUrlDomains.htm" />
+  <HelpKINode Title="ITweetStats.TopEmojisList property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TopEmojisList.htm" />
+  <HelpKINode Title="ITweetStats.TopHashtagList property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TopHashtagList.htm" />
+  <HelpKINode Title="ITweetStats.TopUrlDomainList property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TopUrlDomainList.htm" />
+  <HelpKINode Title="ITweetStats.TotalDownloadTimeInMiliSeconds property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalDownloadTimeInMiliSeconds.htm" />
+  <HelpKINode Title="ITweetStats.TotalEmojisInTweets property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalEmojisInTweets.htm" />
+  <HelpKINode Title="ITweetStats.TotalHashTagsInTweets property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalHashTagsInTweets.htm" />
+  <HelpKINode Title="ITweetStats.TotalTweetsReceived property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalTweetsReceived.htm" />
+  <HelpKINode Title="ITweetStats.TotalTweetsWithPhoto property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalTweetsWithPhoto.htm" />
+  <HelpKINode Title="ITweetStats.TotalUrlsInTweets property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalUrlsInTweets.htm" />
+  <HelpKINode Title="ITweetStats.TweetsWithEmojiCount property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithEmojiCount.htm" />
+  <HelpKINode Title="ITweetStats.TweetsWithHashTagsCount property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithHashTagsCount.htm" />
+  <HelpKINode Title="ITweetStats.TweetsWithUrlsCount property" Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithUrlsCount.htm" />
+  <HelpKINode Title="JackHenryTwitter namespace" Url="html/N-JackHenryTwitter.htm" />
+  <HelpKINode Title="JackHenryTwitter.BundleConfig class">
+    <HelpKINode Title="BundleConfig Class" Url="html/T-JackHenryTwitter.BundleConfig.htm" />
+    <HelpKINode Title="BundleConfig Members" Url="html/AllMembers.T-JackHenryTwitter.BundleConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Controllers namespace" Url="html/N-JackHenryTwitter.Controllers.htm" />
+  <HelpKINode Title="JackHenryTwitter.Controllers.HomeController class">
+    <HelpKINode Title="HomeController Class" Url="html/T-JackHenryTwitter.Controllers.HomeController.htm" />
+    <HelpKINode Title="HomeController Members" Url="html/AllMembers.T-JackHenryTwitter.Controllers.HomeController.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.FilterConfig class">
+    <HelpKINode Title="FilterConfig Class" Url="html/T-JackHenryTwitter.FilterConfig.htm" />
+    <HelpKINode Title="FilterConfig Members" Url="html/AllMembers.T-JackHenryTwitter.FilterConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models namespace" Url="html/N-JackHenryTwitter.Models.htm" />
+  <HelpKINode Title="JackHenryTwitter.Models.Attachments class">
+    <HelpKINode Title="Attachments Class" Url="html/T-JackHenryTwitter.Models.Attachments.htm" />
+    <HelpKINode Title="Attachments Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Attachments.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Data class">
+    <HelpKINode Title="Data Class" Url="html/T-JackHenryTwitter.Models.Data.htm" />
+    <HelpKINode Title="Data Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Data.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Description class">
+    <HelpKINode Title="Description Class" Url="html/T-JackHenryTwitter.Models.Description.htm" />
+    <HelpKINode Title="Description Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Description.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Emoji class">
+    <HelpKINode Title="Emoji Class" Url="html/T-JackHenryTwitter.Models.Emoji.htm" />
+    <HelpKINode Title="Emoji Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Emoji.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.EmojiBase class">
+    <HelpKINode Title="EmojiBase Class" Url="html/T-JackHenryTwitter.Models.EmojiBase.htm" />
+    <HelpKINode Title="EmojiBase Members" Url="html/AllMembers.T-JackHenryTwitter.Models.EmojiBase.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Entities class">
+    <HelpKINode Title="Entities Class" Url="html/T-JackHenryTwitter.Models.Entities.htm" />
+    <HelpKINode Title="Entities Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Entities2 class">
+    <HelpKINode Title="Entities2 Class" Url="html/T-JackHenryTwitter.Models.Entities2.htm" />
+    <HelpKINode Title="Entities2 Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.GetTweetsFromTwitter class">
+    <HelpKINode Title="GetTweetsFromTwitter Class" Url="html/T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+    <HelpKINode Title="GetTweetsFromTwitter Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.GetTwitterDataFromJsonFile class">
+    <HelpKINode Title="GetTwitterDataFromJsonFile Class" Url="html/T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+    <HelpKINode Title="GetTwitterDataFromJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.IGetTwitterData interface">
+    <HelpKINode Title="IGetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+    <HelpKINode Title="IGetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.IGetTwitterData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Includes class">
+    <HelpKINode Title="Includes Class" Url="html/T-JackHenryTwitter.Models.Includes.htm" />
+    <HelpKINode Title="Includes Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Includes.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.ISetTwitterData interface">
+    <HelpKINode Title="ISetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+    <HelpKINode Title="ISetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.ITweetStats interface">
+    <HelpKINode Title="ITweetStats Interface" Url="html/T-JackHenryTwitter.Models.ITweetStats.htm" />
+    <HelpKINode Title="ITweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ITweetStats.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Medium class">
+    <HelpKINode Title="Medium Class" Url="html/T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="Medium Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Medium.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Mention class">
+    <HelpKINode Title="Mention Class" Url="html/T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="Mention Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Mention.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.PublicMetrics class">
+    <HelpKINode Title="PublicMetrics Class" Url="html/T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="PublicMetrics Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetrics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.PublicMetricsUsers class">
+    <HelpKINode Title="PublicMetricsUsers Class" Url="html/T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="PublicMetricsUsers Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Root class">
+    <HelpKINode Title="Root Class" Url="html/T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="Root Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Root.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.RunningTotals class">
+    <HelpKINode Title="RunningTotals Class" Url="html/T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="RunningTotals Members" Url="html/AllMembers.T-JackHenryTwitter.Models.RunningTotals.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.SetTwitterDataToJsonFile class">
+    <HelpKINode Title="SetTwitterDataToJsonFile Class" Url="html/T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="SetTwitterDataToJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Tweet class">
+    <HelpKINode Title="Tweet Class" Url="html/T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="Tweet Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Tweet.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetData class">
+    <HelpKINode Title="TweetData Class" Url="html/T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="TweetData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetDownloadProperties class">
+    <HelpKINode Title="TweetDownloadProperties Class" Url="html/T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="TweetDownloadProperties Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetStats class">
+    <HelpKINode Title="TweetStats Class" Url="html/T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="TweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetStats.TopDomains class">
+    <HelpKINode Title="TweetStats.TopDomains Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="TweetStats.TopDomains Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetStats.TopEmojies class">
+    <HelpKINode Title="TweetStats.TopEmojies Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="TweetStats.TopEmojies Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.TweetStats.TopHashtags class">
+    <HelpKINode Title="TweetStats.TopHashtags Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="TweetStats.TopHashtags Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.Url class">
+    <HelpKINode Title="Url Class" Url="html/T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="Url Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Url.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Models.User class">
+    <HelpKINode Title="User Class" Url="html/T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="User Members" Url="html/AllMembers.T-JackHenryTwitter.Models.User.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.MvcApplication class">
+    <HelpKINode Title="MvcApplication Class" Url="html/T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="MvcApplication Members" Url="html/AllMembers.T-JackHenryTwitter.MvcApplication.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.RouteConfig class">
+    <HelpKINode Title="RouteConfig Class" Url="html/T-JackHenryTwitter.RouteConfig.htm" />
+    <HelpKINode Title="RouteConfig Members" Url="html/AllMembers.T-JackHenryTwitter.RouteConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Tests.Controllers namespace" Url="html/N-JackHenryTwitter.Tests.Controllers.htm" />
+  <HelpKINode Title="JackHenryTwitter.Tests.Controllers.HomeControllerTest class">
+    <HelpKINode Title="HomeControllerTest Class" Url="html/T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+    <HelpKINode Title="HomeControllerTest Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Tests.UnitTests namespace" Url="html/N-JackHenryTwitter.Tests.UnitTests.htm" />
+  <HelpKINode Title="JackHenryTwitter.Tests.UnitTests.MethodUnitTests class">
+    <HelpKINode Title="MethodUnitTests Class" Url="html/T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+    <HelpKINode Title="MethodUnitTests Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Utilities namespace" Url="html/N-JackHenryTwitter.Utilities.htm" />
+  <HelpKINode Title="JackHenryTwitter.Utilities.ExtensionMethods class">
+    <HelpKINode Title="ExtensionMethods Class" Url="html/T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+    <HelpKINode Title="ExtensionMethods Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Utilities.GetTwitterDetails class">
+    <HelpKINode Title="GetTwitterDetails Class" Url="html/T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+    <HelpKINode Title="GetTwitterDetails Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JackHenryTwitter.Utilities.LineStatParsers class">
+    <HelpKINode Title="LineStatParsers Class" Url="html/T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+    <HelpKINode Title="LineStatParsers Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+  </HelpKINode>
+  <HelpKINode Title="lang property" Url="html/P-JackHenryTwitter.Models.Data.lang.htm" />
+  <HelpKINode Title="like_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.like_count.htm" />
+  <HelpKINode Title="LineStatParsers class">
+    <HelpKINode Title="LineStatParsers Class" Url="html/T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+    <HelpKINode Title="LineStatParsers Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+    <HelpKINode Title="about LineStatParsers class" Url="html/T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LineStatParsers.EmojiToHtmlEncode method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.EmojiToHtmlEncode.htm" />
+  <HelpKINode Title="LineStatParsers.GetEmojiList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetEmojiList.htm" />
+  <HelpKINode Title="LineStatParsers.GetHashTagList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHashTagList.htm" />
+  <HelpKINode Title="LineStatParsers.GetHashTotalTagCount method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHashTotalTagCount.htm" />
+  <HelpKINode Title="LineStatParsers.GetHostFromUrlString method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHostFromUrlString.htm" />
+  <HelpKINode Title="LineStatParsers.GetTotalUrlCount method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetTotalUrlCount.htm" />
+  <HelpKINode Title="LineStatParsers.GetUrlList method" Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetUrlList.htm" />
+  <HelpKINode Title="listed_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.listed_count.htm" />
+  <HelpKINode Title="media property" Url="html/P-JackHenryTwitter.Models.Includes.media.htm" />
+  <HelpKINode Title="media_key property" Url="html/P-JackHenryTwitter.Models.Medium.media_key.htm" />
+  <HelpKINode Title="media_keys property" Url="html/P-JackHenryTwitter.Models.Attachments.media_keys.htm" />
+  <HelpKINode Title="Medium class">
+    <HelpKINode Title="Medium Class" Url="html/T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="Medium Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="about Medium class" Url="html/T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Medium.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Medium.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Medium.duration_ms property" Url="html/P-JackHenryTwitter.Models.Medium.duration_ms.htm" />
+  <HelpKINode Title="Medium.height property" Url="html/P-JackHenryTwitter.Models.Medium.height.htm" />
+  <HelpKINode Title="Medium.media_key property" Url="html/P-JackHenryTwitter.Models.Medium.media_key.htm" />
+  <HelpKINode Title="Medium.preview_image_url property" Url="html/P-JackHenryTwitter.Models.Medium.preview_image_url.htm" />
+  <HelpKINode Title="Medium.type property" Url="html/P-JackHenryTwitter.Models.Medium.type.htm" />
+  <HelpKINode Title="Medium.width property" Url="html/P-JackHenryTwitter.Models.Medium.width.htm" />
+  <HelpKINode Title="Mention class">
+    <HelpKINode Title="Mention Class" Url="html/T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="Mention Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="about Mention class" Url="html/T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Mention.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Mention.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Mention.end property" Url="html/P-JackHenryTwitter.Models.Mention.end.htm" />
+  <HelpKINode Title="Mention.start property" Url="html/P-JackHenryTwitter.Models.Mention.start.htm" />
+  <HelpKINode Title="Mention.username property" Url="html/P-JackHenryTwitter.Models.Mention.username.htm" />
+  <HelpKINode Title="mentions property" Url="html/P-JackHenryTwitter.Models.Description.mentions.htm" />
+  <HelpKINode Title="MethodUnitTests class">
+    <HelpKINode Title="MethodUnitTests Class" Url="html/T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+    <HelpKINode Title="MethodUnitTests Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+    <HelpKINode Title="about MethodUnitTests class" Url="html/T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MethodUnitTests.TestCheckForEmoji method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForEmoji.htm" />
+  <HelpKINode Title="MethodUnitTests.TestCheckForUrls method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForUrls.htm" />
+  <HelpKINode Title="MethodUnitTests.TestSetPctTweetsWithPhoto method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetPctTweetsWithPhoto.htm" />
+  <HelpKINode Title="MethodUnitTests.TestSetPctTweetsWithUrl method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetPctTweetsWithUrl.htm" />
+  <HelpKINode Title="MethodUnitTests.TestSetTopHashtags method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetTopHashtags.htm" />
+  <HelpKINode Title="MethodUnitTests.TestSetTopUrlDomains method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetTopUrlDomains.htm" />
+  <HelpKINode Title="MethodUnitTests.TestTweetStatsSetAverageTimes method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestTweetStatsSetAverageTimes.htm" />
+  <HelpKINode Title="MvcApplication class">
+    <HelpKINode Title="MvcApplication Class" Url="html/T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="MvcApplication Members" Url="html/AllMembers.T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="about MvcApplication class" Url="html/T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.MvcApplication.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.MvcApplication.htm" />
+  </HelpKINode>
+  <HelpKINode Title="name property">
+    <HelpKINode Title="name Property " Url="html/P-JackHenryTwitter.Models.Emoji.name.htm" />
+    <HelpKINode Title="name Property " Url="html/P-JackHenryTwitter.Models.User.name.htm" />
+  </HelpKINode>
+  <HelpKINode Title="non_qualified property" Url="html/P-JackHenryTwitter.Models.Emoji.non_qualified.htm" />
+  <HelpKINode Title="PctTweetsWithEmojis property">
+    <HelpKINode Title="PctTweetsWithEmojis Property " Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithEmojis.htm" />
+    <HelpKINode Title="PctTweetsWithEmojis Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithEmojis.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PctTweetsWithHashTags property">
+    <HelpKINode Title="PctTweetsWithHashTags Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithHashTags.htm" />
+    <HelpKINode Title="PctTweetsWithHashTags Property " Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithHashTags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PctTweetsWithPhoto property">
+    <HelpKINode Title="PctTweetsWithPhoto Property " Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithPhoto.htm" />
+    <HelpKINode Title="PctTweetsWithPhoto Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithPhoto.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PctTweetsWithUrl property">
+    <HelpKINode Title="PctTweetsWithUrl Property " Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithUrl.htm" />
+    <HelpKINode Title="PctTweetsWithUrl Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.PctTweetsWithUrl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="pinned_tweet_id property" Url="html/P-JackHenryTwitter.Models.User.pinned_tweet_id.htm" />
+  <HelpKINode Title="possibly_sensitive property" Url="html/P-JackHenryTwitter.Models.Data.possibly_sensitive.htm" />
+  <HelpKINode Title="preview_image_url property" Url="html/P-JackHenryTwitter.Models.Medium.preview_image_url.htm" />
+  <HelpKINode Title="profile_image_url property" Url="html/P-JackHenryTwitter.Models.User.profile_image_url.htm" />
+  <HelpKINode Title="protected property" Url="html/P-JackHenryTwitter.Models.User.protected.htm" />
+  <HelpKINode Title="PublicMetrics class">
+    <HelpKINode Title="PublicMetrics Class" Url="html/T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="PublicMetrics Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="about PublicMetrics class" Url="html/T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.PublicMetrics.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetrics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PublicMetrics.like_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.like_count.htm" />
+  <HelpKINode Title="PublicMetrics.quote_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.quote_count.htm" />
+  <HelpKINode Title="PublicMetrics.reply_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.reply_count.htm" />
+  <HelpKINode Title="PublicMetrics.retweet_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.retweet_count.htm" />
+  <HelpKINode Title="PublicMetricsUsers class">
+    <HelpKINode Title="PublicMetricsUsers Class" Url="html/T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="PublicMetricsUsers Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="about PublicMetricsUsers class" Url="html/T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PublicMetricsUsers.followers_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.followers_count.htm" />
+  <HelpKINode Title="PublicMetricsUsers.following_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.following_count.htm" />
+  <HelpKINode Title="PublicMetricsUsers.listed_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.listed_count.htm" />
+  <HelpKINode Title="PublicMetricsUsers.tweet_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.tweet_count.htm" />
+  <HelpKINode Title="public_metrics property">
+    <HelpKINode Title="public_metrics Property " Url="html/P-JackHenryTwitter.Models.Data.public_metrics.htm" />
+    <HelpKINode Title="public_metrics Property " Url="html/P-JackHenryTwitter.Models.User.public_metrics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="quote_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.quote_count.htm" />
+  <HelpKINode Title="RegisterBundles method" Url="html/M-JackHenryTwitter.BundleConfig.RegisterBundles.htm" />
+  <HelpKINode Title="RegisterGlobalFilters method" Url="html/M-JackHenryTwitter.FilterConfig.RegisterGlobalFilters.htm" />
+  <HelpKINode Title="RegisterRoutes method" Url="html/M-JackHenryTwitter.RouteConfig.RegisterRoutes.htm" />
+  <HelpKINode Title="ReplaceFirst method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceFirst.htm" />
+  <HelpKINode Title="ReplaceLast method" Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceLast.htm" />
+  <HelpKINode Title="reply_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.reply_count.htm" />
+  <HelpKINode Title="retweet_count property" Url="html/P-JackHenryTwitter.Models.PublicMetrics.retweet_count.htm" />
+  <HelpKINode Title="Root class">
+    <HelpKINode Title="Root Class" Url="html/T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="Root Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="about Root class" Url="html/T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Root.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Root.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Root.TweetData property" Url="html/P-JackHenryTwitter.Models.Root.TweetData.htm" />
+  <HelpKINode Title="RouteConfig class">
+    <HelpKINode Title="RouteConfig Class" Url="html/T-JackHenryTwitter.RouteConfig.htm" />
+    <HelpKINode Title="RouteConfig Members" Url="html/AllMembers.T-JackHenryTwitter.RouteConfig.htm" />
+    <HelpKINode Title="about RouteConfig class" Url="html/T-JackHenryTwitter.RouteConfig.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.RouteConfig.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.RouteConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RouteConfig.RegisterRoutes method" Url="html/M-JackHenryTwitter.RouteConfig.RegisterRoutes.htm" />
+  <HelpKINode Title="RunningTotalEmoji property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalEmoji.htm" />
+  <HelpKINode Title="RunningTotalHashtag property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalHashtag.htm" />
+  <HelpKINode Title="RunningTotals class">
+    <HelpKINode Title="RunningTotals Class" Url="html/T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="RunningTotals Members" Url="html/AllMembers.T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="about RunningTotals class" Url="html/T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.RunningTotals.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.RunningTotals.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RunningTotals.FullListOfHashtags property" Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfHashtags.htm" />
+  <HelpKINode Title="RunningTotals.FullListOfUrls property" Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfUrls.htm" />
+  <HelpKINode Title="RunningTotals.RunningTotalEmoji property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalEmoji.htm" />
+  <HelpKINode Title="RunningTotals.RunningTotalHashtag property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalHashtag.htm" />
+  <HelpKINode Title="RunningTotals.RunningTotalUrl property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalUrl.htm" />
+  <HelpKINode Title="RunningTotals.TimeToDownloadInMiliSeconds property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TimeToDownloadInMiliSeconds.htm" />
+  <HelpKINode Title="RunningTotals.TweetsWithEmojiRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithEmojiRunningTotal.htm" />
+  <HelpKINode Title="RunningTotals.TweetsWithHashTagRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithHashTagRunningTotal.htm" />
+  <HelpKINode Title="RunningTotals.TweetsWithUrlRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithUrlRunningTotal.htm" />
+  <HelpKINode Title="RunningTotalUrl property" Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalUrl.htm" />
+  <HelpKINode Title="sample method" Url="html/M-JackHenryTwitter.Controllers.HomeController.sample.htm" />
+  <HelpKINode Title="SearchTextFieldOnlyForStatTotals method" Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.SearchTextFieldOnlyForStatTotals.htm" />
+  <HelpKINode Title="SetAllTweetStatsProperties method">
+    <HelpKINode Title="SetAllTweetStatsProperties Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetAllTweetStatsProperties.htm" />
+    <HelpKINode Title="SetAllTweetStatsProperties Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAllTweetStatsProperties.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetAverageTimes method">
+    <HelpKINode Title="SetAverageTimes Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetAverageTimes.htm" />
+    <HelpKINode Title="SetAverageTimes Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAverageTimes.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetPctTweetsWithEmoji method">
+    <HelpKINode Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji.htm" />
+    <HelpKINode Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetPctTweetsWithHashTags method">
+    <HelpKINode Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags.htm" />
+    <HelpKINode Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetPctTweetsWithPhoto method">
+    <HelpKINode Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto.htm" />
+    <HelpKINode Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetPctTweetsWithUrl method">
+    <HelpKINode Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl.htm" />
+    <HelpKINode Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetTopEmojies method">
+    <HelpKINode Title="SetTopEmojies Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopEmojies.htm" />
+    <HelpKINode Title="SetTopEmojies Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopEmojies.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetTopHashtags method">
+    <HelpKINode Title="SetTopHashtags Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopHashtags.htm" />
+    <HelpKINode Title="SetTopHashtags Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopHashtags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetTopUrlDomains method">
+    <HelpKINode Title="SetTopUrlDomains Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopUrlDomains.htm" />
+    <HelpKINode Title="SetTopUrlDomains Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopUrlDomains.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetTwitterDataToJsonFile class">
+    <HelpKINode Title="SetTwitterDataToJsonFile Class" Url="html/T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="SetTwitterDataToJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="about SetTwitterDataToJsonFile class" Url="html/T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="constructor" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetTwitterDataToJsonFile.AddStreamingTweetToTempDataset method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.AddStreamingTweetToTempDataset.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.emojiBaseList field" Url="html/F-JackHenryTwitter.Models.SetTwitterDataToJsonFile.emojiBaseList.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.FormatTweetDataForDataInsert method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.FormatTweetDataForDataInsert.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.SetTwitterDataToJsonFile constructor" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.-ctor.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.tweetDownloadProperties property" Url="html/P-JackHenryTwitter.Models.SetTwitterDataToJsonFile.tweetDownloadProperties.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.UpdateTopEmojies method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopEmojies.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.UpdateTopHashtags method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopHashtags.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.UpdateTopUrls method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopUrls.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.UpdateTweetStatistics method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTweetStatistics.htm" />
+  <HelpKINode Title="SetTwitterDataToJsonFile.WriteTweetStatsToDataSet method" Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.WriteTweetStatsToDataSet.htm" />
+  <HelpKINode Title="sheet_x property" Url="html/P-JackHenryTwitter.Models.Emoji.sheet_x.htm" />
+  <HelpKINode Title="sheet_y property" Url="html/P-JackHenryTwitter.Models.Emoji.sheet_y.htm" />
+  <HelpKINode Title="short_name property" Url="html/P-JackHenryTwitter.Models.Emoji.short_name.htm" />
+  <HelpKINode Title="short_names property" Url="html/P-JackHenryTwitter.Models.Emoji.short_names.htm" />
+  <HelpKINode Title="softbank property" Url="html/P-JackHenryTwitter.Models.Emoji.softbank.htm" />
+  <HelpKINode Title="sort_order property" Url="html/P-JackHenryTwitter.Models.Emoji.sort_order.htm" />
+  <HelpKINode Title="source property" Url="html/P-JackHenryTwitter.Models.Data.source.htm" />
+  <HelpKINode Title="start property">
+    <HelpKINode Title="start Property " Url="html/P-JackHenryTwitter.Models.Mention.start.htm" />
+    <HelpKINode Title="start Property " Url="html/P-JackHenryTwitter.Models.Url.start.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StartTimeForDownload property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.StartTimeForDownload.htm" />
+  <HelpKINode Title="TestCheckForEmoji method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForEmoji.htm" />
+  <HelpKINode Title="TestCheckForUrls method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForUrls.htm" />
+  <HelpKINode Title="TestSetPctTweetsWithPhoto method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetPctTweetsWithPhoto.htm" />
+  <HelpKINode Title="TestSetPctTweetsWithUrl method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetPctTweetsWithUrl.htm" />
+  <HelpKINode Title="TestSetTopHashtags method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetTopHashtags.htm" />
+  <HelpKINode Title="TestSetTopUrlDomains method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetTopUrlDomains.htm" />
+  <HelpKINode Title="TestTweetStatsSetAverageTimes method" Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestTweetStatsSetAverageTimes.htm" />
+  <HelpKINode Title="text property">
+    <HelpKINode Title="text Property " Url="html/P-JackHenryTwitter.Models.Data.text.htm" />
+    <HelpKINode Title="text Property " Url="html/P-JackHenryTwitter.Models.Emoji.text.htm" />
+  </HelpKINode>
+  <HelpKINode Title="texts property" Url="html/P-JackHenryTwitter.Models.Emoji.texts.htm" />
+  <HelpKINode Title="TimeSpentDownloadingInSeconds property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeSpentDownloadingInSeconds.htm" />
+  <HelpKINode Title="TimeToDownloadInMiliSeconds property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TimeToDownloadInMiliSeconds.htm" />
+  <HelpKINode Title="TimeWantedToDownloadTweets property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeWantedToDownloadTweets.htm" />
+  <HelpKINode Title="TopDomains.Domain property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.Domain.htm" />
+  <HelpKINode Title="TopDomains.DomainCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.DomainCount.htm" />
+  <HelpKINode Title="TopEmojies.Emoji property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.Emoji.htm" />
+  <HelpKINode Title="TopEmojies.EmojiCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.EmojiCount.htm" />
+  <HelpKINode Title="TopEmojisList property">
+    <HelpKINode Title="TopEmojisList Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojisList.htm" />
+    <HelpKINode Title="TopEmojisList Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TopEmojisList.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TopHashtagList property">
+    <HelpKINode Title="TopHashtagList Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TopHashtagList.htm" />
+    <HelpKINode Title="TopHashtagList Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtagList.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TopHashtags.Hashtag property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.Hashtag.htm" />
+  <HelpKINode Title="TopHashtags.HashtagCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.HashtagCount.htm" />
+  <HelpKINode Title="TopUrlDomainList property">
+    <HelpKINode Title="TopUrlDomainList Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopUrlDomainList.htm" />
+    <HelpKINode Title="TopUrlDomainList Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TopUrlDomainList.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalDownloadTimeInMiliSeconds property">
+    <HelpKINode Title="TotalDownloadTimeInMiliSeconds Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalDownloadTimeInMiliSeconds.htm" />
+    <HelpKINode Title="TotalDownloadTimeInMiliSeconds Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalDownloadTimeInMiliSeconds.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalEmojisInTweets property">
+    <HelpKINode Title="TotalEmojisInTweets Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalEmojisInTweets.htm" />
+    <HelpKINode Title="TotalEmojisInTweets Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalEmojisInTweets.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalHashTagsInTweets property">
+    <HelpKINode Title="TotalHashTagsInTweets Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalHashTagsInTweets.htm" />
+    <HelpKINode Title="TotalHashTagsInTweets Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalHashTagsInTweets.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalTweetsReceived property">
+    <HelpKINode Title="TotalTweetsReceived Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalTweetsReceived.htm" />
+    <HelpKINode Title="TotalTweetsReceived Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalTweetsReceived.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalTweetsWithPhoto property">
+    <HelpKINode Title="TotalTweetsWithPhoto Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalTweetsWithPhoto.htm" />
+    <HelpKINode Title="TotalTweetsWithPhoto Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalTweetsWithPhoto.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TotalUrlsInTweets property">
+    <HelpKINode Title="TotalUrlsInTweets Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TotalUrlsInTweets.htm" />
+    <HelpKINode Title="TotalUrlsInTweets Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TotalUrlsInTweets.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tweet class">
+    <HelpKINode Title="Tweet Class" Url="html/T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="Tweet Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="about Tweet class" Url="html/T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Tweet.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Tweet.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Tweet.data property" Url="html/P-JackHenryTwitter.Models.Tweet.data.htm" />
+  <HelpKINode Title="Tweet.includes property" Url="html/P-JackHenryTwitter.Models.Tweet.includes.htm" />
+  <HelpKINode Title="TweetData class">
+    <HelpKINode Title="TweetData Class" Url="html/T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="TweetData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="about TweetData class" Url="html/T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetData.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetData.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetData property" Url="html/P-JackHenryTwitter.Models.Root.TweetData.htm" />
+  <HelpKINode Title="TweetData.Tweets property" Url="html/P-JackHenryTwitter.Models.TweetData.Tweets.htm" />
+  <HelpKINode Title="TweetDownloadProperties class">
+    <HelpKINode Title="TweetDownloadProperties Class" Url="html/T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="TweetDownloadProperties Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="about TweetDownloadProperties class" Url="html/T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
+  </HelpKINode>
+  <HelpKINode Title="tweetDownloadProperties property">
+    <HelpKINode Title="tweetDownloadProperties Property " Url="html/P-JackHenryTwitter.Models.ISetTwitterData.tweetDownloadProperties.htm" />
+    <HelpKINode Title="tweetDownloadProperties Property " Url="html/P-JackHenryTwitter.Models.SetTwitterDataToJsonFile.tweetDownloadProperties.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetDownloadProperties property" Url="html/P-JackHenryTwitter.Models.GetTweetsFromTwitter.TweetDownloadProperties.htm" />
+  <HelpKINode Title="TweetDownloadProperties.EndTimeForDownload property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.EndTimeForDownload.htm" />
+  <HelpKINode Title="TweetDownloadProperties.IsFinishedLoadingTweets property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.IsFinishedLoadingTweets.htm" />
+  <HelpKINode Title="TweetDownloadProperties.StartTimeForDownload property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.StartTimeForDownload.htm" />
+  <HelpKINode Title="TweetDownloadProperties.TimeSpentDownloadingInSeconds property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeSpentDownloadingInSeconds.htm" />
+  <HelpKINode Title="TweetDownloadProperties.TimeWantedToDownloadTweets property" Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeWantedToDownloadTweets.htm" />
+  <HelpKINode Title="Tweets property" Url="html/P-JackHenryTwitter.Models.TweetData.Tweets.htm" />
+  <HelpKINode Title="TweetStatistics method" Url="html/M-JackHenryTwitter.Controllers.HomeController.TweetStatistics.htm" />
+  <HelpKINode Title="TweetStats class">
+    <HelpKINode Title="TweetStats Class" Url="html/T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="TweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="about TweetStats class" Url="html/T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-JackHenryTwitter.Models.TweetStats.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetStats.AverageTweetsReceivedPerHour property" Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerHour.htm" />
+  <HelpKINode Title="TweetStats.AverageTweetsReceivedPerMinute property" Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerMinute.htm" />
+  <HelpKINode Title="TweetStats.AverageTweetsReceivedPerSecond property" Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerSecond.htm" />
+  <HelpKINode Title="TweetStats.PctTweetsWithEmojis property" Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithEmojis.htm" />
+  <HelpKINode Title="TweetStats.PctTweetsWithHashTags property" Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithHashTags.htm" />
+  <HelpKINode Title="TweetStats.PctTweetsWithPhoto property" Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithPhoto.htm" />
+  <HelpKINode Title="TweetStats.PctTweetsWithUrl property" Url="html/P-JackHenryTwitter.Models.TweetStats.PctTweetsWithUrl.htm" />
+  <HelpKINode Title="TweetStats.SetAllTweetStatsProperties method" Url="html/M-JackHenryTwitter.Models.TweetStats.SetAllTweetStatsProperties.htm" />
+  <HelpKINode Title="TweetStats.SetAverageTimes method" Url="html/M-JackHenryTwitter.Models.TweetStats.SetAverageTimes.htm" />
+  <HelpKINode Title="TweetStats.SetPctTweetsWithEmoji method" Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji.htm" />
+  <HelpKINode Title="TweetStats.SetPctTweetsWithHashTags method" Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags.htm" />
+  <HelpKINode Title="TweetStats.SetPctTweetsWithPhoto method" Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto.htm" />
+  <HelpKINode Title="TweetStats.SetPctTweetsWithUrl method" Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl.htm" />
+  <HelpKINode Title="TweetStats.SetTopEmojies method" Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopEmojies.htm" />
+  <HelpKINode Title="TweetStats.SetTopHashtags method" Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopHashtags.htm" />
+  <HelpKINode Title="TweetStats.SetTopUrlDomains method" Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopUrlDomains.htm" />
+  <HelpKINode Title="TweetStats.TopDomains class">
+    <HelpKINode Title="TweetStats.TopDomains Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="TweetStats.TopDomains Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="about TweetStats.TopDomains class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetStats.TopEmojies class">
+    <HelpKINode Title="TweetStats.TopEmojies Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="TweetStats.TopEmojies Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="about TweetStats.TopEmojies class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetStats.TopEmojisList property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojisList.htm" />
+  <HelpKINode Title="TweetStats.TopHashtagList property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtagList.htm" />
+  <HelpKINode Title="TweetStats.TopHashtags class">
+    <HelpKINode Title="TweetStats.TopHashtags Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="TweetStats.TopHashtags Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="about TweetStats.TopHashtags class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetStats.TopUrlDomainList property" Url="html/P-JackHenryTwitter.Models.TweetStats.TopUrlDomainList.htm" />
+  <HelpKINode Title="TweetStats.TotalDownloadTimeInMiliSeconds property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalDownloadTimeInMiliSeconds.htm" />
+  <HelpKINode Title="TweetStats.TotalEmojisInTweets property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalEmojisInTweets.htm" />
+  <HelpKINode Title="TweetStats.TotalHashTagsInTweets property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalHashTagsInTweets.htm" />
+  <HelpKINode Title="TweetStats.TotalTweetsReceived property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalTweetsReceived.htm" />
+  <HelpKINode Title="TweetStats.TotalTweetsWithPhoto property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalTweetsWithPhoto.htm" />
+  <HelpKINode Title="TweetStats.TotalUrlsInTweets property" Url="html/P-JackHenryTwitter.Models.TweetStats.TotalUrlsInTweets.htm" />
+  <HelpKINode Title="TweetStats.TweetStats constructor" Url="html/Overload-JackHenryTwitter.Models.TweetStats.-ctor.htm" />
+  <HelpKINode Title="TweetStats.TweetsWithEmojiCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithEmojiCount.htm" />
+  <HelpKINode Title="TweetStats.TweetsWithHashTagsCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithHashTagsCount.htm" />
+  <HelpKINode Title="TweetStats.TweetsWithUrlsCount property" Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithUrlsCount.htm" />
+  <HelpKINode Title="TweetsWithEmojiCount property">
+    <HelpKINode Title="TweetsWithEmojiCount Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithEmojiCount.htm" />
+    <HelpKINode Title="TweetsWithEmojiCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithEmojiCount.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetsWithEmojiRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithEmojiRunningTotal.htm" />
+  <HelpKINode Title="TweetsWithHashTagRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithHashTagRunningTotal.htm" />
+  <HelpKINode Title="TweetsWithHashTagsCount property">
+    <HelpKINode Title="TweetsWithHashTagsCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithHashTagsCount.htm" />
+    <HelpKINode Title="TweetsWithHashTagsCount Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithHashTagsCount.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TweetsWithUrlRunningTotal property" Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithUrlRunningTotal.htm" />
+  <HelpKINode Title="TweetsWithUrlsCount property">
+    <HelpKINode Title="TweetsWithUrlsCount Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithUrlsCount.htm" />
+    <HelpKINode Title="TweetsWithUrlsCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithUrlsCount.htm" />
+  </HelpKINode>
+  <HelpKINode Title="tweet_count property" Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.tweet_count.htm" />
+  <HelpKINode Title="type property" Url="html/P-JackHenryTwitter.Models.Medium.type.htm" />
+  <HelpKINode Title="unified property" Url="html/P-JackHenryTwitter.Models.Emoji.unified.htm" />
+  <HelpKINode Title="UpdateTopEmojies method">
+    <HelpKINode Title="UpdateTopEmojies Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopEmojies.htm" />
+    <HelpKINode Title="UpdateTopEmojies Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopEmojies.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateTopHashtags method">
+    <HelpKINode Title="UpdateTopHashtags Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopHashtags.htm" />
+    <HelpKINode Title="UpdateTopHashtags Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopHashtags.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateTopUrls method">
+    <HelpKINode Title="UpdateTopUrls Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopUrls.htm" />
+    <HelpKINode Title="UpdateTopUrls Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopUrls.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateTweetStatistics method">
+    <HelpKINode Title="UpdateTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTweetStatistics.htm" />
+    <HelpKINode Title="UpdateTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTweetStatistics.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Url class">
+    <HelpKINode Title="Url Class" Url="html/T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="Url Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="about Url class" Url="html/T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.Url.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.Url.htm" />
+  </HelpKINode>
+  <HelpKINode Title="url property">
+    <HelpKINode Title="url Property " Url="html/P-JackHenryTwitter.Models.User.url.htm" />
+    <HelpKINode Title="url Property " Url="html/P-JackHenryTwitter.Models.Url.url.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Url.display_url property" Url="html/P-JackHenryTwitter.Models.Url.display_url.htm" />
+  <HelpKINode Title="Url.end property" Url="html/P-JackHenryTwitter.Models.Url.end.htm" />
+  <HelpKINode Title="Url.expanded_url property" Url="html/P-JackHenryTwitter.Models.Url.expanded_url.htm" />
+  <HelpKINode Title="Url.start property" Url="html/P-JackHenryTwitter.Models.Url.start.htm" />
+  <HelpKINode Title="Url.url property" Url="html/P-JackHenryTwitter.Models.Url.url.htm" />
+  <HelpKINode Title="urls property" Url="html/P-JackHenryTwitter.Models.Entities.urls.htm" />
+  <HelpKINode Title="User class">
+    <HelpKINode Title="User Class" Url="html/T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="User Members" Url="html/AllMembers.T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="about User class" Url="html/T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-JackHenryTwitter.Models.User.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-JackHenryTwitter.Models.User.htm" />
+  </HelpKINode>
+  <HelpKINode Title="User.created_at property" Url="html/P-JackHenryTwitter.Models.User.created_at.htm" />
+  <HelpKINode Title="User.description property" Url="html/P-JackHenryTwitter.Models.User.description.htm" />
+  <HelpKINode Title="User.entities property" Url="html/P-JackHenryTwitter.Models.User.entities.htm" />
+  <HelpKINode Title="User.id property" Url="html/P-JackHenryTwitter.Models.User.id.htm" />
+  <HelpKINode Title="User.name property" Url="html/P-JackHenryTwitter.Models.User.name.htm" />
+  <HelpKINode Title="User.pinned_tweet_id property" Url="html/P-JackHenryTwitter.Models.User.pinned_tweet_id.htm" />
+  <HelpKINode Title="User.profile_image_url property" Url="html/P-JackHenryTwitter.Models.User.profile_image_url.htm" />
+  <HelpKINode Title="User.protected property" Url="html/P-JackHenryTwitter.Models.User.protected.htm" />
+  <HelpKINode Title="User.public_metrics property" Url="html/P-JackHenryTwitter.Models.User.public_metrics.htm" />
+  <HelpKINode Title="User.url property" Url="html/P-JackHenryTwitter.Models.User.url.htm" />
+  <HelpKINode Title="User.username property" Url="html/P-JackHenryTwitter.Models.User.username.htm" />
+  <HelpKINode Title="User.verified property" Url="html/P-JackHenryTwitter.Models.User.verified.htm" />
+  <HelpKINode Title="username property">
+    <HelpKINode Title="username Property " Url="html/P-JackHenryTwitter.Models.User.username.htm" />
+    <HelpKINode Title="username Property " Url="html/P-JackHenryTwitter.Models.Mention.username.htm" />
+  </HelpKINode>
+  <HelpKINode Title="users property" Url="html/P-JackHenryTwitter.Models.Includes.users.htm" />
+  <HelpKINode Title="verified property" Url="html/P-JackHenryTwitter.Models.User.verified.htm" />
+  <HelpKINode Title="width property" Url="html/P-JackHenryTwitter.Models.Medium.width.htm" />
+  <HelpKINode Title="WriteTweetStatsToDataSet method">
+    <HelpKINode Title="WriteTweetStatsToDataSet Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.WriteTweetStatsToDataSet.htm" />
+    <HelpKINode Title="WriteTweetStatsToDataSet Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.WriteTweetStatsToDataSet.htm" />
+  </HelpKINode>
+</HelpKI>

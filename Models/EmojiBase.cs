@@ -18,6 +18,8 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class EmojiBase
     {
+        #region Public Properties
+
         /// <summary>
         /// Gets or sets the emoji HTML encode.
         /// </summary>
@@ -29,5 +31,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The emoji image.</value>
         public string EmojiImage { get; set; }
+
+        #endregion Public Properties
     }
 }

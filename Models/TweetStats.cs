@@ -11,7 +11,6 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using JackHenryTwitter.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 

@@ -23,7 +23,6 @@ namespace JackHenryTwitter.Models
     /// </summary>
     internal interface IGetTweetsFromTwitter
     {
-
         #region Public Properties
 
         /// <summary>
@@ -49,6 +48,5 @@ namespace JackHenryTwitter.Models
         bool HandleTweetDownloadCompletion();
 
         #endregion Public Methods
-
     }
 }

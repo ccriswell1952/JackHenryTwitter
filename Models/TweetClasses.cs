@@ -383,6 +383,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <value>The emoji running total.</value>
         public int RunningTotalEmoji { get; set; }
+
         /// <summary>
         /// Gets or sets the hash tag running total.
         /// </summary>
@@ -420,6 +421,7 @@ namespace JackHenryTwitter.Models
         public int TweetsWithUrlRunningTotal { get; set; }
 
         #endregion Public Properties
+
     }
 
     /// <summary>

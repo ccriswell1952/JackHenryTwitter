@@ -37,6 +37,17 @@ namespace JackHenryTwitter.Models
 
         #endregion Public Fields
 
+        #region Private Fields
+
+        private RunningTotals runningTotals;
+
+        /// <summary>
+        /// The tweet data
+        /// </summary>
+        private TweetData tweetData = new TweetData();
+
+        #endregion Private Fields
+
         #region Public Constructors
 
         /// <summary>
@@ -95,13 +106,6 @@ namespace JackHenryTwitter.Models
         /// <value><c>true</c> if this instance is finished loading tweets; otherwise, <c>false</c>.</value>
         private bool IsFinishedLoadingTweets { get; set; }
 
-        private RunningTotals runningTotals;
-
-        /// <summary>
-        /// The tweet data
-        /// </summary>
-        private TweetData tweetData = new TweetData();
-
         #endregion Private Properties
 
         #region Public Methods
@@ -154,7 +158,6 @@ namespace JackHenryTwitter.Models
                         }
                     }
                 }
-
             }
             if (linesToCheckForStats.Count > 0)
             {
@@ -197,40 +200,6 @@ namespace JackHenryTwitter.Models
             string returnValue = tweetJsonData.ReplaceFirst("{", ",");
             returnValue = tweetJsonData.ReplaceLast("}", "");
             return returnValue;
-        }
-
-        /// <summary>
-        /// Updates the top domains from the URLs.
-        /// </summary>
-        /// <param name="existingTopDomains">The existing top domains.</param>
-        /// <param name="newTopDomains">The new top domains.</param>
-        /// <returns>TweetStats.TopDomains.</returns>
-        public List<TweetStats.TopDomains> UpdateTopUrls(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
-        {
-            List<TopDomains> mergedTopDomains = new List<TopDomains>();
-            List<TopDomains> combinedLists = new List<TopDomains>();
-            combinedLists.AddRange(newTopDomains);
-            combinedLists.AddRange(existingTopDomains);
-
-            var uniqueDomain = combinedLists.Select(s => new { s.Domain }).Distinct();
-            foreach (var item in uniqueDomain)
-            {
-                TopDomains topDomain = new TopDomains();
-                var domain = item.Domain;
-                topDomain.Domain = domain;
-                int domainCount = 0;
-                foreach (var te in combinedLists)
-                {
-                    if (te.Domain.Equals(domain))
-                    {
-                        domainCount += te.DomainCount;
-                    }
-                }
-                topDomain.DomainCount = domainCount;
-                mergedTopDomains.Add(topDomain);
-            }
-            mergedTopDomains = mergedTopDomains.OrderByDescending(o => o.DomainCount).Take(100).ToList();
-            return mergedTopDomains;
         }
 
         /// <summary>
@@ -305,6 +274,40 @@ namespace JackHenryTwitter.Models
         }
 
         /// <summary>
+        /// Updates the top domains from the URLs.
+        /// </summary>
+        /// <param name="existingTopDomains">The existing top domains.</param>
+        /// <param name="newTopDomains">The new top domains.</param>
+        /// <returns>TweetStats.TopDomains.</returns>
+        public List<TweetStats.TopDomains> UpdateTopUrls(List<TweetStats.TopDomains> existingTopDomains, List<TweetStats.TopDomains> newTopDomains)
+        {
+            List<TopDomains> mergedTopDomains = new List<TopDomains>();
+            List<TopDomains> combinedLists = new List<TopDomains>();
+            combinedLists.AddRange(newTopDomains);
+            combinedLists.AddRange(existingTopDomains);
+
+            var uniqueDomain = combinedLists.Select(s => new { s.Domain }).Distinct();
+            foreach (var item in uniqueDomain)
+            {
+                TopDomains topDomain = new TopDomains();
+                var domain = item.Domain;
+                topDomain.Domain = domain;
+                int domainCount = 0;
+                foreach (var te in combinedLists)
+                {
+                    if (te.Domain.Equals(domain))
+                    {
+                        domainCount += te.DomainCount;
+                    }
+                }
+                topDomain.DomainCount = domainCount;
+                mergedTopDomains.Add(topDomain);
+            }
+            mergedTopDomains = mergedTopDomains.OrderByDescending(o => o.DomainCount).Take(100).ToList();
+            return mergedTopDomains;
+        }
+
+        /// <summary>
         /// Updates the tweet statistics.
         /// </summary>
         /// <param name="newTweetStats">The new tweet stats.</param>
@@ -316,7 +319,7 @@ namespace JackHenryTwitter.Models
             combinedStats.TotalDownloadTimeInMiliSeconds += newTweetStats.TotalDownloadTimeInMiliSeconds;
             combinedStats.TotalTweetsReceived += newTweetStats.TotalTweetsReceived;
             combinedStats.TotalTweetsWithPhoto += newTweetStats.TotalTweetsWithPhoto;
-            combinedStats.TotalUrlsInTweets  += newTweetStats.TotalUrlsInTweets;
+            combinedStats.TotalUrlsInTweets += newTweetStats.TotalUrlsInTweets;
             combinedStats.TotalHashTagsInTweets += newTweetStats.TotalHashTagsInTweets;
             combinedStats.TweetsWithEmojiCount += newTweetStats.TweetsWithEmojiCount;
             combinedStats.TweetsWithHashTagsCount += newTweetStats.TweetsWithHashTagsCount;
