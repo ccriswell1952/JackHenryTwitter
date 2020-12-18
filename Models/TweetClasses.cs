@@ -19,7 +19,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Attachments.
     /// </summary>
-    public class Attachments
+    public partial class Attachments
     {
 
         #region Public Properties
@@ -37,7 +37,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Data.
     /// </summary>
-    public class Data
+    public partial class Data
     {
 
         #region Public Properties
@@ -115,7 +115,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Description.
     /// </summary>
-    public class Description
+    public partial class Description
     {
 
         #region Public Properties
@@ -133,7 +133,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Entities.
     /// </summary>
-    public class Entities
+    public partial class Entities
     {
 
         #region Public Properties
@@ -151,7 +151,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Entities2.
     /// </summary>
-    public class Entities2
+    public partial class Entities2
     {
 
         #region Public Properties
@@ -169,7 +169,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Includes.
     /// </summary>
-    public class Includes
+    public partial class Includes
     {
 
         #region Public Properties
@@ -193,7 +193,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Medium.
     /// </summary>
-    public class Medium
+    public partial class Medium
     {
 
         #region Public Properties
@@ -241,7 +241,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Mention.
     /// </summary>
-    public class Mention
+    public partial class Mention
     {
 
         #region Public Properties
@@ -271,7 +271,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class PublicMetrics.
     /// </summary>
-    public class PublicMetrics
+    public partial class PublicMetrics
     {
 
         #region Public Properties
@@ -307,7 +307,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class PublicMetricsUsers.
     /// </summary>
-    public class PublicMetricsUsers
+    public partial class PublicMetricsUsers
     {
 
         #region Public Properties
@@ -343,7 +343,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Root.
     /// </summary>
-    public class Root
+    public partial class Root
     {
 
         #region Public Properties
@@ -361,7 +361,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class RunningTotals.
     /// </summary>
-    public class RunningTotals
+    public partial class RunningTotals
     {
 
         #region Public Properties
@@ -427,7 +427,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Tweet.
     /// </summary>
-    public class Tweet
+    public partial class Tweet
     {
 
         #region Public Properties
@@ -451,7 +451,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class TweetData.
     /// </summary>
-    public class TweetData
+    public partial class TweetData
     {
 
         #region Public Properties
@@ -469,7 +469,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Url.
     /// </summary>
-    public class Url
+    public partial class Url
     {
 
         #region Public Properties
@@ -511,7 +511,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class User.
     /// </summary>
-    public class User
+    public partial class User
     {
 
         #region Public Properties

@@ -23,7 +23,7 @@ namespace JackHenryTwitter.Utilities
     /// <summary>
     /// Class EmojiParser.
     /// </summary>
-    public static class LineStatParsers
+    public static partial class LineStatParsers
     {
         /// <summary>
         /// Returns the Emoji HTMLEncoded.

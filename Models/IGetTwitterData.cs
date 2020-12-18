@@ -16,7 +16,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Interface IGetData
     /// </summary>
-    public interface IGetTwitterData
+    public partial interface IGetTwitterData
     {
         #region Public Methods
 

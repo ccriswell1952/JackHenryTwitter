@@ -18,7 +18,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Interface ITweetStats
     /// </summary>
-    public interface ITweetStats
+    public partial interface ITweetStats
     {
         #region Public Properties
 

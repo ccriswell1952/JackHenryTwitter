@@ -21,7 +21,7 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Interface GetDataFromTwitter
     /// </summary>
-    internal interface IGetTweetsFromTwitter
+    internal partial interface IGetTweetsFromTwitter
     {
         #region Public Properties
 

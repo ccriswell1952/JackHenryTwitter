@@ -22,7 +22,7 @@ namespace JackHenryTwitter.Controllers
     /// Implements the <see cref="System.Web.Mvc.Controller" />
     /// </summary>
     /// <seealso cref="System.Web.Mvc.Controller" />
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
         /// <summary>
         /// Returns the About view.

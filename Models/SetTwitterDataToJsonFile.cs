@@ -26,7 +26,7 @@ namespace JackHenryTwitter.Models
     /// Implements the <see cref="JackHenryTwitter.Models.ISetTwitterData" />
     /// </summary>
     /// <seealso cref="JackHenryTwitter.Models.ISetTwitterData" />
-    public class SetTwitterDataToJsonFile : ISetTwitterData
+    public partial class SetTwitterDataToJsonFile : ISetTwitterData
     {
         #region Public Fields
 
