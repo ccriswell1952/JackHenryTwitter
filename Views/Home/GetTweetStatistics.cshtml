@@ -27,7 +27,7 @@
 
             <dd>
                 @{
-                    var totalDownloadTimeInSeconds = Model.TotalDownloadTimeInMiliSeconds * 1000;
+                    var totalDownloadTimeInSeconds = Model.TotalDownloadTimeInMiliSeconds / 1000;
                 }
                 @totalDownloadTimeInSeconds
             </dd>
@@ -65,7 +65,7 @@
             </dd>
 
             <dt>
-                Total Hashtags in in Tweets
+                Total Hashtags in Tweets
             </dt>
 
             <dd>
@@ -79,7 +79,6 @@
             <dd>
                 @Html.DisplayFor(model => model.TweetsWithHashTagsCount)
             </dd>
-
         </dl>
 
         <h3>Averages</h3>
@@ -147,10 +146,10 @@
                         {
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Domain)
+                                    @Html.DisplayFor(modelItem => item.Value)
                                 </td>
                                 <td style="padding-left:10px;">
-                                    @Html.DisplayFor(modelItem => item.DomainCount)
+                                    @Html.DisplayFor(modelItem => item.Count)
                                 </td>
                             </tr>
                         }
@@ -192,10 +191,10 @@
                         {
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Hashtag)
+                                    @Html.DisplayFor(modelItem => item.Value)
                                 </td>
                                 <td style="padding-left:10px;">
-                                    @Html.DisplayFor(modelItem => item.HashtagCount)
+                                    @Html.DisplayFor(modelItem => item.Count)
                                 </td>
                             </tr>
                         }

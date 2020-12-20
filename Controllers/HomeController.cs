@@ -1,29 +1,31 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-04-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-04-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-09-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-09-2020 ***********************************************************************
 // <copyright file="HomeController.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using JackHenryTwitter.Models;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Tweetinvi;
+using Tweetinvi.Models;
 
 namespace JackHenryTwitter.Controllers
 {
     /// <summary>
-    /// Class HomeController.
-    /// Implements the <see cref="System.Web.Mvc.Controller" />
+    /// Class HomeController. Implements the <see cref="System.Web.Mvc.Controller"/>
     /// </summary>
-    /// <seealso cref="System.Web.Mvc.Controller" />
+    /// <seealso cref="System.Web.Mvc.Controller"/>
     public partial class HomeController : Controller
     {
+        #region Public Methods
+
         /// <summary>
         /// Returns the About view.
         /// </summary>
@@ -60,11 +62,18 @@ namespace JackHenryTwitter.Controllers
         /// Gets the tweet stream from twitter.
         /// </summary>
         /// <param name="secondsToRun">The seconds to run.</param>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        public async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
+        /// <returns><c>true</c> when the twitter stream is completed, <c>false</c> otherwise.</returns>
+        public async Task<JsonResult> GetTweetStreamFromTwitter()
         {
-            await Utilities.GetTwitterDetails.GetTweetStreamFromTwitter(secondsToRun);
-            return true;
+            DateTime startTime = DateTime.Now;
+            var dataSource = new SetTwitterDataToJsonFile();
+            ReadOnlyTwitterCredentials twitterCredentials = Utilities.GetTwitterDetails.GetTwitterCredentials();
+            TwitterClient twitterClient = new TwitterClient(twitterCredentials);
+            GetTweetsFromTwitter getDataFromTwitter = new GetTweetsFromTwitter(dataSource, twitterClient);
+            await getDataFromTwitter.GetSampleTweetsFromTwitter();
+            Dictionary<string, bool> returnVal = new Dictionary<string, bool>();
+            returnVal.Add("IsComplete", true);
+            return Json(returnVal);
         }
 
         /// <summary>
@@ -94,5 +103,7 @@ namespace JackHenryTwitter.Controllers
             var model = new GetTwitterDataFromJsonFile().GetTwitterStatisitcsData();
             return View(model);
         }
+
+        #endregion Public Methods
     }
 }

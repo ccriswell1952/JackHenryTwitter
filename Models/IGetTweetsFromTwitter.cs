@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-12-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-12-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-12-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-12-2020 ***********************************************************************
 // <copyright file="GetDataFromTwitter.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Threading.Tasks;
 
@@ -40,12 +37,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <returns>Task&lt;System.Boolean&gt;.</returns>
         Task<bool> GetSampleTweetsFromTwitter();
-
-        /// <summary>
-        /// Handles the tweet download completion.
-        /// </summary>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        bool HandleTweetDownloadCompletion();
 
         #endregion Public Methods
     }

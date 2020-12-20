@@ -33,17 +33,18 @@
             <input type="button" onclick="goToTweetStats()" class="btn-primary" value="View Current Tweet Statistics" /> &nbsp;
         </p>
     </div>
-    <div class="col-md-6">
+    @*<div class="col-md-6">
         <p>
-            You can click this button to start an async process that utilizes the Twitter service. It will run the service for 10 seconds, then store the data.
-            <input type="button" value="Start A New 10 Second Async Download" class="btn-primary" id="btnRefreshTweetData" />
+            You can click this button to start an async process that utilizes the Twitter service. 
+            <input type="button" value="Start A New Twitter Async Download" class="btn-primary" id="btnRefreshTweetData" />
         </p>
-    </div>
+    </div>*@
 </div>
 <script type="text/javascript">
     function goToTweetStats() {
-        window.location.href="/Home/TweetStatistics";
+        window.location.href = "/Home/TweetStatistics";
     }
+
     $().ready(function () {
         $("#btnRefreshTweetData").on("click", function () {
             var data = { "secondsToRun": 10 };
@@ -56,6 +57,14 @@
                     alert("Your download will start when you close this Alert. This is actually being done behind the sceens so you are free to navigate the site as you please.")
                 }
             })
+                //.done(function (result) {
+                //    if (result.IsComplete == true) {
+                //        if (confirm("The download is complete would you like to look at the results?")) {
+                //            goToTweetStats();
+                //        }
+                //    }
+                //});
+
         });
     });
 </script>

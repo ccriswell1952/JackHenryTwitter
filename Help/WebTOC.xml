@@ -1,36 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="230e2656-2125-42ef-b5bd-377cedd1871d" Title="JackHenryTwitter Namespace" Url="html/N-JackHenryTwitter.htm">
-    <HelpTOCNode Id="0b09226b-41d9-4715-8784-0963c0def7bb" Title="BundleConfig Class" Url="html/T-JackHenryTwitter.BundleConfig.htm">
+  <HelpTOCNode Id="e9af4e98-58fc-492b-a05a-61c3ac3ffd35" Title="JackHenryTwitter Namespace" Url="html/N-JackHenryTwitter.htm">
+    <HelpTOCNode Id="2efb115d-a7ed-4703-9ac3-52e8b01ce8d6" Title="BundleConfig Class" Url="html/T-JackHenryTwitter.BundleConfig.htm">
       <HelpTOCNode Title="BundleConfig Members" Url="html/AllMembers.T-JackHenryTwitter.BundleConfig.htm" />
-      <HelpTOCNode Id="1f25e548-3e9f-4339-bbd9-1eb84cf9f29b" Title="BundleConfig Methods" Url="html/Methods.T-JackHenryTwitter.BundleConfig.htm">
+      <HelpTOCNode Id="f9537d84-bba8-4c1e-a552-ed7b98fe5c4c" Title="BundleConfig Methods" Url="html/Methods.T-JackHenryTwitter.BundleConfig.htm">
         <HelpTOCNode Title="RegisterBundles Method " Url="html/M-JackHenryTwitter.BundleConfig.RegisterBundles.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0983eef9-bccb-443a-8d39-6d190c4f56ed" Title="FilterConfig Class" Url="html/T-JackHenryTwitter.FilterConfig.htm">
+    <HelpTOCNode Id="a4e98314-09be-4880-b0a6-d4d55576c77e" Title="FilterConfig Class" Url="html/T-JackHenryTwitter.FilterConfig.htm">
       <HelpTOCNode Title="FilterConfig Members" Url="html/AllMembers.T-JackHenryTwitter.FilterConfig.htm" />
-      <HelpTOCNode Id="9a640efd-c1ce-44e4-b135-2b1b535543fa" Title="FilterConfig Methods" Url="html/Methods.T-JackHenryTwitter.FilterConfig.htm">
+      <HelpTOCNode Id="95a372c1-e82c-48d9-b193-ae688b33fa7b" Title="FilterConfig Methods" Url="html/Methods.T-JackHenryTwitter.FilterConfig.htm">
         <HelpTOCNode Title="RegisterGlobalFilters Method " Url="html/M-JackHenryTwitter.FilterConfig.RegisterGlobalFilters.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2bc63d4a-904f-4f25-bc6c-c98e5dbc83d6" Title="MvcApplication Class" Url="html/T-JackHenryTwitter.MvcApplication.htm">
+    <HelpTOCNode Id="a505ac29-df1e-4ce1-ae74-7290d7ccce92" Title="MvcApplication Class" Url="html/T-JackHenryTwitter.MvcApplication.htm">
       <HelpTOCNode Title="MvcApplication Members" Url="html/AllMembers.T-JackHenryTwitter.MvcApplication.htm" />
       <HelpTOCNode Title="MvcApplication Methods" Url="html/Methods.T-JackHenryTwitter.MvcApplication.htm" />
       <HelpTOCNode Title="MvcApplication Properties" Url="html/Properties.T-JackHenryTwitter.MvcApplication.htm" />
       <HelpTOCNode Title="MvcApplication Events" Url="html/Events.T-JackHenryTwitter.MvcApplication.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="61c4467e-e00c-43dc-b56c-be9f983b9143" Title="RouteConfig Class" Url="html/T-JackHenryTwitter.RouteConfig.htm">
+    <HelpTOCNode Id="efe2ef00-d8ee-493e-b378-e45e67dce144" Title="RouteConfig Class" Url="html/T-JackHenryTwitter.RouteConfig.htm">
       <HelpTOCNode Title="RouteConfig Members" Url="html/AllMembers.T-JackHenryTwitter.RouteConfig.htm" />
-      <HelpTOCNode Id="7db5b97c-3273-48db-b8ae-e29ba9ea614b" Title="RouteConfig Methods" Url="html/Methods.T-JackHenryTwitter.RouteConfig.htm">
+      <HelpTOCNode Id="d27dacbe-ac80-4dbb-b84a-6a31200dd08d" Title="RouteConfig Methods" Url="html/Methods.T-JackHenryTwitter.RouteConfig.htm">
         <HelpTOCNode Title="RegisterRoutes Method " Url="html/M-JackHenryTwitter.RouteConfig.RegisterRoutes.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="91953219-a116-4cbe-b8d1-448e0d7b9bce" Title="JackHenryTwitter.Controllers Namespace" Url="html/N-JackHenryTwitter.Controllers.htm">
-    <HelpTOCNode Id="d9374420-b19a-447d-be26-37fbae92b05c" Title="HomeController Class" Url="html/T-JackHenryTwitter.Controllers.HomeController.htm">
+  <HelpTOCNode Id="822d074a-cc64-4d55-847f-30e6c5e6bf03" Title="JackHenryTwitter.Controllers Namespace" Url="html/N-JackHenryTwitter.Controllers.htm">
+    <HelpTOCNode Id="7c171ed8-44af-4895-acdb-c71a517b4108" Title="HomeController Class" Url="html/T-JackHenryTwitter.Controllers.HomeController.htm">
       <HelpTOCNode Title="HomeController Members" Url="html/AllMembers.T-JackHenryTwitter.Controllers.HomeController.htm" />
-      <HelpTOCNode Id="eb486dd6-92b6-4826-b143-c3f4ef0dfcfe" Title="HomeController Methods" Url="html/Methods.T-JackHenryTwitter.Controllers.HomeController.htm">
+      <HelpTOCNode Id="c623a870-b99d-4852-af29-ef852e5f2f64" Title="HomeController Methods" Url="html/Methods.T-JackHenryTwitter.Controllers.HomeController.htm">
         <HelpTOCNode Title="About Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.About.htm" />
         <HelpTOCNode Title="Contact Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.Contact.htm" />
         <HelpTOCNode Title="GetTweetStatistics Method " Url="html/M-JackHenryTwitter.Controllers.HomeController.GetTweetStatistics.htm" />
@@ -42,18 +42,18 @@
       <HelpTOCNode Title="HomeController Properties" Url="html/Properties.T-JackHenryTwitter.Controllers.HomeController.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="62bb4054-e3d1-48d9-8dbd-2c9b7a2c275b" Title="JackHenryTwitter.Models Namespace" Url="html/N-JackHenryTwitter.Models.htm">
-    <HelpTOCNode Id="bf97b1b6-005a-4d3f-b24f-6dd07c478ff7" Title="Attachments Class" Url="html/T-JackHenryTwitter.Models.Attachments.htm">
+  <HelpTOCNode Id="f1affd83-b363-4645-8ee3-bad9dea70aba" Title="JackHenryTwitter.Models Namespace" Url="html/N-JackHenryTwitter.Models.htm">
+    <HelpTOCNode Id="f459e8fa-7bf4-46e1-b4ee-e071c50854fe" Title="Attachments Class" Url="html/T-JackHenryTwitter.Models.Attachments.htm">
       <HelpTOCNode Title="Attachments Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Attachments.htm" />
       <HelpTOCNode Title="Attachments Methods" Url="html/Methods.T-JackHenryTwitter.Models.Attachments.htm" />
-      <HelpTOCNode Id="8a00ebd6-540b-4576-b14d-d2db4df15cb8" Title="Attachments Properties" Url="html/Properties.T-JackHenryTwitter.Models.Attachments.htm">
+      <HelpTOCNode Id="0301fd3d-3a86-4137-8292-d6bff14bd627" Title="Attachments Properties" Url="html/Properties.T-JackHenryTwitter.Models.Attachments.htm">
         <HelpTOCNode Title="media_keys Property " Url="html/P-JackHenryTwitter.Models.Attachments.media_keys.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4de67f37-d523-485c-ad65-350238c933cd" Title="Data Class" Url="html/T-JackHenryTwitter.Models.Data.htm">
+    <HelpTOCNode Id="320fc470-704a-4266-acba-52aa16109da9" Title="Data Class" Url="html/T-JackHenryTwitter.Models.Data.htm">
       <HelpTOCNode Title="Data Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Data.htm" />
       <HelpTOCNode Title="Data Methods" Url="html/Methods.T-JackHenryTwitter.Models.Data.htm" />
-      <HelpTOCNode Id="bf21e377-8cd9-4ed0-bbf7-1841839fb704" Title="Data Properties" Url="html/Properties.T-JackHenryTwitter.Models.Data.htm">
+      <HelpTOCNode Id="df1014d3-7b51-4d13-a576-c12e596c6a4e" Title="Data Properties" Url="html/Properties.T-JackHenryTwitter.Models.Data.htm">
         <HelpTOCNode Title="attachments Property " Url="html/P-JackHenryTwitter.Models.Data.attachments.htm" />
         <HelpTOCNode Title="author_id Property " Url="html/P-JackHenryTwitter.Models.Data.author_id.htm" />
         <HelpTOCNode Title="conversation_id Property " Url="html/P-JackHenryTwitter.Models.Data.conversation_id.htm" />
@@ -67,129 +67,104 @@
         <HelpTOCNode Title="text Property " Url="html/P-JackHenryTwitter.Models.Data.text.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="05277374-fb00-408c-a5cb-e68e55489654" Title="Description Class" Url="html/T-JackHenryTwitter.Models.Description.htm">
+    <HelpTOCNode Id="66af80e6-9ae8-45b6-8529-aacc89be5835" Title="Description Class" Url="html/T-JackHenryTwitter.Models.Description.htm">
       <HelpTOCNode Title="Description Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Description.htm" />
       <HelpTOCNode Title="Description Methods" Url="html/Methods.T-JackHenryTwitter.Models.Description.htm" />
-      <HelpTOCNode Id="e44a1e77-8219-4f90-bcc6-0fa167d95655" Title="Description Properties" Url="html/Properties.T-JackHenryTwitter.Models.Description.htm">
+      <HelpTOCNode Id="fe581e9c-a8b0-441d-accd-1b3910c5fb00" Title="Description Properties" Url="html/Properties.T-JackHenryTwitter.Models.Description.htm">
         <HelpTOCNode Title="mentions Property " Url="html/P-JackHenryTwitter.Models.Description.mentions.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="873301b4-a0f6-40a2-b872-c984fb927787" Title="Emoji Class" Url="html/T-JackHenryTwitter.Models.Emoji.htm">
+    <HelpTOCNode Id="4835d98b-a5e4-43a2-a259-c006bee5fff4" Title="Emoji Class" Url="html/T-JackHenryTwitter.Models.Emoji.htm">
       <HelpTOCNode Title="Emoji Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Emoji.htm" />
       <HelpTOCNode Title="Emoji Methods" Url="html/Methods.T-JackHenryTwitter.Models.Emoji.htm" />
-      <HelpTOCNode Id="48f1fcc1-f708-4a85-96a6-2b2fec743d00" Title="Emoji Properties" Url="html/Properties.T-JackHenryTwitter.Models.Emoji.htm">
-        <HelpTOCNode Title="added_in Property " Url="html/P-JackHenryTwitter.Models.Emoji.added_in.htm" />
-        <HelpTOCNode Title="au Property " Url="html/P-JackHenryTwitter.Models.Emoji.au.htm" />
-        <HelpTOCNode Title="category Property " Url="html/P-JackHenryTwitter.Models.Emoji.category.htm" />
-        <HelpTOCNode Title="docomo Property " Url="html/P-JackHenryTwitter.Models.Emoji.docomo.htm" />
-        <HelpTOCNode Title="google Property " Url="html/P-JackHenryTwitter.Models.Emoji.google.htm" />
-        <HelpTOCNode Title="has_img_apple Property " Url="html/P-JackHenryTwitter.Models.Emoji.has_img_apple.htm" />
-        <HelpTOCNode Title="has_img_facebook Property " Url="html/P-JackHenryTwitter.Models.Emoji.has_img_facebook.htm" />
-        <HelpTOCNode Title="has_img_google Property " Url="html/P-JackHenryTwitter.Models.Emoji.has_img_google.htm" />
-        <HelpTOCNode Title="has_img_twitter Property " Url="html/P-JackHenryTwitter.Models.Emoji.has_img_twitter.htm" />
-        <HelpTOCNode Title="image Property " Url="html/P-JackHenryTwitter.Models.Emoji.image.htm" />
-        <HelpTOCNode Title="name Property " Url="html/P-JackHenryTwitter.Models.Emoji.name.htm" />
-        <HelpTOCNode Title="non_qualified Property " Url="html/P-JackHenryTwitter.Models.Emoji.non_qualified.htm" />
-        <HelpTOCNode Title="sheet_x Property " Url="html/P-JackHenryTwitter.Models.Emoji.sheet_x.htm" />
-        <HelpTOCNode Title="sheet_y Property " Url="html/P-JackHenryTwitter.Models.Emoji.sheet_y.htm" />
-        <HelpTOCNode Title="short_name Property " Url="html/P-JackHenryTwitter.Models.Emoji.short_name.htm" />
-        <HelpTOCNode Title="short_names Property " Url="html/P-JackHenryTwitter.Models.Emoji.short_names.htm" />
-        <HelpTOCNode Title="softbank Property " Url="html/P-JackHenryTwitter.Models.Emoji.softbank.htm" />
-        <HelpTOCNode Title="sort_order Property " Url="html/P-JackHenryTwitter.Models.Emoji.sort_order.htm" />
-        <HelpTOCNode Title="text Property " Url="html/P-JackHenryTwitter.Models.Emoji.text.htm" />
-        <HelpTOCNode Title="texts Property " Url="html/P-JackHenryTwitter.Models.Emoji.texts.htm" />
-        <HelpTOCNode Title="unified Property " Url="html/P-JackHenryTwitter.Models.Emoji.unified.htm" />
+      <HelpTOCNode Id="6059996a-0e0e-4d88-aae6-2c15b39958d7" Title="Emoji Properties" Url="html/Properties.T-JackHenryTwitter.Models.Emoji.htm">
+        <HelpTOCNode Title="EmojiHtmlEncode Property " Url="html/P-JackHenryTwitter.Models.Emoji.EmojiHtmlEncode.htm" />
+        <HelpTOCNode Title="EmojiImage Property " Url="html/P-JackHenryTwitter.Models.Emoji.EmojiImage.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="676039d3-f4d5-4372-9134-d8f9ae1f931c" Title="EmojiBase Class" Url="html/T-JackHenryTwitter.Models.EmojiBase.htm">
-      <HelpTOCNode Title="EmojiBase Members" Url="html/AllMembers.T-JackHenryTwitter.Models.EmojiBase.htm" />
-      <HelpTOCNode Title="EmojiBase Methods" Url="html/Methods.T-JackHenryTwitter.Models.EmojiBase.htm" />
-      <HelpTOCNode Id="a6bbd629-2584-4f05-bca2-f095369d47f4" Title="EmojiBase Properties" Url="html/Properties.T-JackHenryTwitter.Models.EmojiBase.htm">
-        <HelpTOCNode Title="EmojiHtmlEncode Property " Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiHtmlEncode.htm" />
-        <HelpTOCNode Title="EmojiImage Property " Url="html/P-JackHenryTwitter.Models.EmojiBase.EmojiImage.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="8375f9d1-9c48-433f-989d-d50d9c58c530" Title="Entities Class" Url="html/T-JackHenryTwitter.Models.Entities.htm">
+    <HelpTOCNode Id="152dbacc-4aae-4408-8e8e-b5a834846399" Title="Entities Class" Url="html/T-JackHenryTwitter.Models.Entities.htm">
       <HelpTOCNode Title="Entities Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities.htm" />
       <HelpTOCNode Title="Entities Methods" Url="html/Methods.T-JackHenryTwitter.Models.Entities.htm" />
-      <HelpTOCNode Id="86782bb0-472f-4ddc-9488-3c9b4a26fd21" Title="Entities Properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities.htm">
+      <HelpTOCNode Id="49705703-7045-4ee3-aa81-0d4a0669468b" Title="Entities Properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities.htm">
         <HelpTOCNode Title="urls Property " Url="html/P-JackHenryTwitter.Models.Entities.urls.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="14973898-4455-4a4b-ad18-dbf6b4f1662d" Title="Entities2 Class" Url="html/T-JackHenryTwitter.Models.Entities2.htm">
+    <HelpTOCNode Id="864b33da-0505-42f1-ac74-a1dac7194691" Title="Entities2 Class" Url="html/T-JackHenryTwitter.Models.Entities2.htm">
       <HelpTOCNode Title="Entities2 Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Entities2.htm" />
       <HelpTOCNode Title="Entities2 Methods" Url="html/Methods.T-JackHenryTwitter.Models.Entities2.htm" />
-      <HelpTOCNode Id="3712a7f9-a9bb-4f76-ab16-be420248e0c8" Title="Entities2 Properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities2.htm">
+      <HelpTOCNode Id="08434ba6-4db0-47ee-b28e-01dce7c0f5f6" Title="Entities2 Properties" Url="html/Properties.T-JackHenryTwitter.Models.Entities2.htm">
         <HelpTOCNode Title="description Property " Url="html/P-JackHenryTwitter.Models.Entities2.description.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="02e5b032-aa6b-4a8c-b0d1-70f27642e2b6" Title="GetTweetsFromTwitter Class" Url="html/T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
+    <HelpTOCNode Id="ee1863a3-a46a-47a8-8cf5-332d47e3fd12" Title="GetStreamingTweetStats Class" Url="html/T-JackHenryTwitter.Models.GetStreamingTweetStats.htm">
+      <HelpTOCNode Title="GetStreamingTweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetStreamingTweetStats.htm" />
+      <HelpTOCNode Id="450fdb85-77f6-41b0-bd4c-3842dee27dad" Title="GetStreamingTweetStats Methods" Url="html/Methods.T-JackHenryTwitter.Models.GetStreamingTweetStats.htm">
+        <HelpTOCNode Title="GetStreamingStats Method " Url="html/M-JackHenryTwitter.Models.GetStreamingTweetStats.GetStreamingStats.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f0886808-af8f-470f-9da3-39eda181a6c3" Title="GetTweetsFromTwitter Class" Url="html/T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
       <HelpTOCNode Title="GetTweetsFromTwitter Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm" />
       <HelpTOCNode Title="GetTweetsFromTwitter Constructor " Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.-ctor.htm" />
-      <HelpTOCNode Id="b09fd20e-5c2c-4170-a232-6b0ddf7298e9" Title="GetTweetsFromTwitter Methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
-        <HelpTOCNode Title="GetSampleTweetsFromTwitter Method " Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.GetSampleTweetsFromTwitter.htm" />
-        <HelpTOCNode Title="HandleTweetDownloadCompletion Method " Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.HandleTweetDownloadCompletion.htm" />
+      <HelpTOCNode Id="54a23639-8e27-4067-a55a-fe1f8e7b8455" Title="GetTweetsFromTwitter Fields" Url="html/Fields.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
+        <HelpTOCNode Title="DataSource Field" Url="html/F-JackHenryTwitter.Models.GetTweetsFromTwitter.DataSource.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7e8f1971-23ee-4970-9a8c-11f918f935ee" Title="GetTweetsFromTwitter Properties" Url="html/Properties.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
+      <HelpTOCNode Id="a4abe269-3967-49f4-b77a-d8d80bf79b59" Title="GetTweetsFromTwitter Methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
+        <HelpTOCNode Title="GetSampleTweetsFromTwitter Method " Url="html/M-JackHenryTwitter.Models.GetTweetsFromTwitter.GetSampleTweetsFromTwitter.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="437d5a4e-9fbf-4e44-bb2d-8bb16cadea4d" Title="GetTweetsFromTwitter Properties" Url="html/Properties.T-JackHenryTwitter.Models.GetTweetsFromTwitter.htm">
         <HelpTOCNode Title="TweetDownloadProperties Property " Url="html/P-JackHenryTwitter.Models.GetTweetsFromTwitter.TweetDownloadProperties.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="acb10f16-1b98-43f2-8d20-45f5c65681ea" Title="GetTwitterDataFromJsonFile Class" Url="html/T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm">
+    <HelpTOCNode Id="d366d81e-8ded-4a49-b49a-c3828cb9fc4c" Title="GetTwitterDataFromJsonFile Class" Url="html/T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm">
       <HelpTOCNode Title="GetTwitterDataFromJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm" />
-      <HelpTOCNode Id="e5163548-2eb1-45dd-9010-336de0112489" Title="GetTwitterDataFromJsonFile Methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm">
+      <HelpTOCNode Id="5f9dad03-f53c-4eaf-b5e5-46f5f3a3cfd9" Title="GetTwitterDataFromJsonFile Methods" Url="html/Methods.T-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.htm">
         <HelpTOCNode Title="GetTweeterRootData Method " Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTweeterRootData.htm" />
         <HelpTOCNode Title="GetTwitterStatisitcsData Method " Url="html/M-JackHenryTwitter.Models.GetTwitterDataFromJsonFile.GetTwitterStatisitcsData.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="473333c5-9c00-4ed9-8ae4-64d623e6f7f9" Title="IGetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.IGetTwitterData.htm">
+    <HelpTOCNode Id="72443ed7-d4f1-437b-ba14-c47e7d2d422d" Title="IGetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.IGetTwitterData.htm">
       <HelpTOCNode Title="IGetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.IGetTwitterData.htm" />
-      <HelpTOCNode Id="cdc326c8-515d-469c-83b0-0ef78dae2257" Title="IGetTwitterData Methods" Url="html/Methods.T-JackHenryTwitter.Models.IGetTwitterData.htm">
+      <HelpTOCNode Id="4ceb1f9d-4d9c-4b63-80cd-ad8658b985c7" Title="IGetTwitterData Methods" Url="html/Methods.T-JackHenryTwitter.Models.IGetTwitterData.htm">
         <HelpTOCNode Title="GetTweeterRootData Method " Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTweeterRootData.htm" />
         <HelpTOCNode Title="GetTwitterStatisitcsData Method " Url="html/M-JackHenryTwitter.Models.IGetTwitterData.GetTwitterStatisitcsData.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="91b5d712-0bde-44ff-aa7e-d16645007289" Title="Includes Class" Url="html/T-JackHenryTwitter.Models.Includes.htm">
+    <HelpTOCNode Id="2d58c9d4-2df9-49e9-9953-766fa09dcee7" Title="Includes Class" Url="html/T-JackHenryTwitter.Models.Includes.htm">
       <HelpTOCNode Title="Includes Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Includes.htm" />
       <HelpTOCNode Title="Includes Methods" Url="html/Methods.T-JackHenryTwitter.Models.Includes.htm" />
-      <HelpTOCNode Id="8ffed686-2100-4345-bbc9-37b0bccfb61c" Title="Includes Properties" Url="html/Properties.T-JackHenryTwitter.Models.Includes.htm">
+      <HelpTOCNode Id="4d6ad69a-92d7-486f-9d2b-9e195e24d424" Title="Includes Properties" Url="html/Properties.T-JackHenryTwitter.Models.Includes.htm">
         <HelpTOCNode Title="media Property " Url="html/P-JackHenryTwitter.Models.Includes.media.htm" />
         <HelpTOCNode Title="users Property " Url="html/P-JackHenryTwitter.Models.Includes.users.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="75536ca5-6d68-4573-a2b2-cd017a09bdb8" Title="ISetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.ISetTwitterData.htm">
+    <HelpTOCNode Id="d00d01c3-7bba-4b2a-bfa5-a00ae508a3e1" Title="ISetTwitterData Interface" Url="html/T-JackHenryTwitter.Models.ISetTwitterData.htm">
       <HelpTOCNode Title="ISetTwitterData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ISetTwitterData.htm" />
-      <HelpTOCNode Id="a277fed1-bc7f-4812-896f-cbc64be32dec" Title="ISetTwitterData Methods" Url="html/Methods.T-JackHenryTwitter.Models.ISetTwitterData.htm">
+      <HelpTOCNode Id="5b9baeef-fd3d-4d08-adc0-8cdd7cf92224" Title="ISetTwitterData Methods" Url="html/Methods.T-JackHenryTwitter.Models.ISetTwitterData.htm">
         <HelpTOCNode Title="AddStreamingTweetToTempDataset Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.AddStreamingTweetToTempDataset.htm" />
-        <HelpTOCNode Title="FormatTweetDataForDataInsert Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.FormatTweetDataForDataInsert.htm" />
-        <HelpTOCNode Title="UpdateTopEmojies Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopEmojies.htm" />
-        <HelpTOCNode Title="UpdateTopHashtags Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopHashtags.htm" />
-        <HelpTOCNode Title="UpdateTopUrls Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTopUrls.htm" />
-        <HelpTOCNode Title="UpdateTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.UpdateTweetStatistics.htm" />
+        <HelpTOCNode Title="GetStreamingAndExistingTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.GetStreamingAndExistingTweetStatistics.htm" />
+        <HelpTOCNode Title="WriteTweetDataToDataSet Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.WriteTweetDataToDataSet.htm" />
         <HelpTOCNode Title="WriteTweetStatsToDataSet Method " Url="html/M-JackHenryTwitter.Models.ISetTwitterData.WriteTweetStatsToDataSet.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="74e01f95-033b-486d-85d1-3ade4fb4132e" Title="ISetTwitterData Properties" Url="html/Properties.T-JackHenryTwitter.Models.ISetTwitterData.htm">
-        <HelpTOCNode Title="tweetDownloadProperties Property " Url="html/P-JackHenryTwitter.Models.ISetTwitterData.tweetDownloadProperties.htm" />
-      </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b4823c1d-3261-44ed-89f6-fc5d76584f97" Title="ITweetStats Interface" Url="html/T-JackHenryTwitter.Models.ITweetStats.htm">
+    <HelpTOCNode Id="7e35b1b2-4231-4bf0-b5a1-8efe01fd5c0a" Title="ITweetStats Interface" Url="html/T-JackHenryTwitter.Models.ITweetStats.htm">
       <HelpTOCNode Title="ITweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.ITweetStats.htm" />
-      <HelpTOCNode Id="ba46748e-71f5-499e-b499-b108bd44ec09" Title="ITweetStats Methods" Url="html/Methods.T-JackHenryTwitter.Models.ITweetStats.htm">
+      <HelpTOCNode Id="e9880aea-c7c7-40ad-b94d-783934ba2c7a" Title="ITweetStats Methods" Url="html/Methods.T-JackHenryTwitter.Models.ITweetStats.htm">
         <HelpTOCNode Title="SetAllTweetStatsProperties Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAllTweetStatsProperties.htm" />
         <HelpTOCNode Title="SetAverageTimes Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetAverageTimes.htm" />
-        <HelpTOCNode Id="9b1221c6-a0d5-40c8-969a-257b75750b1d" Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji.htm">
+        <HelpTOCNode Id="9a5b72f6-0a1c-409a-a7f0-0b0625a182fd" Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji.htm">
           <HelpTOCNode Title="SetPctTweetsWithEmoji Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji.htm" />
           <HelpTOCNode Title="SetPctTweetsWithEmoji Method (Double)" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithEmoji_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="0b465089-9d79-4fcf-a63b-0510177cbfb2" Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags.htm">
+        <HelpTOCNode Id="137c8e01-f709-49d1-95a8-3f70f6cbd04d" Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags.htm">
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags.htm" />
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method (Double)" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags_1.htm" />
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method (Int32)" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithHashTags_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="be40a8bb-380c-42f3-8d71-c1963277df9e" Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto.htm">
+        <HelpTOCNode Id="2f7fb0be-178a-46ba-9d28-18cc76b65f0e" Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto.htm">
           <HelpTOCNode Title="SetPctTweetsWithPhoto Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto.htm" />
           <HelpTOCNode Title="SetPctTweetsWithPhoto Method (Double)" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithPhoto_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="de7f3f09-6300-4f33-82bc-1083952f520a" Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl.htm">
+        <HelpTOCNode Id="4fd2856c-2466-40f8-8cf7-a06d1a2687c6" Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl.htm">
           <HelpTOCNode Title="SetPctTweetsWithUrl Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl.htm" />
           <HelpTOCNode Title="SetPctTweetsWithUrl Method (Double)" Url="html/M-JackHenryTwitter.Models.ITweetStats.SetPctTweetsWithUrl_1.htm" />
         </HelpTOCNode>
@@ -197,7 +172,7 @@
         <HelpTOCNode Title="SetTopHashtags Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopHashtags.htm" />
         <HelpTOCNode Title="SetTopUrlDomains Method " Url="html/M-JackHenryTwitter.Models.ITweetStats.SetTopUrlDomains.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d412763c-4572-4fba-a2d0-98a5d18b0271" Title="ITweetStats Properties" Url="html/Properties.T-JackHenryTwitter.Models.ITweetStats.htm">
+      <HelpTOCNode Id="5c14399e-71c9-4fda-9e87-1e7c4d7bd47e" Title="ITweetStats Properties" Url="html/Properties.T-JackHenryTwitter.Models.ITweetStats.htm">
         <HelpTOCNode Title="AverageTweetsReceivedPerHour Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerHour.htm" />
         <HelpTOCNode Title="AverageTweetsReceivedPerMinute Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerMinute.htm" />
         <HelpTOCNode Title="AverageTweetsReceivedPerSecond Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.AverageTweetsReceivedPerSecond.htm" />
@@ -219,10 +194,18 @@
         <HelpTOCNode Title="TweetsWithUrlsCount Property " Url="html/P-JackHenryTwitter.Models.ITweetStats.TweetsWithUrlsCount.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="85222b30-8381-42e7-be5f-97d35e510763" Title="Medium Class" Url="html/T-JackHenryTwitter.Models.Medium.htm">
+    <HelpTOCNode Id="719ec8a8-7699-42a7-be85-2bf25bbf5599" Title="KeyValuePair(TKey, TValue) Class" Url="html/T-JackHenryTwitter.Models.KeyValuePair-2.htm">
+      <HelpTOCNode Title="KeyValuePair(TKey, TValue) Members" Url="html/AllMembers.T-JackHenryTwitter.Models.KeyValuePair-2.htm" />
+      <HelpTOCNode Title="KeyValuePair(TKey, TValue) Methods" Url="html/Methods.T-JackHenryTwitter.Models.KeyValuePair-2.htm" />
+      <HelpTOCNode Id="44867a6e-03b0-449a-889a-c368a56bbb4a" Title="KeyValuePair(TKey, TValue) Properties" Url="html/Properties.T-JackHenryTwitter.Models.KeyValuePair-2.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P-JackHenryTwitter.Models.KeyValuePair-2.Count.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P-JackHenryTwitter.Models.KeyValuePair-2.Value.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9a05d1a5-289b-4996-ae43-1de3a1e54422" Title="Medium Class" Url="html/T-JackHenryTwitter.Models.Medium.htm">
       <HelpTOCNode Title="Medium Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Medium.htm" />
       <HelpTOCNode Title="Medium Methods" Url="html/Methods.T-JackHenryTwitter.Models.Medium.htm" />
-      <HelpTOCNode Id="543654f8-f958-4bea-959c-b155445265e1" Title="Medium Properties" Url="html/Properties.T-JackHenryTwitter.Models.Medium.htm">
+      <HelpTOCNode Id="62a1c474-60b3-4aab-aed3-e63881acdaef" Title="Medium Properties" Url="html/Properties.T-JackHenryTwitter.Models.Medium.htm">
         <HelpTOCNode Title="duration_ms Property " Url="html/P-JackHenryTwitter.Models.Medium.duration_ms.htm" />
         <HelpTOCNode Title="height Property " Url="html/P-JackHenryTwitter.Models.Medium.height.htm" />
         <HelpTOCNode Title="media_key Property " Url="html/P-JackHenryTwitter.Models.Medium.media_key.htm" />
@@ -231,46 +214,46 @@
         <HelpTOCNode Title="width Property " Url="html/P-JackHenryTwitter.Models.Medium.width.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="67e217f3-640a-472a-b067-827eabadc00b" Title="Mention Class" Url="html/T-JackHenryTwitter.Models.Mention.htm">
+    <HelpTOCNode Id="5e06b1c7-bfa1-4527-af3a-1cfbd3a2f106" Title="Mention Class" Url="html/T-JackHenryTwitter.Models.Mention.htm">
       <HelpTOCNode Title="Mention Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Mention.htm" />
       <HelpTOCNode Title="Mention Methods" Url="html/Methods.T-JackHenryTwitter.Models.Mention.htm" />
-      <HelpTOCNode Id="3c3a6a18-6c20-4368-967b-f413424f5499" Title="Mention Properties" Url="html/Properties.T-JackHenryTwitter.Models.Mention.htm">
+      <HelpTOCNode Id="c7144010-0b2b-449e-a112-81b26f688c40" Title="Mention Properties" Url="html/Properties.T-JackHenryTwitter.Models.Mention.htm">
         <HelpTOCNode Title="end Property " Url="html/P-JackHenryTwitter.Models.Mention.end.htm" />
         <HelpTOCNode Title="start Property " Url="html/P-JackHenryTwitter.Models.Mention.start.htm" />
         <HelpTOCNode Title="username Property " Url="html/P-JackHenryTwitter.Models.Mention.username.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="3b45e748-39b0-4733-8721-d72c82166218" Title="PublicMetrics Class" Url="html/T-JackHenryTwitter.Models.PublicMetrics.htm">
+    <HelpTOCNode Id="0ab5c01f-7aa1-472a-ba82-ff8e1f8205b2" Title="PublicMetrics Class" Url="html/T-JackHenryTwitter.Models.PublicMetrics.htm">
       <HelpTOCNode Title="PublicMetrics Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetrics.htm" />
       <HelpTOCNode Title="PublicMetrics Methods" Url="html/Methods.T-JackHenryTwitter.Models.PublicMetrics.htm" />
-      <HelpTOCNode Id="8efa18bc-9eea-4261-996a-af9a4824844f" Title="PublicMetrics Properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetrics.htm">
+      <HelpTOCNode Id="29085b38-4c05-48ef-a3d7-196d14fb3ff7" Title="PublicMetrics Properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetrics.htm">
         <HelpTOCNode Title="like_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetrics.like_count.htm" />
         <HelpTOCNode Title="quote_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetrics.quote_count.htm" />
         <HelpTOCNode Title="reply_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetrics.reply_count.htm" />
         <HelpTOCNode Title="retweet_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetrics.retweet_count.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="978c3b91-8288-4af9-85f0-b3b65b94876e" Title="PublicMetricsUsers Class" Url="html/T-JackHenryTwitter.Models.PublicMetricsUsers.htm">
+    <HelpTOCNode Id="fb445684-ad41-4fde-9959-bcb2a5a468f6" Title="PublicMetricsUsers Class" Url="html/T-JackHenryTwitter.Models.PublicMetricsUsers.htm">
       <HelpTOCNode Title="PublicMetricsUsers Members" Url="html/AllMembers.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
       <HelpTOCNode Title="PublicMetricsUsers Methods" Url="html/Methods.T-JackHenryTwitter.Models.PublicMetricsUsers.htm" />
-      <HelpTOCNode Id="7fe6f1a8-d157-4cf2-89b3-dddede07c8db" Title="PublicMetricsUsers Properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetricsUsers.htm">
+      <HelpTOCNode Id="cf1d4929-f03e-4aef-8d25-ee72598b5fa1" Title="PublicMetricsUsers Properties" Url="html/Properties.T-JackHenryTwitter.Models.PublicMetricsUsers.htm">
         <HelpTOCNode Title="followers_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.followers_count.htm" />
         <HelpTOCNode Title="following_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.following_count.htm" />
         <HelpTOCNode Title="listed_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.listed_count.htm" />
         <HelpTOCNode Title="tweet_count Property " Url="html/P-JackHenryTwitter.Models.PublicMetricsUsers.tweet_count.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="bffc8b12-bc16-4100-8d7d-d7294923db06" Title="Root Class" Url="html/T-JackHenryTwitter.Models.Root.htm">
+    <HelpTOCNode Id="09f1d82b-d932-434e-9b30-560e1b06b701" Title="Root Class" Url="html/T-JackHenryTwitter.Models.Root.htm">
       <HelpTOCNode Title="Root Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Root.htm" />
       <HelpTOCNode Title="Root Methods" Url="html/Methods.T-JackHenryTwitter.Models.Root.htm" />
-      <HelpTOCNode Id="cfa80eff-1793-4250-b9db-115ea748615f" Title="Root Properties" Url="html/Properties.T-JackHenryTwitter.Models.Root.htm">
+      <HelpTOCNode Id="24d3901f-597b-415a-9b7c-8db9ba8c96f9" Title="Root Properties" Url="html/Properties.T-JackHenryTwitter.Models.Root.htm">
         <HelpTOCNode Title="TweetData Property " Url="html/P-JackHenryTwitter.Models.Root.TweetData.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="379ad86d-e946-4109-8d9e-b294057b7f19" Title="RunningTotals Class" Url="html/T-JackHenryTwitter.Models.RunningTotals.htm">
+    <HelpTOCNode Id="0bfe2604-cd93-4198-abd9-87416de1a28f" Title="RunningTotals Class" Url="html/T-JackHenryTwitter.Models.RunningTotals.htm">
       <HelpTOCNode Title="RunningTotals Members" Url="html/AllMembers.T-JackHenryTwitter.Models.RunningTotals.htm" />
       <HelpTOCNode Title="RunningTotals Methods" Url="html/Methods.T-JackHenryTwitter.Models.RunningTotals.htm" />
-      <HelpTOCNode Id="dc38e34f-73cf-426f-be9d-51df436fbf57" Title="RunningTotals Properties" Url="html/Properties.T-JackHenryTwitter.Models.RunningTotals.htm">
+      <HelpTOCNode Id="c1bf27e4-85af-405a-b7e9-c54a52d06960" Title="RunningTotals Properties" Url="html/Properties.T-JackHenryTwitter.Models.RunningTotals.htm">
         <HelpTOCNode Title="FullListOfHashtags Property " Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfHashtags.htm" />
         <HelpTOCNode Title="FullListOfUrls Property " Url="html/P-JackHenryTwitter.Models.RunningTotals.FullListOfUrls.htm" />
         <HelpTOCNode Title="RunningTotalEmoji Property " Url="html/P-JackHenryTwitter.Models.RunningTotals.RunningTotalEmoji.htm" />
@@ -282,74 +265,80 @@
         <HelpTOCNode Title="TweetsWithUrlRunningTotal Property " Url="html/P-JackHenryTwitter.Models.RunningTotals.TweetsWithUrlRunningTotal.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4ff86318-73bc-485c-a9ff-cb08e0fd72ed" Title="SetTwitterDataToJsonFile Class" Url="html/T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
+    <HelpTOCNode Id="c1217410-0bb7-4916-b747-7edd411fe4fb" Title="SetTwitterDataToJsonFile Class" Url="html/T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
       <HelpTOCNode Title="SetTwitterDataToJsonFile Members" Url="html/AllMembers.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm" />
       <HelpTOCNode Title="SetTwitterDataToJsonFile Constructor " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.-ctor.htm" />
-      <HelpTOCNode Id="77d5fb42-6ad8-48f9-b836-5774c013a2e2" Title="SetTwitterDataToJsonFile Fields" Url="html/Fields.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
-        <HelpTOCNode Title="emojiBaseList Field" Url="html/F-JackHenryTwitter.Models.SetTwitterDataToJsonFile.emojiBaseList.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="7bf0be6e-f18e-438e-9c75-da4652a08e63" Title="SetTwitterDataToJsonFile Methods" Url="html/Methods.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
+      <HelpTOCNode Id="1a8522d4-c259-48e4-98c8-23da5aa4689b" Title="SetTwitterDataToJsonFile Methods" Url="html/Methods.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
         <HelpTOCNode Title="AddStreamingTweetToTempDataset Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.AddStreamingTweetToTempDataset.htm" />
-        <HelpTOCNode Title="FormatTweetDataForDataInsert Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.FormatTweetDataForDataInsert.htm" />
-        <HelpTOCNode Title="UpdateTopEmojies Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopEmojies.htm" />
-        <HelpTOCNode Title="UpdateTopHashtags Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopHashtags.htm" />
-        <HelpTOCNode Title="UpdateTopUrls Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTopUrls.htm" />
-        <HelpTOCNode Title="UpdateTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.UpdateTweetStatistics.htm" />
+        <HelpTOCNode Title="GetStreamingAndExistingTweetStatistics Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.GetStreamingAndExistingTweetStatistics.htm" />
+        <HelpTOCNode Title="WriteTweetDataToDataSet Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.WriteTweetDataToDataSet.htm" />
         <HelpTOCNode Title="WriteTweetStatsToDataSet Method " Url="html/M-JackHenryTwitter.Models.SetTwitterDataToJsonFile.WriteTweetStatsToDataSet.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b2c97f52-d1cf-4ee9-ad35-58f392a4f080" Title="SetTwitterDataToJsonFile Properties" Url="html/Properties.T-JackHenryTwitter.Models.SetTwitterDataToJsonFile.htm">
-        <HelpTOCNode Title="tweetDownloadProperties Property " Url="html/P-JackHenryTwitter.Models.SetTwitterDataToJsonFile.tweetDownloadProperties.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="5b3ee5a0-9697-46ce-a2f1-c4661f6b04cc" Title="TopEntities Class" Url="html/T-JackHenryTwitter.Models.TopEntities.htm">
+      <HelpTOCNode Title="TopEntities Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TopEntities.htm" />
+      <HelpTOCNode Title="TopEntities Methods" Url="html/Methods.T-JackHenryTwitter.Models.TopEntities.htm" />
+      <HelpTOCNode Id="d5d49681-b87a-41ea-ba07-0933a49579f6" Title="TopEntities Properties" Url="html/Properties.T-JackHenryTwitter.Models.TopEntities.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P-JackHenryTwitter.Models.TopEntities.Count.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P-JackHenryTwitter.Models.TopEntities.Value.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7e37eff6-ed5f-4059-a24b-6d847403af2f" Title="Tweet Class" Url="html/T-JackHenryTwitter.Models.Tweet.htm">
+    <HelpTOCNode Id="15aeb10a-1301-4aa5-8ae3-18fdd20fe04f" Title="Tweet Class" Url="html/T-JackHenryTwitter.Models.Tweet.htm">
       <HelpTOCNode Title="Tweet Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Tweet.htm" />
       <HelpTOCNode Title="Tweet Methods" Url="html/Methods.T-JackHenryTwitter.Models.Tweet.htm" />
-      <HelpTOCNode Id="2266fa59-4a56-4aef-9b26-135b1cbc09aa" Title="Tweet Properties" Url="html/Properties.T-JackHenryTwitter.Models.Tweet.htm">
+      <HelpTOCNode Id="5221d2bc-3d37-4982-a49a-ed899469eb74" Title="Tweet Properties" Url="html/Properties.T-JackHenryTwitter.Models.Tweet.htm">
         <HelpTOCNode Title="data Property " Url="html/P-JackHenryTwitter.Models.Tweet.data.htm" />
         <HelpTOCNode Title="includes Property " Url="html/P-JackHenryTwitter.Models.Tweet.includes.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="582b5fa9-62bc-4d15-bfe5-6d6834e2d863" Title="TweetData Class" Url="html/T-JackHenryTwitter.Models.TweetData.htm">
+    <HelpTOCNode Id="77c97916-3f52-462f-8bef-c30cfb9d8a79" Title="TweetData Class" Url="html/T-JackHenryTwitter.Models.TweetData.htm">
       <HelpTOCNode Title="TweetData Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetData.htm" />
       <HelpTOCNode Title="TweetData Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetData.htm" />
-      <HelpTOCNode Id="d9c608cb-e546-4713-91dd-a359a172cadc" Title="TweetData Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetData.htm">
+      <HelpTOCNode Id="7883760a-bc5b-40d8-bca1-242fa22c531c" Title="TweetData Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetData.htm">
+        <HelpTOCNode Title="TotalRunningTime Property " Url="html/P-JackHenryTwitter.Models.TweetData.TotalRunningTime.htm" />
         <HelpTOCNode Title="Tweets Property " Url="html/P-JackHenryTwitter.Models.TweetData.Tweets.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ee80118f-4d10-47b3-ac09-788add6d279b" Title="TweetDownloadProperties Class" Url="html/T-JackHenryTwitter.Models.TweetDownloadProperties.htm">
+    <HelpTOCNode Id="e4eab296-0119-4c89-b0b6-e463a177d6c1" Title="TweetDownloadProperties Class" Url="html/T-JackHenryTwitter.Models.TweetDownloadProperties.htm">
       <HelpTOCNode Title="TweetDownloadProperties Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
       <HelpTOCNode Title="TweetDownloadProperties Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetDownloadProperties.htm" />
-      <HelpTOCNode Id="de3147b1-75bc-4fe2-ae1f-3da4456436d7" Title="TweetDownloadProperties Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetDownloadProperties.htm">
+      <HelpTOCNode Id="9368155c-7271-4f7d-b61d-fdcdb16304db" Title="TweetDownloadProperties Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetDownloadProperties.htm">
         <HelpTOCNode Title="EndTimeForDownload Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.EndTimeForDownload.htm" />
         <HelpTOCNode Title="IsFinishedLoadingTweets Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.IsFinishedLoadingTweets.htm" />
         <HelpTOCNode Title="StartTimeForDownload Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.StartTimeForDownload.htm" />
-        <HelpTOCNode Title="TimeSpentDownloadingInSeconds Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeSpentDownloadingInSeconds.htm" />
+        <HelpTOCNode Title="TimeSpentDownloadingInMiliSeconds Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeSpentDownloadingInMiliSeconds.htm" />
         <HelpTOCNode Title="TimeWantedToDownloadTweets Property " Url="html/P-JackHenryTwitter.Models.TweetDownloadProperties.TimeWantedToDownloadTweets.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ec82d713-b68e-46af-a713-3c9fc3b535b1" Title="TweetStats Class" Url="html/T-JackHenryTwitter.Models.TweetStats.htm">
-      <HelpTOCNode Title="TweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.htm" />
-      <HelpTOCNode Id="2c57fb4c-7312-4605-8f29-947214c34ca3" Title="TweetStats Constructor " Url="html/Overload-JackHenryTwitter.Models.TweetStats.-ctor.htm">
-        <HelpTOCNode Title="TweetStats Constructor " Url="html/M-JackHenryTwitter.Models.TweetStats.-ctor.htm" />
-        <HelpTOCNode Title="TweetStats Constructor (Root, List(EmojiBase), RunningTotals)" Url="html/M-JackHenryTwitter.Models.TweetStats.-ctor_1.htm" />
+    <HelpTOCNode Id="ec69efe6-4203-4426-8c0d-8bbe6f138893" Title="TweetParser Class" Url="html/T-JackHenryTwitter.Models.TweetParser.htm">
+      <HelpTOCNode Title="TweetParser Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetParser.htm" />
+      <HelpTOCNode Id="e9607355-7c12-4935-afce-20be48b2892e" Title="TweetParser Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetParser.htm">
+        <HelpTOCNode Title="ParseTweetDataForDataStatistics Method " Url="html/M-JackHenryTwitter.Models.TweetParser.ParseTweetDataForDataStatistics.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="25bc0b28-255d-443b-9959-729d06bbd234" Title="TweetStats Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.htm">
+    </HelpTOCNode>
+    <HelpTOCNode Id="06510ff6-378a-4d8f-9b9a-18334127a6a5" Title="TweetStats Class" Url="html/T-JackHenryTwitter.Models.TweetStats.htm">
+      <HelpTOCNode Title="TweetStats Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.htm" />
+      <HelpTOCNode Id="caac15f5-0edd-4572-a860-97c69e0ac829" Title="TweetStats Constructor " Url="html/Overload-JackHenryTwitter.Models.TweetStats.-ctor.htm">
+        <HelpTOCNode Title="TweetStats Constructor " Url="html/M-JackHenryTwitter.Models.TweetStats.-ctor.htm" />
+        <HelpTOCNode Title="TweetStats Constructor (Root, List(Emoji), RunningTotals)" Url="html/M-JackHenryTwitter.Models.TweetStats.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="dc541a15-6db5-42d2-9195-783af13e70e9" Title="TweetStats Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.htm">
         <HelpTOCNode Title="SetAllTweetStatsProperties Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetAllTweetStatsProperties.htm" />
         <HelpTOCNode Title="SetAverageTimes Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetAverageTimes.htm" />
-        <HelpTOCNode Id="54ccde15-a90b-42b7-a88e-9d39e518133c" Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji.htm">
+        <HelpTOCNode Id="175b878b-bd0b-4e94-88c0-e5b825c710e2" Title="SetPctTweetsWithEmoji Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji.htm">
           <HelpTOCNode Title="SetPctTweetsWithEmoji Method (Double)" Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji.htm" />
           <HelpTOCNode Title="SetPctTweetsWithEmoji Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithEmoji_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ddd29647-3b90-4059-9e3f-93886f45278d" Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags.htm">
+        <HelpTOCNode Id="1bf81875-2798-4522-b6eb-3cdb910de16f" Title="SetPctTweetsWithHashTags Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags.htm">
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags.htm" />
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method (Double)" Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags_1.htm" />
           <HelpTOCNode Title="SetPctTweetsWithHashTags Method (Int32)" Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithHashTags_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="54dd1fb8-5808-42ba-8170-556ff78fb0a7" Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto.htm">
+        <HelpTOCNode Id="eab228d8-8883-4da0-bbdb-099e7ca21f60" Title="SetPctTweetsWithPhoto Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto.htm">
           <HelpTOCNode Title="SetPctTweetsWithPhoto Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto.htm" />
           <HelpTOCNode Title="SetPctTweetsWithPhoto Method (Double)" Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithPhoto_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="332080e2-280e-4262-a59f-6ebb7f3b04d6" Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl.htm">
+        <HelpTOCNode Id="7ca3d51a-362e-49e7-bdf2-a357a7d6aaf7" Title="SetPctTweetsWithUrl Method " Url="html/Overload-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl.htm">
           <HelpTOCNode Title="SetPctTweetsWithUrl Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl.htm" />
           <HelpTOCNode Title="SetPctTweetsWithUrl Method (Double)" Url="html/M-JackHenryTwitter.Models.TweetStats.SetPctTweetsWithUrl_1.htm" />
         </HelpTOCNode>
@@ -357,7 +346,7 @@
         <HelpTOCNode Title="SetTopHashtags Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopHashtags.htm" />
         <HelpTOCNode Title="SetTopUrlDomains Method " Url="html/M-JackHenryTwitter.Models.TweetStats.SetTopUrlDomains.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f909eb84-7103-4845-95ea-49f0bf1545b0" Title="TweetStats Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.htm">
+      <HelpTOCNode Id="8504a53f-2bfb-4e7e-8188-b4841a309263" Title="TweetStats Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.htm">
         <HelpTOCNode Title="AverageTweetsReceivedPerHour Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerHour.htm" />
         <HelpTOCNode Title="AverageTweetsReceivedPerMinute Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerMinute.htm" />
         <HelpTOCNode Title="AverageTweetsReceivedPerSecond Property " Url="html/P-JackHenryTwitter.Models.TweetStats.AverageTweetsReceivedPerSecond.htm" />
@@ -379,34 +368,18 @@
         <HelpTOCNode Title="TweetsWithUrlsCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TweetsWithUrlsCount.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="3e537402-156c-4b67-b54c-01177c272670" Title="TweetStats.TopDomains Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopDomains.htm">
-      <HelpTOCNode Title="TweetStats.TopDomains Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
-      <HelpTOCNode Title="TweetStats.TopDomains Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm" />
-      <HelpTOCNode Id="af7119e7-c214-4a5c-8338-12d0e1a9b8b2" Title="TweetStats.TopDomains Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopDomains.htm">
-        <HelpTOCNode Title="Domain Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.Domain.htm" />
-        <HelpTOCNode Title="DomainCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopDomains.DomainCount.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="dd826a16-a574-44b9-b846-b9b1f6877994" Title="TweetStats.TopEmojies Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm">
+    <HelpTOCNode Id="fed93f33-61a3-43e3-bbdc-c32cfa4df3e5" Title="TweetStats.TopEmojies Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm">
       <HelpTOCNode Title="TweetStats.TopEmojies Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
       <HelpTOCNode Title="TweetStats.TopEmojies Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm" />
-      <HelpTOCNode Id="0a1849fc-5435-4030-94ba-6cd0f1535dab" Title="TweetStats.TopEmojies Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm">
+      <HelpTOCNode Id="860171eb-2550-4f03-a1e2-4ae89dee0e45" Title="TweetStats.TopEmojies Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopEmojies.htm">
         <HelpTOCNode Title="Emoji Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.Emoji.htm" />
         <HelpTOCNode Title="EmojiCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopEmojies.EmojiCount.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a132ea08-05a1-4768-a9cc-be9956b7c362" Title="TweetStats.TopHashtags Class" Url="html/T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm">
-      <HelpTOCNode Title="TweetStats.TopHashtags Members" Url="html/AllMembers.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
-      <HelpTOCNode Title="TweetStats.TopHashtags Methods" Url="html/Methods.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm" />
-      <HelpTOCNode Id="364eb382-0eca-4b71-921f-86566f688b16" Title="TweetStats.TopHashtags Properties" Url="html/Properties.T-JackHenryTwitter.Models.TweetStats.TopHashtags.htm">
-        <HelpTOCNode Title="Hashtag Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.Hashtag.htm" />
-        <HelpTOCNode Title="HashtagCount Property " Url="html/P-JackHenryTwitter.Models.TweetStats.TopHashtags.HashtagCount.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="0f251353-8385-4851-a73a-0e862a05c8e9" Title="Url Class" Url="html/T-JackHenryTwitter.Models.Url.htm">
+    <HelpTOCNode Id="f323644e-1dcc-48bb-85a8-dac42191baa5" Title="Url Class" Url="html/T-JackHenryTwitter.Models.Url.htm">
       <HelpTOCNode Title="Url Members" Url="html/AllMembers.T-JackHenryTwitter.Models.Url.htm" />
       <HelpTOCNode Title="Url Methods" Url="html/Methods.T-JackHenryTwitter.Models.Url.htm" />
-      <HelpTOCNode Id="c743dd0b-c852-453f-b978-35800d256bbb" Title="Url Properties" Url="html/Properties.T-JackHenryTwitter.Models.Url.htm">
+      <HelpTOCNode Id="b6a21f5a-ca7d-4894-9d63-0c61ab4b6c32" Title="Url Properties" Url="html/Properties.T-JackHenryTwitter.Models.Url.htm">
         <HelpTOCNode Title="display_url Property " Url="html/P-JackHenryTwitter.Models.Url.display_url.htm" />
         <HelpTOCNode Title="end Property " Url="html/P-JackHenryTwitter.Models.Url.end.htm" />
         <HelpTOCNode Title="expanded_url Property " Url="html/P-JackHenryTwitter.Models.Url.expanded_url.htm" />
@@ -414,10 +387,10 @@
         <HelpTOCNode Title="url Property " Url="html/P-JackHenryTwitter.Models.Url.url.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="76f3c762-ef87-4797-acea-6d5f279e3cb8" Title="User Class" Url="html/T-JackHenryTwitter.Models.User.htm">
+    <HelpTOCNode Id="3e397649-c2ca-4c42-9dcb-330c9792122b" Title="User Class" Url="html/T-JackHenryTwitter.Models.User.htm">
       <HelpTOCNode Title="User Members" Url="html/AllMembers.T-JackHenryTwitter.Models.User.htm" />
       <HelpTOCNode Title="User Methods" Url="html/Methods.T-JackHenryTwitter.Models.User.htm" />
-      <HelpTOCNode Id="157b37b8-10e2-4bdb-82d0-5e2943c7df20" Title="User Properties" Url="html/Properties.T-JackHenryTwitter.Models.User.htm">
+      <HelpTOCNode Id="a3f5a1a2-dfe5-4e44-9611-1d1f48de496e" Title="User Properties" Url="html/Properties.T-JackHenryTwitter.Models.User.htm">
         <HelpTOCNode Title="created_at Property " Url="html/P-JackHenryTwitter.Models.User.created_at.htm" />
         <HelpTOCNode Title="description Property " Url="html/P-JackHenryTwitter.Models.User.description.htm" />
         <HelpTOCNode Title="entities Property " Url="html/P-JackHenryTwitter.Models.User.entities.htm" />
@@ -433,20 +406,20 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="358ab774-b584-400e-84bd-24fb7ee536c9" Title="JackHenryTwitter.Tests.Controllers Namespace" Url="html/N-JackHenryTwitter.Tests.Controllers.htm">
-    <HelpTOCNode Id="896591a9-6da9-4a31-b7e5-c8c71213d2d4" Title="HomeControllerTest Class" Url="html/T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm">
+  <HelpTOCNode Id="2c292ec9-7b71-440d-8828-09e636087a5e" Title="JackHenryTwitter.Tests.Controllers Namespace" Url="html/N-JackHenryTwitter.Tests.Controllers.htm">
+    <HelpTOCNode Id="bdebd2e1-300c-4a7c-93a6-24931a36e3eb" Title="HomeControllerTest Class" Url="html/T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm">
       <HelpTOCNode Title="HomeControllerTest Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm" />
-      <HelpTOCNode Id="7686ecf4-e5c5-473f-ac47-05829581c6c3" Title="HomeControllerTest Methods" Url="html/Methods.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm">
+      <HelpTOCNode Id="9086390c-7f93-4715-8be0-a76d2650b569" Title="HomeControllerTest Methods" Url="html/Methods.T-JackHenryTwitter.Tests.Controllers.HomeControllerTest.htm">
         <HelpTOCNode Title="About Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.About.htm" />
         <HelpTOCNode Title="Contact Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Contact.htm" />
         <HelpTOCNode Title="Index Method " Url="html/M-JackHenryTwitter.Tests.Controllers.HomeControllerTest.Index.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="53fa3302-a3fd-44ab-b6c4-e75f08103d71" Title="JackHenryTwitter.Tests.UnitTests Namespace" Url="html/N-JackHenryTwitter.Tests.UnitTests.htm">
-    <HelpTOCNode Id="4351c97e-47f6-4fa3-99b1-c5606286a046" Title="MethodUnitTests Class" Url="html/T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm">
+  <HelpTOCNode Id="37e40c08-6e82-48ed-a7a8-3b3a74472377" Title="JackHenryTwitter.Tests.UnitTests Namespace" Url="html/N-JackHenryTwitter.Tests.UnitTests.htm">
+    <HelpTOCNode Id="6b7ad7d1-933d-45b4-a356-608460b4b1ce" Title="MethodUnitTests Class" Url="html/T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm">
       <HelpTOCNode Title="MethodUnitTests Members" Url="html/AllMembers.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm" />
-      <HelpTOCNode Id="f96ca687-6b18-4445-876e-dcc792edd23b" Title="MethodUnitTests Methods" Url="html/Methods.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm">
+      <HelpTOCNode Id="cf3d2883-da23-4104-b2c7-ce366adc86a9" Title="MethodUnitTests Methods" Url="html/Methods.T-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.htm">
         <HelpTOCNode Title="TestCheckForEmoji Method " Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForEmoji.htm" />
         <HelpTOCNode Title="TestCheckForUrls Method " Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestCheckForUrls.htm" />
         <HelpTOCNode Title="TestSetPctTweetsWithPhoto Method " Url="html/M-JackHenryTwitter.Tests.UnitTests.MethodUnitTests.TestSetPctTweetsWithPhoto.htm" />
@@ -457,28 +430,28 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="9d06b027-5a45-40c4-9215-561a25e1d222" Title="JackHenryTwitter.Utilities Namespace" Url="html/N-JackHenryTwitter.Utilities.htm">
-    <HelpTOCNode Id="2e03c955-e62a-493d-80fb-ad61aafba809" Title="ExtensionMethods Class" Url="html/T-JackHenryTwitter.Utilities.ExtensionMethods.htm">
+  <HelpTOCNode Id="2c470575-0ac9-45cb-8fb3-884b274dfe85" Title="JackHenryTwitter.Utilities Namespace" Url="html/N-JackHenryTwitter.Utilities.htm">
+    <HelpTOCNode Id="0bfc5756-db91-4b70-b477-f9893d37a376" Title="ExtensionMethods Class" Url="html/T-JackHenryTwitter.Utilities.ExtensionMethods.htm">
       <HelpTOCNode Title="ExtensionMethods Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.ExtensionMethods.htm" />
-      <HelpTOCNode Id="c8dc9866-ba50-41db-a833-c50643a2aced" Title="ExtensionMethods Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.ExtensionMethods.htm">
+      <HelpTOCNode Id="5f827162-c2ed-47ce-8de8-be49137aba85" Title="ExtensionMethods Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.ExtensionMethods.htm">
         <HelpTOCNode Title="AddSafe Method " Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.AddSafe.htm" />
         <HelpTOCNode Title="ReplaceFirst Method " Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceFirst.htm" />
         <HelpTOCNode Title="ReplaceLast Method " Url="html/M-JackHenryTwitter.Utilities.ExtensionMethods.ReplaceLast.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4b092550-8872-40c7-9b51-317f15a00dcd" Title="GetTwitterDetails Class" Url="html/T-JackHenryTwitter.Utilities.GetTwitterDetails.htm">
+    <HelpTOCNode Id="754bf79f-c954-45ed-82bb-8c05313043cf" Title="GetTwitterDetails Class" Url="html/T-JackHenryTwitter.Utilities.GetTwitterDetails.htm">
       <HelpTOCNode Title="GetTwitterDetails Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm" />
-      <HelpTOCNode Id="468a8c9f-6d6b-481d-a233-4d5cf006a4e7" Title="GetTwitterDetails Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm">
+      <HelpTOCNode Id="eaee6a96-3d19-467a-85bf-3b5d5e6706ca" Title="GetTwitterDetails Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.GetTwitterDetails.htm">
         <HelpTOCNode Title="GetFilePath Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetFilePath.htm" />
+        <HelpTOCNode Title="GetTimespanInMilliseconds Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTimespanInMilliseconds.htm" />
         <HelpTOCNode Title="GetTweetJsonFilePath Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetJsonFilePath.htm" />
-        <HelpTOCNode Title="GetTweetStreamFromTwitter Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTweetStreamFromTwitter.htm" />
         <HelpTOCNode Title="GetTwitterCredentials Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.GetTwitterCredentials.htm" />
         <HelpTOCNode Title="SearchTextFieldOnlyForStatTotals Method " Url="html/M-JackHenryTwitter.Utilities.GetTwitterDetails.SearchTextFieldOnlyForStatTotals.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8b929662-e8cb-44cc-a2ce-811dffa35f87" Title="LineStatParsers Class" Url="html/T-JackHenryTwitter.Utilities.LineStatParsers.htm">
+    <HelpTOCNode Id="24b27d2f-b6c9-4920-9830-fd65abdbd0e4" Title="LineStatParsers Class" Url="html/T-JackHenryTwitter.Utilities.LineStatParsers.htm">
       <HelpTOCNode Title="LineStatParsers Members" Url="html/AllMembers.T-JackHenryTwitter.Utilities.LineStatParsers.htm" />
-      <HelpTOCNode Id="a09706e9-92ef-455e-8f55-23e6b476eab7" Title="LineStatParsers Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.LineStatParsers.htm">
+      <HelpTOCNode Id="8f881f53-2c45-40af-bf78-eb94ea43cc85" Title="LineStatParsers Methods" Url="html/Methods.T-JackHenryTwitter.Utilities.LineStatParsers.htm">
         <HelpTOCNode Title="EmojiToHtmlEncode Method " Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.EmojiToHtmlEncode.htm" />
         <HelpTOCNode Title="GetEmojiList Method " Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetEmojiList.htm" />
         <HelpTOCNode Title="GetHashTagList Method " Url="html/M-JackHenryTwitter.Utilities.LineStatParsers.GetHashTagList.htm" />

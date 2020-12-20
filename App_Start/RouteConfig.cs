@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-04-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-04-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-04-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-04-2020 ***********************************************************************
 // <copyright file="RouteConfig.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -21,6 +18,8 @@ namespace JackHenryTwitter
     /// </summary>
     public class RouteConfig
     {
+        #region Public Methods
+
         /// <summary>
         /// Registers the routes.
         /// </summary>
@@ -35,5 +34,7 @@ namespace JackHenryTwitter
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
+
+        #endregion Public Methods
     }
 }

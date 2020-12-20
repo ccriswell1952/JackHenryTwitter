@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-13-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-13-2020 ***********************************************************************
 // <copyright file="ITweetStats.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Collections.Generic;
 
@@ -74,13 +71,13 @@ namespace JackHenryTwitter.Models
         /// Gets or sets the top hashtag list.
         /// </summary>
         /// <value>The top hashtag list.</value>
-        List<TweetStats.TopHashtags> TopHashtagList { get; set; }
+        List<TopEntities> TopHashtagList { get; set; }
 
         /// <summary>
         /// Gets or sets the top URL domain list.
         /// </summary>
         /// <value>The top URL domain list.</value>
-        List<TweetStats.TopDomains> TopUrlDomainList { get; set; }
+        List<TopEntities> TopUrlDomainList { get; set; }
 
         /// <summary>
         /// Gets or sets the total download time in mili seconds.

@@ -1,19 +1,17 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-12-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-12-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-12-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-12-2020 ***********************************************************************
 // <copyright file="GetData.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using Newtonsoft.Json;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace JackHenryTwitter.Models
 {
@@ -22,6 +20,13 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class GetTwitterDataFromJsonFile : IGetTwitterData
     {
+        #region Private Fields
+
+        private static ReaderWriterLockSlim readJsonLock = new ReaderWriterLockSlim();
+        private static ReaderWriterLockSlim readStatisticsLock = new ReaderWriterLockSlim();
+
+        #endregion Private Fields
+
         #region Public Methods
 
         /// <summary>
@@ -30,35 +35,12 @@ namespace JackHenryTwitter.Models
         /// <returns>Root.</returns>
         public Root GetTweeterRootData()
         {
-            string combinedPath = Utilities.GetTwitterDetails.GetTweetJsonFilePath(false);
+            string filePath = Utilities.GetTwitterDetails.GetTweetJsonFilePath(false);
             string fileContent = "";
-            using (FileStream stream = System.IO.File.Open(combinedPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            if (File.Exists(filePath))
             {
-                using (StreamReader reader = new StreamReader(stream))
-                {
-                    while (!reader.EndOfStream)
-                    {
-                        fileContent += reader.ReadToEnd();
-                    }
-                }
-            }
-            //dynamic array = JsonConvert.DeserializeObject(fileContent);
-            Root deserializedClass = JsonConvert.DeserializeObject<Root>(fileContent);
-            return deserializedClass;
-        }
-
-        /// <summary>
-        /// Gets the deserialized file json statisitcs data.
-        /// </summary>
-        /// <returns>TweetStats.</returns>
-        public TweetStats GetTwitterStatisitcsData()
-        {
-            TweetStats deserializedClass = new TweetStats();
-            string combinedPath = Utilities.GetTwitterDetails.GetTweetJsonFilePath(true);
-            if (File.Exists(combinedPath))
-            {
-                string fileContent = "";
-                using (FileStream stream = System.IO.File.Open(combinedPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                readJsonLock.EnterReadLock();
+                using (FileStream stream = System.IO.File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     using (StreamReader reader = new StreamReader(stream))
                     {
@@ -68,9 +50,39 @@ namespace JackHenryTwitter.Models
                         }
                     }
                 }
+                readJsonLock.ExitReadLock();
+                return JsonConvert.DeserializeObject<Root>(fileContent);
+            }
+            else return null;
+        }
+
+        /// <summary>
+        /// Gets the deserialized file json statisitcs data.
+        /// </summary>
+        /// <returns>TweetStats.</returns>
+        public TweetStats GetTwitterStatisitcsData()
+        {
+            TweetStats deserializedClass = new TweetStats();
+            string filePath = Utilities.GetTwitterDetails.GetTweetJsonFilePath(true);
+
+            if (File.Exists(filePath))
+            {
+                string fileContent = "";
+                readStatisticsLock.EnterReadLock();
+                using (FileStream stream = System.IO.File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        while (!reader.EndOfStream)
+                        {
+                            fileContent += reader.ReadToEnd();
+                        }
+                    }
+                }
+                readStatisticsLock.ExitReadLock();
                 deserializedClass = JsonConvert.DeserializeObject<TweetStats>(fileContent);
-                deserializedClass.TopUrlDomainList = deserializedClass.TopUrlDomainList.Distinct().OrderByDescending(o => o.DomainCount).ThenBy(t => t.Domain).Take(100).ToList();
-                deserializedClass.TopHashtagList = deserializedClass.TopHashtagList.Distinct().OrderByDescending(o => o.HashtagCount).ThenBy(t => t.Hashtag).Take(100).ToList();
+                deserializedClass.TopUrlDomainList = deserializedClass.TopUrlDomainList.Distinct().OrderByDescending(o => o.Count).ThenBy(t => t.Value).Take(100).ToList();
+                deserializedClass.TopHashtagList = deserializedClass.TopHashtagList.Distinct().OrderByDescending(o => o.Count).ThenBy(t => t.Value).Take(100).ToList();
                 deserializedClass.TopEmojisList = deserializedClass.TopEmojisList.Distinct().OrderByDescending(o => o.EmojiCount).Take(100).ToList();
             }
 

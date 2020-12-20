@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-04-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-04-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-04-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-04-2020 ***********************************************************************
 // <copyright file="FilterConfig.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Web.Mvc;
 
@@ -20,6 +17,8 @@ namespace JackHenryTwitter
     /// </summary>
     public class FilterConfig
     {
+        #region Public Methods
+
         /// <summary>
         /// Registers the global filters.
         /// </summary>
@@ -28,5 +27,7 @@ namespace JackHenryTwitter
         {
             filters.Add(new HandleErrorAttribute());
         }
+
+        #endregion Public Methods
     }
 }

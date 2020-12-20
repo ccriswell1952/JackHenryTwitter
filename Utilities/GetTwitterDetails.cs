@@ -1,22 +1,16 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-09-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-09-2020 ***********************************************************************
 // <copyright file="Utilities.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
-using JackHenryTwitter.Models;
 using System;
 using System.Configuration;
 using System.IO;
-using System.Threading.Tasks;
-using Tweetinvi;
 using Tweetinvi.Models;
 
 namespace JackHenryTwitter.Utilities
@@ -39,28 +33,28 @@ namespace JackHenryTwitter.Utilities
         }
 
         /// <summary>
+        /// Gets a timespan in milliseconds.
+        /// </summary>
+        /// <param name="startTime">The start time.</param>
+        /// <returns>System.Double.</returns>
+        public static double GetTimespanInMilliseconds(DateTime startTime)
+        {
+            DateTime endTime = DateTime.Now;
+            TimeSpan span = endTime.Subtract(startTime);
+            return span.TotalMilliseconds;
+        }
+
+        /// <summary>
         /// Gets the tweeter json file path.
         /// </summary>
-        /// <param name="isStatsFile">true if writing to the Tweet Statistics file else false if writing to the data file</param>
+        /// <param name="isStatsFile">
+        /// true if writing to the Tweet Statistics file else false if writing to the data file
+        /// </param>
         /// <returns>System.String.</returns>
         public static string GetTweetJsonFilePath(bool isStatsFile)
         {
             string relativePath = isStatsFile ? ConfigurationManager.AppSettings["TweetStatsJsonFilePath"] : ConfigurationManager.AppSettings["TweetJsonFilePath"];
             return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
-        }
-
-        /// <summary>
-        /// Gets the tweet stream from twitter.
-        /// </summary>
-        /// <param name="secondsToRun">The seconds to run.</param>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        public static async Task<bool> GetTweetStreamFromTwitter(int secondsToRun)
-        {
-            var dataSource = new SetTwitterDataToJsonFile();
-            ReadOnlyTwitterCredentials twitterCredentials = GetTwitterCredentials();
-            TwitterClient twitterClient = new TwitterClient(twitterCredentials);
-            GetTweetsFromTwitter getDataFromTwitter = new GetTweetsFromTwitter(secondsToRun, dataSource, twitterClient);
-            return await getDataFromTwitter.GetSampleTweetsFromTwitter();
         }
 
         /// <summary>
@@ -79,7 +73,9 @@ namespace JackHenryTwitter.Utilities
         /// <summary>
         /// Determines if we search the tweet text field only for statistic data.
         /// </summary>
-        /// <returns><c>true</c> if we only searth the tweet text field for statistic data, <c>false</c> otherwise.</returns>
+        /// <returns>
+        /// <c>true</c> if we only searth the tweet text field for statistic data, <c>false</c> otherwise.
+        /// </returns>
         public static bool SearchTextFieldOnlyForStatTotals()
         {
             return ConfigurationManager.AppSettings["SearchOnlyTextFieldForTotals"] == "true";
