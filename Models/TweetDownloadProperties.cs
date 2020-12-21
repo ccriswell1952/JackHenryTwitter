@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-12-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-12-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-12-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-12-2020 ***********************************************************************
 // <copyright file="TweedDownloadProperties.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System;
 
@@ -20,7 +17,6 @@ namespace JackHenryTwitter.Models
     /// </summary>
     public partial class TweetDownloadProperties
     {
-
         #region Public Properties
 
         /// <summary>
@@ -45,7 +41,7 @@ namespace JackHenryTwitter.Models
         /// Gets or sets the time actually taken to download.
         /// </summary>
         /// <value>The time taken to download.</value>
-        public double TimeSpentDownloadingInSeconds { get; set; }
+        public double TimeSpentDownloadingInMiliSeconds { get; set; }
 
         /// <summary>
         /// Gets or sets the time user wants to download new tweets.
@@ -54,6 +50,5 @@ namespace JackHenryTwitter.Models
         public int TimeWantedToDownloadTweets { get; set; }
 
         #endregion Public Properties
-
     }
 }

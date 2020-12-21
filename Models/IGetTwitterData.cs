@@ -1,22 +1,19 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-12-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-12-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-12-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-12-2020 ***********************************************************************
 // <copyright file="IGetData.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 namespace JackHenryTwitter.Models
 {
     /// <summary>
     /// Interface IGetData
     /// </summary>
-    public interface IGetTwitterData
+    public partial interface IGetTwitterData
     {
         #region Public Methods
 

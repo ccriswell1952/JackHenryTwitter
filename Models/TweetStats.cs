@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-13-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-13-2020 ***********************************************************************
 // <copyright file="TweetStats.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +23,7 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// The emoji list
         /// </summary>
-        private List<EmojiBase> emojiList = new List<EmojiBase>();
+        private List<Emoji> emojiList = new List<Emoji>();
 
         /// <summary>
         /// The full list of hashtags
@@ -37,11 +34,6 @@ namespace JackHenryTwitter.Models
         /// The full list of urls
         /// </summary>
         private List<string> fullListOfUrls = new List<string>();
-
-        /// <summary>
-        /// The tweet root
-        /// </summary>
-        private Root tweetRoot = new Root();
 
         /// <summary>
         /// The unique list of emojies
@@ -63,22 +55,23 @@ namespace JackHenryTwitter.Models
         #region Public Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TweetStats" /> class.
+        /// Initializes a new instance of the <see cref="TweetStats"/> class.
         /// </summary>
         public TweetStats()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TweetStats" /> class.
+        /// Initializes a new instance of the <see cref="TweetStats"/> class.
         /// </summary>
         /// <param name="root">A Tweet Root object.</param>
         /// <param name="emojiList">The emoji list.</param>
         /// <param name="runningTotals">The running totals.</param>
-        public TweetStats(Root root, List<EmojiBase> emojiList, RunningTotals runningTotals)
+        public TweetStats(Root root, List<Emoji> emojiList, RunningTotals runningTotals)
         {
-            this.TotalDownloadTimeInMiliSeconds = runningTotals.TimeToDownloadInMiliSeconds;
-            this.tweetRoot = root;
+            this.TotalTweetsReceived = root.TweetData.Tweets.Count;
+            this.TotalDownloadTimeInMiliSeconds = root.TweetData.TotalRunningTime;
+            this.TotalTweetsWithPhoto = root.TweetData.Tweets.Where(t => t.includes.users.Any(a => a.profile_image_url != null)).Count();
             this.emojiList = emojiList;
             this.TotalHashTagsInTweets = runningTotals.RunningTotalHashtag;
             this.TotalUrlsInTweets = runningTotals.RunningTotalUrl;
@@ -121,7 +114,7 @@ namespace JackHenryTwitter.Models
         /// <summary>
         /// Gets or sets the percentage of tweets with hash tags.
         /// </summary>
-        /// <value>The PCT tweets with hash tags.</value>
+        /// <value>The percentage tweets with hash tags.</value>
         public decimal PctTweetsWithHashTags { get; set; }
 
         /// <summary>
@@ -146,13 +139,13 @@ namespace JackHenryTwitter.Models
         /// Gets or sets the top hashtag list.
         /// </summary>
         /// <value>The top hashtag list.</value>
-        public List<TopHashtags> TopHashtagList { get; set; }
+        public List<TopEntities> TopHashtagList { get; set; }
 
         /// <summary>
         /// Gets or sets the top URL domain list.
         /// </summary>
         /// <value>The top URL domain list.</value>
-        public List<TopDomains> TopUrlDomainList { get; set; }
+        public List<TopEntities> TopUrlDomainList { get; set; }
 
         /// <summary>
         /// Gets or sets the total download time in mili seconds.
@@ -217,7 +210,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public void SetAllTweetStatsProperties()
         {
-            this.TotalTweetsReceived = tweetRoot.TweetData.Tweets.Count;
             SetAverageTimes();
             SetPctTweetsWithPhoto();
             SetPctTweetsWithEmoji();
@@ -233,7 +225,7 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public void SetAverageTimes()
         {
-            var averageTweetsPerSecond = this.TotalTweetsReceived / (this.TotalDownloadTimeInMiliSeconds * 1000);
+            var averageTweetsPerSecond = this.TotalTweetsReceived / (this.TotalDownloadTimeInMiliSeconds / 1000);
             this.AverageTweetsReceivedPerSecond = averageTweetsPerSecond;
             this.AverageTweetsReceivedPerMinute = averageTweetsPerSecond * 60;
             this.AverageTweetsReceivedPerHour = averageTweetsPerSecond * (60 * 60);
@@ -286,8 +278,7 @@ namespace JackHenryTwitter.Models
             }
         }
 
-        /// Sets the percentage of tweets with hash tags.
-        /// </summary>
+        /// Sets the percentage of tweets with hash tags. </summary>
         public void SetPctTweetsWithHashTags(double tweetsWithHashtagCount)
         {
             this.TweetsWithHashTagsCount = tweetsWithHashtagCount;
@@ -302,7 +293,7 @@ namespace JackHenryTwitter.Models
         }
 
         /// <summary>
-        /// Sets the PCT tweets with hash tags.
+        /// Sets the percentage tweets with hash tags.
         /// </summary>
         /// <param name="tweetsWithHashtagCount">The tweets with hashtag count.</param>
         public void SetPctTweetsWithHashTags(int tweetsWithHashtagCount)
@@ -323,7 +314,6 @@ namespace JackHenryTwitter.Models
         /// </summary>
         public void SetPctTweetsWithPhoto()
         {
-            this.TotalTweetsWithPhoto = tweetRoot.TweetData.Tweets.Where(t => t.includes.users.Any(a => a.profile_image_url != null)).Count();
             if (this.TotalTweetsReceived > 0)
             {
                 this.PctTweetsWithPhoto = ((decimal)this.TotalTweetsWithPhoto / (decimal)this.TotalTweetsReceived) * 100;
@@ -397,7 +387,7 @@ namespace JackHenryTwitter.Models
 
                 int emojiCount = 0;
                 TopEmojies topEmoji = new TopEmojies();
-                EmojiBase emoji = new EmojiBase();
+                Emoji emoji = new Emoji();
                 emoji.EmojiHtmlEncode = htmlEncode;
                 emoji.EmojiImage = distinctList.Select(s => s.EmojiImage).FirstOrDefault();
                 topEmoji.Emoji = emoji;
@@ -418,19 +408,19 @@ namespace JackHenryTwitter.Models
         public void SetTopHashtags()
         {
             this.uniqueListOfHashtags = this.fullListOfHashtags.Distinct().ToList();
-            List<TopHashtags> topHashtagList = new List<TopHashtags>();
+            List<TopEntities> topHashtagList = new List<TopEntities>();
             foreach (var uniqueHashtag in this.uniqueListOfHashtags)
             {
-                TopHashtags topHashtags = new TopHashtags();
+                TopEntities topHashtags = new TopEntities();
                 var hashtagCount = this.fullListOfHashtags.Where(w => w.ToLower().Trim() == uniqueHashtag.ToLower().Trim()).Count();
-                topHashtags.Hashtag = uniqueHashtag;
-                topHashtags.HashtagCount = hashtagCount;
+                topHashtags.Value = uniqueHashtag;
+                topHashtags.Count = hashtagCount;
                 if (hashtagCount > 0)
                 {
                     topHashtagList.Add(topHashtags);
                 }
             }
-            this.TopHashtagList = topHashtagList.OrderByDescending(o => o.HashtagCount).ToList();
+            this.TopHashtagList = topHashtagList.OrderByDescending(o => o.Count).ToList();
         }
 
         /// <summary>
@@ -439,46 +429,24 @@ namespace JackHenryTwitter.Models
         public void SetTopUrlDomains()
         {
             this.uniqueListOfUrls = this.fullListOfUrls.Distinct().ToList();
-            List<TopDomains> topDomainList = new List<TopDomains>();
+            List<TopEntities> topDomainList = new List<TopEntities>();
             foreach (var uniqueHost in this.uniqueListOfUrls)
             {
-                TopDomains topDomains = new TopDomains();
+                TopEntities topDomains = new TopEntities();
                 var hostCount = this.fullListOfUrls.Where(w => w.ToLower().Trim() == uniqueHost.ToLower().Trim()).Count();
-                topDomains.Domain = uniqueHost;
-                topDomains.DomainCount = hostCount;
+                topDomains.Value = uniqueHost;
+                topDomains.Count = hostCount;
                 if (hostCount > 0)
                 {
                     topDomainList.Add(topDomains);
                 }
             }
-            this.TopUrlDomainList = topDomainList.OrderByDescending(o => o.DomainCount).ToList();
+            this.TopUrlDomainList = topDomainList.OrderByDescending(o => o.Count).ToList();
         }
 
         #endregion Public Methods
 
         #region Public Classes
-
-        /// <summary>
-        /// Class TopDomains.
-        /// </summary>
-        public class TopDomains
-        {
-            #region Public Properties
-
-            /// <summary>
-            /// Gets or sets the domain name.
-            /// </summary>
-            /// <value>The domain name.</value>
-            public string Domain { get; set; }
-
-            /// <summary>
-            /// Gets or sets the domain count.
-            /// </summary>
-            /// <value>The domain count.</value>
-            public int DomainCount { get; set; }
-
-            #endregion Public Properties
-        }
 
         /// <summary>
         /// Class TopEmojies.
@@ -491,35 +459,13 @@ namespace JackHenryTwitter.Models
             /// Gets or sets the emoji.
             /// </summary>
             /// <value>The emoji.</value>
-            public EmojiBase Emoji { get; set; }
+            public Emoji Emoji { get; set; }
 
             /// <summary>
             /// Gets or sets the emoji count.
             /// </summary>
             /// <value>The emoji count.</value>
             public int EmojiCount { get; set; }
-
-            #endregion Public Properties
-        }
-
-        /// <summary>
-        /// Class TopHashtags.
-        /// </summary>
-        public class TopHashtags
-        {
-            #region Public Properties
-
-            /// <summary>
-            /// Gets or sets the hashtag.
-            /// </summary>
-            /// <value>The hashtag.</value>
-            public string Hashtag { get; set; }
-
-            /// <summary>
-            /// Gets or sets the hashtag count.
-            /// </summary>
-            /// <value>The hashtag count.</value>
-            public int HashtagCount { get; set; }
 
             #endregion Public Properties
         }

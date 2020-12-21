@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-12-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-12-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-13-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-13-2020 ***********************************************************************
 // <copyright file="GetTweetsFromTwitter.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System;
 using System.Diagnostics;
@@ -19,18 +16,21 @@ using Tweetinvi;
 namespace JackHenryTwitter.Models
 {
     /// <summary>
-    /// Class GetDataFromTwitter.
-    /// Implements the <see cref="JackHenryTwitter.Models.IGetTweetsFromTwitter" />
+    /// Class GetDataFromTwitter. Implements the <see cref="JackHenryTwitter.Models.IGetTweetsFromTwitter"/>
     /// </summary>
-    /// <seealso cref="JackHenryTwitter.Models.IGetTweetsFromTwitter" />
+    /// <seealso cref="JackHenryTwitter.Models.IGetTweetsFromTwitter"/>
     public partial class GetTweetsFromTwitter : IGetTweetsFromTwitter
     {
-        #region Private Fields
+        #region Public Fields
 
         /// <summary>
         /// The datasource
         /// </summary>
-        private SetTwitterDataToJsonFile datasource = new SetTwitterDataToJsonFile();
+        public ISetTwitterData DataSource;
+
+        #endregion Public Fields
+
+        #region Private Fields
 
         /// <summary>
         /// The end time
@@ -52,16 +52,15 @@ namespace JackHenryTwitter.Models
         #region Public Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetTweetsFromTwitter" /> class.
+        /// Initializes a new instance of the <see cref="GetTweetsFromTwitter"/> class.
         /// </summary>
         /// <param name="secondsToRun">The seconds to run.</param>
         /// <param name="passedDataSource">The passed data source.</param>
         /// <param name="passedTwitterCredentials">The passed twitter credentials.</param>
-        public GetTweetsFromTwitter(int secondsToRun, SetTwitterDataToJsonFile passedDataSource, TwitterClient passedTwitterCredentials)
+        public GetTweetsFromTwitter(ISetTwitterData passedDataSource, TwitterClient passedTwitterCredentials)
         {
             this.TweetDownloadProperties = new TweetDownloadProperties();
-            this.TweetDownloadProperties.TimeWantedToDownloadTweets = secondsToRun;
-            this.datasource = passedDataSource;
+            this.DataSource = passedDataSource;
             this.twitterCredentials = passedTwitterCredentials;
         }
 
@@ -85,46 +84,27 @@ namespace JackHenryTwitter.Models
         /// <returns>Task&lt;System.Boolean&gt;.</returns>
         public async Task<bool> GetSampleTweetsFromTwitter()
         {
-            startTime = DateTime.Now;
+            DateTime startTime = DateTime.Now;
+            this.startTime = startTime;
             this.TweetDownloadProperties.IsFinishedLoadingTweets = false;
             var timer = Stopwatch.StartNew();
             var sampleStream = twitterCredentials.StreamsV2.CreateSampleStream();
+            TweetDownloadProperties tweetDownloadProperties = new TweetDownloadProperties();
             try
             {
                 sampleStream.TweetReceived += (sender, eventArgs) =>
                 {
                     var json = eventArgs.Json;
-                    this.datasource.AddStreamingTweetToTempDataset(json);
-                    if (timer.ElapsedMilliseconds >= this.TweetDownloadProperties.TimeWantedToDownloadTweets * 1000)
-                    {
-                        sampleStream.StopStream();
-                    }
+                    this.DataSource.AddStreamingTweetToTempDataset(json, false);
                 };
                 await sampleStream.StartAsync();
-                return HandleTweetDownloadCompletion();
+                return true;
             }
-            catch
+            finally
             {
-                // we have received all the records twitter will send us.
-                // since we aren't getting any more we write what we already have to the data set.
                 sampleStream.StopStream();
-                return HandleTweetDownloadCompletion();
+                this.DataSource.AddStreamingTweetToTempDataset(null, true);
             }
-        }
-
-        /// <summary>
-        /// Handles the tweet download completion.
-        /// </summary>
-        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        public bool HandleTweetDownloadCompletion()
-        {
-            this.endTime = DateTime.Now;
-            this.TweetDownloadProperties.StartTimeForDownload = this.startTime;
-            this.TweetDownloadProperties.EndTimeForDownload = endTime;
-            TimeSpan span = endTime.Subtract(startTime);
-            this.TweetDownloadProperties.TimeSpentDownloadingInSeconds = span.TotalSeconds;
-            this.TweetDownloadProperties.IsFinishedLoadingTweets = true;
-            return this.datasource.WriteTweetStatsToDataSet(this.TweetDownloadProperties);
         }
 
         #endregion Public Methods

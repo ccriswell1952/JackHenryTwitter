@@ -1,16 +1,10 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-13-2020
-// ***********************************************************************
-// <copyright file="TweetClasses.cs" company="">
-//     Copyright ©  2020
-// </copyright>
-// <summary>Usage:      Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);</summary>
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-13-2020
+// *********************************************************************** <copyright
+// file="TweetClasses.cs" company=""> Copyright © 2020 </copyright> <summary>Usage: Root
+// myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);</summary> ***********************************************************************
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +13,8 @@ namespace JackHenryTwitter.Models
     /// <summary>
     /// Class Attachments.
     /// </summary>
-    public class Attachments
+    public partial class Attachments
     {
-
         #region Public Properties
 
         /// <summary>
@@ -31,15 +24,13 @@ namespace JackHenryTwitter.Models
         public List<string> media_keys { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Data.
     /// </summary>
-    public class Data
+    public partial class Data
     {
-
         #region Public Properties
 
         /// <summary>
@@ -109,15 +100,13 @@ namespace JackHenryTwitter.Models
         public string text { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Description.
     /// </summary>
-    public class Description
+    public partial class Description
     {
-
         #region Public Properties
 
         /// <summary>
@@ -127,15 +116,13 @@ namespace JackHenryTwitter.Models
         public List<Mention> mentions { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Entities.
     /// </summary>
-    public class Entities
+    public partial class Entities
     {
-
         #region Public Properties
 
         /// <summary>
@@ -145,15 +132,13 @@ namespace JackHenryTwitter.Models
         public List<Url> urls { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Entities2.
     /// </summary>
-    public class Entities2
+    public partial class Entities2
     {
-
         #region Public Properties
 
         /// <summary>
@@ -163,15 +148,13 @@ namespace JackHenryTwitter.Models
         public Description description { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Includes.
     /// </summary>
-    public class Includes
+    public partial class Includes
     {
-
         #region Public Properties
 
         /// <summary>
@@ -187,15 +170,13 @@ namespace JackHenryTwitter.Models
         public List<User> users { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Medium.
     /// </summary>
-    public class Medium
+    public partial class Medium
     {
-
         #region Public Properties
 
         /// <summary>
@@ -235,15 +216,13 @@ namespace JackHenryTwitter.Models
         public int width { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Mention.
     /// </summary>
-    public class Mention
+    public partial class Mention
     {
-
         #region Public Properties
 
         /// <summary>
@@ -265,15 +244,13 @@ namespace JackHenryTwitter.Models
         public string username { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class PublicMetrics.
     /// </summary>
-    public class PublicMetrics
+    public partial class PublicMetrics
     {
-
         #region Public Properties
 
         /// <summary>
@@ -301,15 +278,13 @@ namespace JackHenryTwitter.Models
         public int retweet_count { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class PublicMetricsUsers.
     /// </summary>
-    public class PublicMetricsUsers
+    public partial class PublicMetricsUsers
     {
-
         #region Public Properties
 
         /// <summary>
@@ -337,15 +312,13 @@ namespace JackHenryTwitter.Models
         public int tweet_count { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Root.
     /// </summary>
-    public class Root
+    public partial class Root
     {
-
         #region Public Properties
 
         /// <summary>
@@ -355,15 +328,13 @@ namespace JackHenryTwitter.Models
         public TweetData TweetData { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class RunningTotals.
     /// </summary>
-    public class RunningTotals
+    public partial class RunningTotals
     {
-
         #region Public Properties
 
         /// <summary>
@@ -421,15 +392,13 @@ namespace JackHenryTwitter.Models
         public int TweetsWithUrlRunningTotal { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Tweet.
     /// </summary>
-    public class Tweet
+    public partial class Tweet
     {
-
         #region Public Properties
 
         /// <summary>
@@ -445,16 +414,16 @@ namespace JackHenryTwitter.Models
         public Includes includes { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class TweetData.
     /// </summary>
-    public class TweetData
+    public partial class TweetData
     {
-
         #region Public Properties
+
+        public double TotalRunningTime { get; set; }
 
         /// <summary>
         /// Gets or sets the tweet.
@@ -463,15 +432,13 @@ namespace JackHenryTwitter.Models
         public List<Tweet> Tweets { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class Url.
     /// </summary>
-    public class Url
+    public partial class Url
     {
-
         #region Public Properties
 
         /// <summary>
@@ -505,19 +472,17 @@ namespace JackHenryTwitter.Models
         public string url { get; set; }
 
         #endregion Public Properties
-
     }
 
     /// <summary>
     /// Class User.
     /// </summary>
-    public class User
+    public partial class User
     {
-
         #region Public Properties
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="User" /> is protected.
+        /// Gets or sets a value indicating whether this <see cref="User"/> is protected.
         /// </summary>
         /// <value><c>true</c> if protected; otherwise, <c>false</c>.</value>
         public bool @protected { get; set; }
@@ -583,12 +548,11 @@ namespace JackHenryTwitter.Models
         public string username { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="User" /> is verified.
+        /// Gets or sets a value indicating whether this <see cref="User"/> is verified.
         /// </summary>
         /// <value><c>true</c> if verified; otherwise, <c>false</c>.</value>
         public bool verified { get; set; }
 
         #endregion Public Properties
-
     }
 }

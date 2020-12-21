@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-09-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-09-2020 ***********************************************************************
 // <copyright file="ExtensionMethods.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using System.Collections.Generic;
 
@@ -20,6 +17,8 @@ namespace JackHenryTwitter.Utilities
     /// </summary>
     public static partial class ExtensionMethods
     {
+        #region Public Methods
+
         /// <summary>
         /// Adds an item to a dictionary only if there isn't an already existing key.
         /// </summary>
@@ -37,7 +36,7 @@ namespace JackHenryTwitter.Utilities
         /// </summary>
         /// <param name="text">The text you want to search and replace.</param>
         /// <param name="searchFor">The string to search for.</param>
-        /// <param name="replaceWith">The string  that will be used to replace with.</param>
+        /// <param name="replaceWith">The string that will be used to replace with.</param>
         /// <returns>System.String.</returns>
         public static string ReplaceFirst(this string text, string searchFor, string replaceWith)
         {
@@ -54,7 +53,7 @@ namespace JackHenryTwitter.Utilities
         /// </summary>
         /// <param name="text">The text you want to search and replace.</param>
         /// <param name="searchFor">The string to search for.</param>
-        /// <param name="replaceWith">The string  that will be used to replace with.</param>
+        /// <param name="replaceWith">The string that will be used to replace with.</param>
         /// <returns>System.String.</returns>
         public static string ReplaceLast(this string text, string searchFor, string replaceWith)
         {
@@ -65,5 +64,7 @@ namespace JackHenryTwitter.Utilities
             }
             return text.Substring(0, pos) + replaceWith + text.Substring(pos + searchFor.Length);
         }
+
+        #endregion Public Methods
     }
 }
