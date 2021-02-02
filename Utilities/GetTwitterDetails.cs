@@ -33,18 +33,6 @@ namespace JackHenryTwitter.Utilities
         }
 
         /// <summary>
-        /// Gets a timespan in milliseconds.
-        /// </summary>
-        /// <param name="startTime">The start time.</param>
-        /// <returns>System.Double.</returns>
-        public static double GetTimespanInMilliseconds(DateTime startTime)
-        {
-            DateTime endTime = DateTime.Now;
-            TimeSpan span = endTime.Subtract(startTime);
-            return span.TotalMilliseconds;
-        }
-
-        /// <summary>
         /// Gets the tweeter json file path.
         /// </summary>
         /// <param name="isStatsFile">

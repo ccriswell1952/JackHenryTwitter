@@ -203,7 +203,6 @@
     <Compile Include="Models\TweetParser.cs" />
     <Compile Include="Models\TweetStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\LineStatParsers.cs" />
     <Compile Include="Utilities\ExtensionMethods.cs" />
     <Compile Include="Utilities\GetTwitterDetails.cs" />
   </ItemGroup>

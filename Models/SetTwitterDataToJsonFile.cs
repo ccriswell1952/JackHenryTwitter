@@ -88,7 +88,7 @@ namespace JackHenryTwitter.Models
             {
                 DateTime passedStartTime = this.startTime;
                 this.startTime = DateTime.Now;
-                double theseTweetsTimeSpan = GetTwitterDetails.GetTimespanInMilliseconds(passedStartTime);
+                double theseTweetsTimeSpan = GetTimespanInMilliseconds(passedStartTime);
                 List<Tweet> tweetsToInsert = streamingTweetData.Tweets;
                 streamingTweetData.Tweets = new List<Tweet>();
                 if (WriteTweetDataToDataSet(tweetsToInsert, theseTweetsTimeSpan))
@@ -109,7 +109,7 @@ namespace JackHenryTwitter.Models
             TweetStats existingTweetStats = getTwitterDataFromJsonFile.GetTwitterStatisitcsData();
             DateTime passedStartTime = this.startTime;
             this.startTime = DateTime.Now;
-            double theseTweetsTimeSpan = GetTwitterDetails.GetTimespanInMilliseconds(passedStartTime);
+            double theseTweetsTimeSpan = GetTimespanInMilliseconds(passedStartTime);
 
             try
             {
@@ -122,6 +122,18 @@ namespace JackHenryTwitter.Models
             {
                 return existingTweetStats;
             }
+        }
+
+        /// <summary>
+        /// Gets a timespan in milliseconds.
+        /// </summary>
+        /// <param name="startTime">The start time.</param>
+        /// <returns>System.Double.</returns>
+        public double GetTimespanInMilliseconds(DateTime startTime)
+        {
+            DateTime endTime = DateTime.Now;
+            TimeSpan span = endTime.Subtract(startTime);
+            return span.TotalMilliseconds;
         }
 
         /// <summary>

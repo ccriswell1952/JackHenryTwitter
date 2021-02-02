@@ -8,6 +8,7 @@
 // <summary>
 // </summary>
 // ***********************************************************************
+using System;
 using System.Collections.Generic;
 
 namespace JackHenryTwitter.Models
@@ -32,6 +33,13 @@ namespace JackHenryTwitter.Models
         /// </summary>
         /// <returns>TweetStats.</returns>
         TweetStats GetStreamingAndExistingTweetStatistics();
+
+        /// <summary>
+        /// Gets a timespan in milliseconds.
+        /// </summary>
+        /// <param name="startTime">The start time.</param>
+        /// <returns>System.Double.</returns>
+        double GetTimespanInMilliseconds(DateTime startTime);
 
         /// <summary>
         /// Writes the tweet data to data set.
